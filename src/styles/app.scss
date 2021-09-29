@@ -23,6 +23,7 @@ $font-primary: sans-serif;
 
 @import "./common/fonts.scss";
 @import "./common/nosmalize";
+@import "./common/mixins.scss";
 
 * {
 	box-sizing: border-box;
@@ -91,6 +92,7 @@ main {
 	width: max-content;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 22px;
@@ -101,6 +103,7 @@ main {
 	border: none;
 	border-radius: 5px;
 	padding: 10px 30px;
+	cursor: pointer;
 }
 
 @import "./common/header.scss";
