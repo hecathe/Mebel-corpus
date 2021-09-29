@@ -1,6 +1,3 @@
-let text = "Привет Васян";
-console.log(text);
-
 const activeClass = "active";
 
 // Переключение табов
@@ -38,3 +35,20 @@ if (tabIdList) {
 		}
 	}
 }
+
+const swiper = new Swiper('[data-swiper="one-slide"]', {
+	// Optional parameters
+	loop: true,
+	speed: 500,
+
+	// If we need pagination
+	pagination: {
+		el: '.swiper-pagination',
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+})

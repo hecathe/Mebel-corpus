@@ -5,16 +5,29 @@ block variables
 
 block content
     main
-        h1
         section.main-slider
-            .swiper-container
+            .swiper-container(data-swiper="one-slide")
                 .swiper-wrapper 
                     .swiper-slide
                         .main-slider__item
-                            img(src="#", alt="")
-                            .main-slider__text-wrap
-                                h2.main-slider__title 
-                                    span.main-slider__small Новая коллекция 
-                                    span.main-slider__big диванов 
-                                    span.main-slider__middle со скидкой
-                                a(href="#") Перейти к скидкам
+                            img.main-slider__img(src="assets/images/banner-min.jpg", alt="")
+                            .container
+                                .main-slider__text-wrap
+                                    h2.main-slider__title
+                                        span.main-slider__small Новая коллекция 
+                                        span.main-slider__big диванов 
+                                        span.main-slider__middle со скидкой
+                                    a.main-slider__button.button(href="#") Перейти к скидкам
+                    .swiper-slide
+                        .main-slider__item
+                            img.main-slider__img(src="assets/images/banner-min.jpg", alt="")
+                            .container
+                                .main-slider__text-wrap
+                                    h2.main-slider__title
+                                        span.main-slider__small Новая коллекция 
+                                        span.main-slider__big диванов 
+                                        span.main-slider__middle со скидкой
+                                    a.main-slider__button.button(href="#") Перейти к скидкам
+                .swiper-pagination
+                .swiper-button-prev
+                .swiper-button-next
