@@ -1,0 +1,132 @@
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    a {
+        text-decoration: none;
+    }
+
+    &__top {
+        padding: 11px 0;
+    }
+    &__location-btn {
+        display: flex;
+        @include button-reset;
+    }
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        column-gap: 30px;
+        @include list-reset;
+    }
+    &__link {
+        color: var(--color-main-text);
+    }
+    &__info {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        column-gap: 30px;
+    }
+    &__time {
+        span {
+            font-weight: 600;
+        }
+    }
+    &__note {
+        display: grid;
+        font-weight: 600;
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+    &__tel {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--color-primary);
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    &__primary {
+        align-items: flex-end;
+        padding-top: 27px;
+        padding-bottom: 33px;
+    }
+    &__logo {
+        display: flex;
+    }
+    &__toggle-menu {
+        font-size: 14px;
+        line-height: 19px;
+        padding: 15px 20px;
+
+        svg {
+            margin-right: 15px;
+        }
+    }
+    &__search {
+        max-width: 500px;
+        width: 100%;
+    }
+    &__search-input {
+        width: 100%;
+        height: 50px;
+        background-color: var(--color-search-back);
+        border: none;
+        border-radius: 5px;
+        padding: 15px 30px 16px;
+    }
+
+    &__user-menu {
+        display: flex;
+    }
+    &__account {
+        display: flex;
+        align-items: center;
+        color: var(--color-main-text);
+        padding: 12px 15px;
+        margin-right: 10px;
+
+        svg {
+            margin-right: 13px;
+        }
+    }
+    &__cart {
+        display: flex;
+        align-items: center;
+        color: var(--color-main-text);
+
+        sup {
+            top: -1em;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            color: var(--color-primary);
+            margin-right: 10px;
+        }
+    }
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include list-reset;
+    padding: 10px 0;
+
+    &__link {
+        display: flex;
+        color: var(--color-main-text);
+        padding: 10px 0;
+    }
+}
