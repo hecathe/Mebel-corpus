@@ -1,33 +1,12 @@
 extends ../template
 
 block variables
-    - var title = 'Главная'
+    - var title = 'Карта сайта'
 
 block content
     main
-        section.main-slider
-            .swiper-container(data-swiper="one-slide")
-                .swiper-wrapper 
-                    .swiper-slide
-                        .main-slider__item
-                            img.main-slider__img(src="assets/images/banner-min.jpg", alt="")
-                            .container
-                                .main-slider__text-wrap
-                                    h2.main-slider__title
-                                        span.main-slider__small Новая коллекция 
-                                        span.main-slider__big диванов 
-                                        span.main-slider__middle со скидкой
-                                    a.main-slider__button.button(href="#") Перейти к скидкам
-                    .swiper-slide
-                        .main-slider__item
-                            img.main-slider__img(src="assets/images/banner-min.jpg", alt="")
-                            .container
-                                .main-slider__text-wrap
-                                    h2.main-slider__title
-                                        span.main-slider__small Новая коллекция 
-                                        span.main-slider__big диванов 
-                                        span.main-slider__middle со скидкой
-                                    a.main-slider__button.button(href="#") Перейти к скидкам
-                .swiper-pagination
-                .swiper-button-prev
-                .swiper-button-next
+        .container
+            table.site-map
+                tr.site-map__row
+                    td.site-map__cell
+                        a.site-map__link(href="main.html") Карта сайта

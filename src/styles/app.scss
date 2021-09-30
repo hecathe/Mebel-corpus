@@ -12,12 +12,17 @@
 	--color-old-price: #AEAEAE;
 	--color-bc: #BDBDBD;
 	--color-search-back: #F9F9F9;
+	--color-gray: #F1F1F1;
 	--color-white: #ffffff;
 }
-
+// 008535
 // Размеры
 $content-max-weight: 1200px;
 $content-padding: 0 16px;
+
+//Цвета
+$color-primary: #00AB44;
+$color-white: #ffffff;
 
 // Шрифт
 $font-primary: sans-serif;
@@ -55,7 +60,7 @@ img {
 }
 
 main {
-	min-height: 100vh;
+	// min-height: 100vh;
 	height: 1px;
 	flex: 1;
 }
@@ -102,6 +107,20 @@ main {
 	background-color: var(--color-primary);
 	border-radius: 5px;
 	padding: 10px 30px;
+}
+
+.button--ghost {
+	color: var(--color-primary);
+	background: none;
+	border: 1px solid var(--color-primary);
+	transition: 150ms ease-in-out;
+	transition-property: background, color;
+	padding: 10px 15px;
+
+	&:hover {
+		color: var(--color-white);
+		background: var(--color-primary);
+	}
 }
 
 @import "./common/header.scss";
