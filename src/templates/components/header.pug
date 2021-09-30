@@ -16,9 +16,9 @@ header.header
                     li.header__item
                         a.header__link(href="#") Контакты
                 .header__info
-                    .header__
-                        .header__ <span>Пн-Пт:</span> 09:00 – 18:00
-                        .header__ <span>Сб:</span> 10:00 – 13:00
+                    .header__graphic
+                        .header__time <span>Пн-Пт:</span> 09:00 – 18:00
+                        .header__time <span>Сб:</span> 10:00 – 13:00
                     .header__note Прием заказов на сайте
                         span круглосуточно
                 a.header__tel(href="tel:+78123093154") 
@@ -34,17 +34,18 @@ header.header
                         use(xlink:href="assets/images/sprite.svg#hamburger-button")
                     span Каталог
                 .header__search
-                    label
-                        input(type="search")
-                a(href="#").header__account
-                    svg(width="25" height="25")
-                        use(xlink:href="assets/images/sprite.svg#user-outlined")
-                    span Личный кабинет
-                a(href="#").header__cart
-                    svg(width="27" height="27")
-                        use(xlink:href="assets/images/sprite.svg#cart")
-                    sup 3
-                    span Корзина
+                    label.header__search-label
+                        input.header__search-input(type="search" placeholder="Поиск по сайту")
+                .header__user-menu
+                    a(href="#").header__account
+                        svg(width="25" height="25")
+                            use(xlink:href="assets/images/sprite.svg#user-outlined")
+                        span Личный кабинет
+                    a(href="#").header__cart
+                        svg(width="27" height="27")
+                            use(xlink:href="assets/images/sprite.svg#cart")
+                        sup 3
+                        span Корзина
 
             ul.header__menu.header-menu
                 li.header-menu__item
