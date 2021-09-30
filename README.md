@@ -1,4 +1,4 @@
-# Демо 
+# Демо https://hecathe.github.io/mebel-corpus/
 
 ## Использование
 
