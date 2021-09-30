@@ -1,7 +1,7 @@
 header.header
-    .container
-        nav.header__nav
-            .header__top.header-wrap
+    nav.header__nav
+        .header__top
+            .container.header-wrap
                 button.header__location-btn
                     svg(width="15" height="15")
                         use(xlink:href="assets/images/sprite.svg#icon-gps-device")
@@ -26,16 +26,24 @@ header.header
                         use(xlink:href="assets/images/sprite.svg#telephone")
                     span +7 (812) 309-31-54
 
+        .container
             .header__primary.header-wrap
                 a.header__logo(href="#")
                     img(src="assets/images/logo.png", alt="")
-                button.header__toggle-menu.button
+
+                button.header__toggle-menu.button(data-catalog-toggle)
                     svg(width="14" height="14")
                         use(xlink:href="assets/images/sprite.svg#hamburger-button")
                     span Каталог
-                .header__search
-                    label.header__search-label
-                        input.header__search-input(type="search" placeholder="Поиск по сайту")
+
+                // форма поиска
+                form.header__search.search-form(method="get" action="#")
+                    button.search-form__btn(type="submit")
+                        svg(width="20" height="20")
+                            use(xlink:href="assets/images/sprite.svg#icons-search")
+                    input.search-form__input(type="search" placeholder="Поиск по сайту")
+                // форма поиска конец
+
                 .header__user-menu
                     a(href="#").header__account
                         svg(width="25" height="25")
@@ -46,6 +54,9 @@ header.header
                             use(xlink:href="assets/images/sprite.svg#cart")
                         sup 3
                         span Корзина
+                
+                    button.header__burger-btn(aria-label="Раскрыть меню")
+                        span
 
             ul.header__menu.header-menu
                 li.header-menu__item
@@ -63,4 +74,94 @@ header.header
                 li.header-menu__item
                     a.header-menu__link(href="#") Снято с производства
                 
-            
+        .header__full-menu.full-menu(data-full-menu)
+            .container
+                .full-menu__head
+                    a.header__logo(href="#")
+                        img(src="assets/images/logo.png", alt="")
+                    button.full-menu__close-btn.button-close(type="button" aria-label="Закрыть" data-close)
+                        svg(width="20" height="20")
+                            use(xlink:href="assets/images/sprite.svg#close")
+                .full-menu__top
+                    h2.full-menu__title.title-second Каталог
+                    form.header__search.search-form
+                        label.search-form__label
+                            svg(width="20" height="20")
+                                use(xlink:href="assets/images/sprite.svg#icons-search")
+                            input.search-form__input(type="search" placeholder="Поиск по сайту")
+                .full-menu__wrap
+                    ul.full-menu__list
+                        li.full-menu__item.full-menu__item--caption
+                            a.full-menu__link(href="#") Мебель для гостинной
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Стенки
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Шкафы
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Журнальные столы
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Мягкая мебель
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Тумбы ТВ
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Стулья
+
+                    ul.full-menu__list
+                        li.full-menu__item.full-menu__item--caption
+                            a.full-menu__link(href="#") Мебель для спальни
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Спальные гарнитуры
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Модульные спальни
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Кровати
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Матрасы
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Комоды
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Прикроватные тумбы
+
+                    ul.full-menu__list
+                        li.full-menu__item.full-menu__item--caption
+                            a.full-menu__link(href="#") Мебель для кухни
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Модульные кухни
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Готовые решения
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Обеденные группы
+                        li.full-menu__item.full-menu__item--caption
+                            a.full-menu__link(href="#") Кабинет
+                    
+                    ul.full-menu__list
+                        li.full-menu__item.full-menu__item--caption
+                            a.full-menu__link(href="#") Прихожие
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Модульные прихожие
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Готовые решения
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Обувницы
+
+                    ul.full-menu__list
+                        li.full-menu__item.full-menu__item--caption
+                            a.full-menu__link(href="#") Детская мебель
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Модульные детские
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Готовые решения
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Компьютерные столы
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Компьютерные стулья
+
+                    ul.full-menu__list
+                        li.full-menu__item.full-menu__item--caption
+                            a.full-menu__link(href="#") Мягкая мебель
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Диваны
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Модульные диваны
+                        li.full-menu__item
+                            a.full-menu__link(href="#") Кресла
