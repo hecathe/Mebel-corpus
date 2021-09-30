@@ -93,6 +93,18 @@ main {
 	overflow: hidden;
 }
 
+.title-first, .title-second {
+	font-weight: 600;
+	font-size: 34px;
+	line-height: 46px;
+	margin: 0;
+}
+.title-third {
+	font-size: 24px;
+	line-height: 33px;
+	margin: 0;
+}
+
 .button {
 	width: max-content;
 	display: flex;
@@ -120,6 +132,17 @@ main {
 	&:hover {
 		color: var(--color-white);
 		background: var(--color-primary);
+	}
+}
+
+.button-close {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include button-reset;
+
+	svg {
+		pointer-events: none;
 	}
 }
 
