@@ -5,7 +5,8 @@ block variables
 
 block content
     main
-        section.main-slider
+        // Слайдер
+        section.main-slider.mb-90
             .swiper-container(data-swiper="one-slide")
                 .swiper-wrapper 
                     .swiper-slide
@@ -18,6 +19,9 @@ block content
                                         span.main-slider__big диванов 
                                         span.main-slider__middle со скидкой
                                     a.main-slider__button.button(href="#") Перейти к скидкам
+                                    .main-slider__sale-wrap
+                                        span.main-slider__sale-caption Скидка
+                                        span.main-slider__sale-val 30%
                     .swiper-slide
                         .main-slider__item
                             img.main-slider__img(src="assets/images/banner-min.jpg", alt="")
@@ -28,6 +32,57 @@ block content
                                         span.main-slider__big диванов 
                                         span.main-slider__middle со скидкой
                                     a.main-slider__button.button(href="#") Перейти к скидкам
+                                    .main-slider__sale-wrap
+                                        span.main-slider__sale-caption Скидка
+                                        span.main-slider__sale-val 30%
                 .swiper-pagination
                 .swiper-button-prev
                 .swiper-button-next
+
+        // Каталог
+        section.main-catalog.mb-90
+            .container
+                h2.main-catalog__title.title-second.mb-60 Каталог
+                ul.main-catalog__list
+                    li.main-catalog__item.main-catalog__item--w50
+                        a.main-catalog__link(href="#")
+                            img.main-catalog__img(src="assets/images/Rectangle323-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Мебель для гостинной
+                                .main-catalog__btn.button Перейти
+                    li.main-catalog__item.main-catalog__item--w50
+                        a.main-catalog__link(href="#")
+                            img.main-catalog__img(src="assets/images/Rectangle340-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Детская мебель
+                                .main-catalog__btn.button Перейти
+                    li.main-catalog__item.main-catalog__item--w50
+                        a.main-catalog__link(href="#")
+                            img.main-catalog__img(src="assets/images/Rectangle323-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Мебель для кухни
+                                .main-catalog__btn.button Перейти
+                    li.main-catalog__item.main-catalog__item--w50
+                        a.main-catalog__link(href="#")
+                            img.main-catalog__img(src="#", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Мягкая мебель
+                                .main-catalog__btn.button Перейти
+                    li.main-catalog__item.main-catalog__item--w33
+                        a.main-catalog__link(href="#")
+                            img.main-catalog__img(src="#", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Кабинет
+                                .main-catalog__btn.button Перейти
+                    li.main-catalog__item.main-catalog__item--w33
+                        a.main-catalog__link(href="#")
+                            img.main-catalog__img(src="#", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Мебель для спальни
+                                .main-catalog__btn.button Перейти
+                    li.main-catalog__item.main-catalog__item--w33
+                        a.main-catalog__link(href="#")
+                            img.main-catalog__img(src="#", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Прихожие
+                                .main-catalog__btn.button Перейти
