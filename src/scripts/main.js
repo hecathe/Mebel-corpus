@@ -54,51 +54,41 @@ const swiper = new Swiper('[data-swiper="one-slide"]', {
 })
 
 //header
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-// function toggle() {
-// 	document.querySelector('[data-full-menu]').classList.toggle("show");
-// }
-  
-// // Close the dropdown menu if the user clicks outside of it
-// window.onclick = function(event) {
-// 	if (!event.target.matches('.dropbtn')) {
-// 	  	var dropdowns = document.getElementsByClassName("dropdown-content");
-// 	  	var i;
-// 	  	for (i = 0; i < dropdowns.length; i++) {
-// 			var openDropdown = dropdowns[i];
-// 			if (openDropdown.classList.contains('show')) {
-// 		  		openDropdown.classList.remove('show');
-// 			}
-// 	  	}
-// 	}
-// }
-
-const toggleFullMenu = document.querySelector('[data-catalog-toggle]');
+const toggleFullMenu = document.querySelectorAll('[data-catalog-toggle]');
 const closeBtn = document.querySelector('[data-close]');
+const searchBtn = document.querySelector('.search-form__btn');
+const burgerBtn = document.querySelector('[data-burger]')
 
 window.onclick = (event) => {
 	const fullMenu = document.querySelector('[data-full-menu');
 
-	if (event.target == toggleFullMenu) {
-		fullMenu.classList.add('show')
-	}
+	toggleFullMenu.forEach((item) => {
+		if (event.target == item) {
+			fullMenu.classList.add('show')
+		}
+	})
 
 	if (event.target == closeBtn) {
 		fullMenu.classList.remove('show')
 	}
+
+	if (event.target == searchBtn) {
+		searchBtn.nextElementSibling.classList.add('show')
+	} else if (event.target !== searchBtn.nextElementSibling.childNodes[1]) {
+		searchBtn.nextElementSibling.classList.remove('show')
+	}
+
+	if (event.target == burgerBtn) {
+		const header = document.querySelector('.header')
+		const body = document.body;
+
+		header.classList.toggle('active')
+
+		if (header.classList.contains('active')) {
+			body.style.overflow = 'hidden'
+		} else {
+			body.removeAttribute('style')
+		}
+	}
 }
 
-
-
-
-// /* Open */
-// function openNav() {
-// 	document.getElementById("myNav").style.height = "100%";
-//   }
-  
-//   /* Close */
-//   function closeNav() {
-// 	document.getElementById("myNav").style.height = "0%";
-//   }

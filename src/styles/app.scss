@@ -117,8 +117,13 @@ main {
 	@include button-reset;
 	text-decoration: none;
 	background-color: var(--color-primary);
+	transition: background-color 150ms ease-in-out;
 	border-radius: 5px;
 	padding: 10px 30px;
+	
+	&:hover {
+		background-color: #008936;
+	}
 }
 
 .button--ghost {
