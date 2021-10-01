@@ -151,12 +151,21 @@ main {
 	}
 }
 
+.mb-90 {
+	margin-bottom: 90px;
+}
+
+.mb-60 {
+	margin-bottom: 60px;
+}
+
 @import "./common/header.scss";
 @import "./pages/index.scss";
 @import "./common/footer.scss";
 
 //components
 @import "./common/main-slider.scss";
+@import "./common/main-catalog.scss";
 
 // @media screen and (max-width: 1274px) {
 
