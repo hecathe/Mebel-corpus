@@ -1,1 +1,20 @@
+.site-map {
+    border-collapse: collapse;
+    margin: 30px 0;
 
+    &__cell {
+        border: 1px solid #000000;
+        padding: 15px;
+    }
+
+    &__link {
+        color: var(--color-main-text);
+        text-decoration: none;
+        padding: 15px;
+        transition: color 150ms ease-in-out;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
