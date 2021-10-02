@@ -42,7 +42,7 @@
                 </svg><span>+7 (812) 309-31-54</span></a>
             </div>
           </div>
-          <div class="container">
+          <div class="header__container container">
             <div class="header__primary header-wrap"><a class="header__logo" href="#"><img src="assets/images/logo.png" alt=""></a>
               <button class="header__toggle-menu button" data-catalog-toggle>
                 <svg width="14" height="14">
@@ -56,7 +56,9 @@
                     <use xlink:href="assets/images/sprite.svg#icons-search"></use>
                   </svg>
                 </button>
-                <input class="search-form__input" type="search" placeholder="Поиск по сайту">
+                <label>
+                  <input class="search-form__input" type="search" placeholder="Поиск по сайту">
+                </label>
               </form>
               <!-- форма поиска конец-->
               <div class="header__user-menu"><a class="header__account" href="#">
@@ -66,8 +68,26 @@
                   <svg width="27" height="27">
                     <use xlink:href="assets/images/sprite.svg#cart"></use>
                   </svg><sup>3</sup><span>Корзина</span></a>
-                <button class="header__burger-btn" aria-label="Раскрыть меню"><span></span></button>
+                <button class="header__burger-btn" data-burger aria-label="Раскрыть меню"><span></span></button>
               </div>
+            </div>
+            <div class="header__mobile">
+              <div class="header__btns"><a class="header__toggle-menu button" href="#">
+                  <svg width="14" height="14">
+                    <use xlink:href="assets/images/sprite.svg#hamburger-button"></use>
+                  </svg><span>Каталог</span></a>
+                <button class="header__location-btn">
+                  <svg width="15" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-gps-device"></use>
+                  </svg><span>Санкт-Петербург</span>
+                </button>
+              </div>
+              <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="#">Как купить </a></li>
+                <li class="header__item"><a class="header__link" href="#">Гарантии</a></li>
+                <li class="header__item"><a class="header__link" href="#">Скидки и акции</a></li>
+                <li class="header__item"><a class="header__link" href="#">Контакты</a></li>
+              </ul>
             </div>
             <ul class="header__menu header-menu">
               <li class="header-menu__item"><a class="header-menu__link" href="#">О компании</a></li>
@@ -78,6 +98,18 @@
               <li class="header-menu__item"><a class="header-menu__link" href="">Пресс-кит</a></li>
               <li class="header-menu__item"><a class="header-menu__link" href="#">Снято с производства</a></li>
             </ul>
+            <div class="header__mobile"><a class="header__tel" href="tel:+78123093154"> 
+                <svg width="18" height="18">
+                  <use xlink:href="assets/images/sprite.svg#telephone"></use>
+                </svg><span>+7 (812) 309-31-54</span></a>
+              <div class="header__info">
+                <div class="header__graphic">
+                  <div class="header__time"><span>Пн-Пт:</span> 09:00 – 18:00</div>
+                  <div class="header__time"><span>Сб:</span> 10:00 – 13:00</div>
+                </div>
+                <div class="header__note">Прием заказов на сайте<span>круглосуточно</span></div>
+              </div>
+            </div>
           </div>
           <div class="header__full-menu full-menu" data-full-menu>
             <div class="container">
@@ -90,11 +122,13 @@
               </div>
               <div class="full-menu__top">
                 <h2 class="full-menu__title title-second">Каталог</h2>
-                <form class="header__search search-form">
-                  <label class="search-form__label">
+                <form class="header__search search-form" method="get" action="#">
+                  <button class="search-form__btn" type="submit">
                     <svg width="20" height="20">
                       <use xlink:href="assets/images/sprite.svg#icons-search"></use>
                     </svg>
+                  </button>
+                  <label>
                     <input class="search-form__input" type="search" placeholder="Поиск по сайту">
                   </label>
                 </form>
@@ -123,7 +157,7 @@
                   <li class="full-menu__item"><a class="full-menu__link" href="#">Модульные кухни</a></li>
                   <li class="full-menu__item"><a class="full-menu__link" href="#">Готовые решения</a></li>
                   <li class="full-menu__item"><a class="full-menu__link" href="#">Обеденные группы</a></li>
-                  <li class="full-menu__item full-menu__item--caption"><a class="full-menu__link" href="#">Кабинет</a></li>
+                  <li class="full-menu__item full-menu__item--caption" style="margin-top: 47px;"><a class="full-menu__link" href="#">Кабинет</a></li>
                 </ul>
                 <ul class="full-menu__list">
                   <li class="full-menu__item full-menu__item--caption"><a class="full-menu__link" href="#">Прихожие</a></li>
@@ -150,14 +184,16 @@
         </nav>
       </header>
       <main>
-        <section class="main-slider">
-          <div class="swiper-container" data-swiper="one-slide">
+        <!-- Слайдер-->
+        <section class="main-slider mb-90">
+          <div class="swiper-container swiper-oneslide">
             <div class="swiper-wrapper"> 
               <div class="swiper-slide">
                 <div class="main-slider__item"><img class="main-slider__img" src="assets/images/banner-min.jpg" alt="">
                   <div class="container">
                     <div class="main-slider__text-wrap">
                       <h2 class="main-slider__title"><span class="main-slider__small">Новая коллекция </span><span class="main-slider__big">диванов </span><span class="main-slider__middle">со скидкой</span></h2><a class="main-slider__button button" href="#">Перейти к скидкам</a>
+                      <div class="main-slider__sale-wrap"><span class="main-slider__sale-caption">Скидка</span><span class="main-slider__sale-val">30%</span></div>
                     </div>
                   </div>
                 </div>
@@ -167,14 +203,235 @@
                   <div class="container">
                     <div class="main-slider__text-wrap">
                       <h2 class="main-slider__title"><span class="main-slider__small">Новая коллекция </span><span class="main-slider__big">диванов </span><span class="main-slider__middle">со скидкой</span></h2><a class="main-slider__button button" href="#">Перейти к скидкам</a>
+                      <div class="main-slider__sale-wrap"><span class="main-slider__sale-caption">Скидка</span><span class="main-slider__sale-val">30%</span></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="main-slider__btns container">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </section>
+        <!-- Каталог-->
+        <section class="main-catalog mb-90">
+          <div class="container">
+            <h2 class="main-catalog__title title-second mb-60">Каталог</h2>
+            <ul class="main-catalog__list">
+              <li class="main-catalog__item main-catalog__item--w50"><a class="main-catalog__link" href="#"><img class="main-catalog__img" src="assets/images/Rectangle323-min.jpg" alt="">
+                  <div class="main-catalog__wrap">
+                    <h3 class="main-catalog__caption title-third">Мебель для гостинной</h3>
+                    <div class="main-catalog__btn button">Перейти</div>
+                  </div></a></li>
+              <li class="main-catalog__item main-catalog__item--w50"><a class="main-catalog__link" href="#"><img class="main-catalog__img" src="assets/images/Rectangle340-min.jpg" alt="">
+                  <div class="main-catalog__wrap">
+                    <h3 class="main-catalog__caption title-third">Детская мебель</h3>
+                    <div class="main-catalog__btn button">Перейти</div>
+                  </div></a></li>
+              <li class="main-catalog__item main-catalog__item--w50"><a class="main-catalog__link" href="#"><img class="main-catalog__img" src="assets/images/Rectangle323-min.jpg" alt="">
+                  <div class="main-catalog__wrap">
+                    <h3 class="main-catalog__caption title-third">Мебель для кухни</h3>
+                    <div class="main-catalog__btn button">Перейти</div>
+                  </div></a></li>
+              <li class="main-catalog__item main-catalog__item--w50"><a class="main-catalog__link" href="#"><img class="main-catalog__img" src="assets/images/Rectangle334-min.jpg" alt="">
+                  <div class="main-catalog__wrap">
+                    <h3 class="main-catalog__caption title-third">Мягкая мебель</h3>
+                    <div class="main-catalog__btn button">Перейти</div>
+                  </div></a></li>
+              <li class="main-catalog__item main-catalog__item--w33"><a class="main-catalog__link" href="#"><img class="main-catalog__img" src="assets/images/Rectangle339-min.jpg" alt="">
+                  <div class="main-catalog__wrap">
+                    <h3 class="main-catalog__caption title-third">Кабинет</h3>
+                    <div class="main-catalog__btn button">Перейти</div>
+                  </div></a></li>
+              <li class="main-catalog__item main-catalog__item--w33"><a class="main-catalog__link" href="#"><img class="main-catalog__img" src="assets/images/Rectangle325-min.jpg" alt="">
+                  <div class="main-catalog__wrap">
+                    <h3 class="main-catalog__caption title-third">Мебель для спальни</h3>
+                    <div class="main-catalog__btn button">Перейти</div>
+                  </div></a></li>
+              <li class="main-catalog__item main-catalog__item--w33"><a class="main-catalog__link" href="#"><img class="main-catalog__img" src="assets/images/Rectangle324-min.jpg" alt="">
+                  <div class="main-catalog__wrap">
+                    <h3 class="main-catalog__caption title-third">Прихожие</h3>
+                    <div class="main-catalog__btn button">Перейти</div>
+                  </div></a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- Новинки-->
+        <section class="cards mb-90">
+          <div class="container">
+            <div class="cards__header title-wb mb-60">
+              <h2 class="title-second">Новинки</h2><a class="cards__more title-wb__link" href="#">Смотреть все</a>
+            </div>
+            <div class="cards__slider">
+              <div class="swiper-container swiper-fourslide">
+                <ul class="cards__list product-cards swiper-wrapper">
+                  <li class="product-cards__item swiper-slide"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
+                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
+                        <div class="product-cards__wrap">
+                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
+                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
+                        </div>
+                        <div class="product-cards__bot">
+                          <div class="product-cards__price">125 000 ₽</div>
+                          <div class="product-cards__btn button">
+                            <svg width="21" height="21">
+                              <use xlink:href="assets/images/sprite.svg#cart"></use>
+                            </svg><span>В корзину</span>
+                          </div>
+                        </div>
+                      </div></a></li>
+                  <li class="product-cards__item swiper-slide"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
+                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
+                        <div class="product-cards__wrap">
+                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
+                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
+                        </div>
+                        <div class="product-cards__bot">
+                          <div class="product-cards__price">125 000 ₽</div>
+                          <div class="product-cards__btn button">
+                            <svg width="21" height="21">
+                              <use xlink:href="assets/images/sprite.svg#cart"></use>
+                            </svg><span>В корзину</span>
+                          </div>
+                        </div>
+                      </div></a></li>
+                  <li class="product-cards__item swiper-slide"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
+                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
+                        <div class="product-cards__wrap">
+                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
+                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
+                        </div>
+                        <div class="product-cards__bot">
+                          <div class="product-cards__price">125 000 ₽</div>
+                          <div class="product-cards__btn button">
+                            <svg width="21" height="21">
+                              <use xlink:href="assets/images/sprite.svg#cart"></use>
+                            </svg><span>В корзину</span>
+                          </div>
+                        </div>
+                      </div></a></li>
+                  <li class="product-cards__item swiper-slide"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
+                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
+                        <div class="product-cards__wrap">
+                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
+                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
+                        </div>
+                        <div class="product-cards__bot">
+                          <div class="product-cards__price">125 000 ₽</div>
+                          <div class="product-cards__btn button">
+                            <svg width="21" height="21">
+                              <use xlink:href="assets/images/sprite.svg#cart"></use>
+                            </svg><span>В корзину</span>
+                          </div>
+                        </div>
+                      </div></a></li>
+                  <li class="product-cards__item swiper-slide"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
+                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
+                        <div class="product-cards__wrap">
+                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
+                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
+                        </div>
+                        <div class="product-cards__bot">
+                          <div class="product-cards__price">125 000 ₽</div>
+                          <div class="product-cards__btn button">
+                            <svg width="21" height="21">
+                              <use xlink:href="assets/images/sprite.svg#cart"></use>
+                            </svg><span>В корзину</span>
+                          </div>
+                        </div>
+                      </div></a></li>
+                  <li class="product-cards__item swiper-slide"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
+                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
+                        <div class="product-cards__wrap">
+                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
+                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
+                        </div>
+                        <div class="product-cards__bot">
+                          <div class="product-cards__price">125 000 ₽</div>
+                          <div class="product-cards__btn button">
+                            <svg width="21" height="21">
+                              <use xlink:href="assets/images/sprite.svg#cart"></use>
+                            </svg><span>В корзину</span>
+                          </div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </section>
+        <!-- Скидки и акции-->
+        <section class="sales mb-90">
+          <div class="container">
+            <div class="sales__header title-wb mb-60">
+              <h2 class="title-second">Скидки и акции</h2><a class="sales__more title-wb__link" href="#">Смотреть все</a>
+            </div>
+            <div class="sales__slider">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="sales__item"><img class="sales__img" src="assets/images/sales-banner-min.jpg" alt="">
+                      <div class="sales__text-wrap">
+                        <div class="sales__caption">Новая коллекция диванов со скидками до 30%</div><a class="sales__btn button" href="#">Перейти к скидкам</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </section>
+        <!-- Новости-->
+        <section class="main-news mb-90">
+          <div class="container">
+            <div class="main-news__header title-wb mb-60">
+              <h2 class="main-news__title title-second">Новости</h2><a class="main-news__more title-wb__link" href="#">Смотреть все</a>
+            </div>
+            <ul class="main-news__list news-cards">
+              <li class="news-cards__item"><a class="news-cards__link" href="#"><img class="news-cards__img" src="assets/images/news-card-min.jpg" alt="">
+                  <div class="news-cards__text-wrap">
+                    <time class="news-cards__date" datetime="2020-12-10">10.12.2020</time>
+                    <div class="news-cards__caption">Интервью с руководителем коммерческого департамента</div>
+                    <p>Мы воспринимаем текущий года как вызов, размышляя о том, что еще мы можем изменить и улучшить в будущем!</p>
+                  </div></a></li>
+              <li class="news-cards__item"><a class="news-cards__link" href="#"><img class="news-cards__img" src="assets/images/news-card-min.jpg" alt="">
+                  <div class="news-cards__text-wrap">
+                    <time class="news-cards__date" datetime="2020-12-10">10.12.2020</time>
+                    <div class="news-cards__caption">Интервью с руководителем коммерческого департамента</div>
+                    <p>Мы воспринимаем текущий года как вызов, размышляя о том, что еще мы можем изменить и улучшить в будущем!</p>
+                  </div></a></li>
+              <li class="news-cards__item"><a class="news-cards__link" href="#"><img class="news-cards__img" src="assets/images/news-card-min.jpg" alt="">
+                  <div class="news-cards__text-wrap">
+                    <time class="news-cards__date" datetime="2020-12-10">10.12.2020</time>
+                    <div class="news-cards__caption">Интервью с руководителем коммерческого департамента</div>
+                    <p>Мы воспринимаем текущий года как вызов, размышляя о том, что еще мы можем изменить и улучшить в будущем!</p>
+                  </div></a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- О компании-->
+        <section class="about-block mb-90">
+          <div class="container">
+            <div class="about-block__text">
+              <h4 class="about-block__title">ТД Андрей - федеральная оптовая сеть мебели в Москве, Санкт-Петербурге и Краснодаре</h4>
+              <p>Мы продаем оптом мебель в, в Санкт Петербурге и Северо-Западном федеральном округе, Москва, Центральном федеральном округе, Краснодар, Краснодарский край.</p>
+              <p>Для удобства интернет магазинов и магазинов, реализующих мебель эконом и среднего класса. Открыты оптовые склады в разных регионах. С нами Вы сэкономите на доставке мебели.</p>
+              <p>Всем мебельным магазинам самые выгодные цены независимо от объема закупок, отгрузка по крупному опту.</p>
+              <p>У нас огромный складской запас корпусной мебели. Оптимальность закупок и доставки, которую наша организация делает напрямую с мебельных фабрик, позволяет торговать по самым выгодным ценам. Нами создана Складская программа мебель, которая всегда находится на складе, если ее нет на складе она находится в пути, от 3 до 5 дней.</p>
+              <p>Для магазинов есть возможность бронировать товар у менеджеров сроком до 7 дней. (более длительный срок оговаривается индивидуально). Все заказы отправляются на электронную почту <a href="mailto:konstantinova@mebelcorpus.ru">konstantinova@mebelcorpus.ru</a> Для интернет-магазинов и магазинов полный спектр услуг, доставка, подъем, сборка мы все сделаем сами. Мы будем рады работать с Вами. С нами легко и просто!</p>
+              <p>Офисы и Склады готовой продукции в одном месте. </p>
+              <p>Москва, Мытищи, ул. Силикатная, дом 53, кор.3; <a href="tel:+74951396098">8(495) 139-60-98</a>, <a href="tel:+79672562200">8-967-256-22-00</a> </p>
+              <p>Санкт-Петербург, Николаевский проезд, дом 37; <a href="tel:+78123093154">8(812) 309-31-54</a>, <a href="tel:983-59-51">983-59-51</a></p>
+              <p>Краснодар, ул. Новороссийская, дом 220, литера Е; <a href="tel:+78612139513">8(861) 213-95-13</a>, <a href="tel:+79628600565">8-962-860-05-65</a></p>
+            </div>
+            <button class="about-block__btn" data-more-text>Развернуть</button>
           </div>
         </section>
       </main>
