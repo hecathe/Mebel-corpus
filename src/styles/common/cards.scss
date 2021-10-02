@@ -1,0 +1,22 @@
+.cards {
+    &__slider {
+        position: relative;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 35%;
+    }
+
+    .swiper-button-prev {
+        left: -15px;
+    }
+
+    .swiper-button-next {
+        right: -15px;
+    }
+
+    .swiper-button-disabled {
+        display: none;
+    }
+}

@@ -11,6 +11,7 @@
 	--color-placeholder-3: #C5C5C5;
 	--color-old-price: #AEAEAE;
 	--color-bc: #BDBDBD;
+	--color-background: #e7e7e7;
 	--color-search-back: #F9F9F9;
 	--color-gray: #F1F1F1;
 	--color-white: #ffffff;
@@ -96,13 +97,29 @@ main {
 .title-first, .title-second {
 	font-weight: 600;
 	font-size: 34px;
-	line-height: 46px;
+	line-height: 140%;
 	margin: 0;
 }
 .title-third {
 	font-size: 24px;
-	line-height: 33px;
+	line-height: 140%;
 	margin: 0;
+}
+
+.title-wb {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+
+	&__link {
+		color: var(--color-primary);
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .button {
@@ -164,8 +181,15 @@ main {
 @import "./common/footer.scss";
 
 //components
+// main page
 @import "./common/main-slider.scss";
 @import "./common/main-catalog.scss";
+@import "./common/product-card.scss";
+@import "./common/cards.scss";
+@import "./common/sales.scss";
+@import "./common/main-news.scss";
+@import "./common/news-card.scss";
+@import "./common/about-block.scss";
 
 // @media screen and (max-width: 1274px) {
 
@@ -175,6 +199,18 @@ main {
 
 // }
 
-// @media screen and (max-width: 768px) {
-
-// }
+@media screen and (max-width: 767.98px) {
+	.title-first, .title-second {
+		font-size: 28px;
+	}
+	.title-third {
+		font-size: 18px;
+	}
+	.mb-90 {
+		margin-bottom: 45px;
+	}
+	
+	.mb-60 {
+		margin-bottom: 30px;
+	}
+}
