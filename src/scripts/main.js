@@ -36,7 +36,8 @@ if (tabIdList) {
 	}
 }
 
-const swiper = new Swiper('[data-swiper="one-slide"]', {
+//sliders
+const swiper = new Swiper('.swiper-oneslide', {
 	// Optional parameters
 	loop: true,
 	speed: 500,
@@ -53,11 +54,50 @@ const swiper = new Swiper('[data-swiper="one-slide"]', {
 	},
 })
 
+const cardsSwiper = new Swiper('.cards__slider .swiper-fourslide', {
+	// Optional parameters
+	loop: false,
+	speed: 500,
+	slidesPerView: 1,
+	spaceBetween: 20,
+
+	breakpoints: {
+		500: {
+			slidesPerView: 2,
+		},
+		700: {
+			slidesPerView: 3,
+		},
+		1024: {
+			slidesPerView: 4,
+		}
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.cards__slider .swiper-button-next',
+		prevEl: '.cards__slider .swiper-button-prev',
+	},
+})
+
+const swiperWithoutPag = new Swiper('.sales__slider .swiper-container', {
+	// Optional parameters
+	loop: true,
+	speed: 500,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.sales__slider .swiper-button-next',
+		prevEl: '.sales__slider .swiper-button-prev',
+	},
+})
+
 //header
 const toggleFullMenu = document.querySelectorAll('[data-catalog-toggle]');
 const closeBtn = document.querySelector('[data-close]');
 const searchBtn = document.querySelector('.search-form__btn');
 const burgerBtn = document.querySelector('[data-burger]')
+const moreBtn = document.querySelector('[data-more-text]');
 
 window.onclick = (event) => {
 	const fullMenu = document.querySelector('[data-full-menu');
@@ -88,6 +128,16 @@ window.onclick = (event) => {
 			body.style.overflow = 'hidden'
 		} else {
 			body.removeAttribute('style')
+		}
+	}
+
+	if (event.target == moreBtn) {
+		moreBtn.previousElementSibling.classList.toggle('isOpen');
+
+		if (moreBtn.previousElementSibling.classList.contains('isOpen')) {
+			moreBtn.innerHTML = 'Свернуть'
+		} else {
+			moreBtn.innerHTML = 'Развернуть'
 		}
 	}
 }

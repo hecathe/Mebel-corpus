@@ -1,20 +1,49 @@
 .main-slider {
     position: relative;
 
+    &__item {
+        height: 600px;
+        background-color: var(--color-background);
+    }
+
     &__img {
+        position: absolute;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 66px;
+    }
+
+    .main-slider__btns {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 11;
+        pointer-events: none;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            pointer-events: auto;
+        }
     }
 
     &__text-wrap {
-        position: absolute;
-        top: 66px;
-        right: 50px;
+        margin-right: 50px;
     }
 
     &__title {
         display: flex;
         flex-direction: column;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
     }
 
     &__small {
@@ -32,7 +61,14 @@
         line-height: 100%;
     }
 
+    &__button {
+        margin-top: 30px;
+    }
+
     &__sale-wrap {
+        position: absolute;
+        right: 78px;
+        bottom: 66px;
         width: 170px;
         height: 170px;
         display: flex;
@@ -88,4 +124,44 @@
 
 .swiper-pagination-bullet {
     background: var(--color-primary);
+}
+
+@media screen and (max-width: 767.98px) {
+    .main-slider {
+        &__item {
+            height: 300px;
+        }
+
+        .container {
+            justify-content: center;
+            padding: 30px 40px;
+        }
+
+        &__text-wrap {
+            margin-right: 0;
+        }
+
+        &__small {
+            font-size: 23px;
+        }
+
+        &__big {
+            font-size: 32px;
+        }
+
+        &__middle {
+            font-size: 27px;
+        }
+
+        &__button {
+            position: relative;
+            margin-top: 50px;
+            z-index: 1;
+        }
+
+        &__sale-wrap {
+            right: -30px;
+            bottom: -30px;
+        }
+    }
 }

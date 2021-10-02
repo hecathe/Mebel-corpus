@@ -7,7 +7,7 @@ block content
     main
         // Слайдер
         section.main-slider.mb-90
-            .swiper-container(data-swiper="one-slide")
+            .swiper-container.swiper-oneslide
                 .swiper-wrapper 
                     .swiper-slide
                         .main-slider__item
@@ -36,8 +36,9 @@ block content
                                         span.main-slider__sale-caption Скидка
                                         span.main-slider__sale-val 30%
                 .swiper-pagination
-                .swiper-button-prev
-                .swiper-button-next
+                .main-slider__btns.container
+                    .swiper-button-prev
+                    .swiper-button-next
 
         // Каталог
         section.main-catalog.mb-90
@@ -64,25 +65,84 @@ block content
                                 .main-catalog__btn.button Перейти
                     li.main-catalog__item.main-catalog__item--w50
                         a.main-catalog__link(href="#")
-                            img.main-catalog__img(src="#", alt="")
+                            img.main-catalog__img(src="assets/images/Rectangle334-min.jpg", alt="")
                             .main-catalog__wrap
                                 h3.main-catalog__caption.title-third Мягкая мебель
                                 .main-catalog__btn.button Перейти
                     li.main-catalog__item.main-catalog__item--w33
                         a.main-catalog__link(href="#")
-                            img.main-catalog__img(src="#", alt="")
+                            img.main-catalog__img(src="assets/images/Rectangle339-min.jpg", alt="")
                             .main-catalog__wrap
                                 h3.main-catalog__caption.title-third Кабинет
                                 .main-catalog__btn.button Перейти
                     li.main-catalog__item.main-catalog__item--w33
                         a.main-catalog__link(href="#")
-                            img.main-catalog__img(src="#", alt="")
+                            img.main-catalog__img(src="assets/images/Rectangle325-min.jpg", alt="")
                             .main-catalog__wrap
                                 h3.main-catalog__caption.title-third Мебель для спальни
                                 .main-catalog__btn.button Перейти
                     li.main-catalog__item.main-catalog__item--w33
                         a.main-catalog__link(href="#")
-                            img.main-catalog__img(src="#", alt="")
+                            img.main-catalog__img(src="assets/images/Rectangle324-min.jpg", alt="")
                             .main-catalog__wrap
                                 h3.main-catalog__caption.title-third Прихожие
                                 .main-catalog__btn.button Перейти
+
+        // Новинки
+        section.cards.mb-90
+            .container
+                .cards__header.title-wb.mb-60
+                    h2.title-second Новинки
+                    a.cards__more.title-wb__link(href="#") Смотреть все
+                .cards__slider
+                    .swiper-container.swiper-fourslide
+                        ul.cards__list.product-cards.swiper-wrapper
+                            li.product-cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.product-cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.product-cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.product-cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.product-cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.product-cards__item.swiper-slide
+                                include  ../components/product-card
+                    .swiper-button-prev
+                    .swiper-button-next
+
+        // Скидки и акции
+        section.sales.mb-90
+            .container
+                .sales__header.title-wb.mb-60
+                    h2.title-second Скидки и акции
+                    a.sales__more.title-wb__link(href="#") Смотреть все
+                .sales__slider
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                .sales__item
+                                    img.sales__img(src="assets/images/sales-banner-min.jpg", alt="")
+                                    .sales__text-wrap
+                                        .sales__caption Новая коллекция диванов со скидками до 30%
+                                        a.sales__btn.button(href="#") Перейти к скидкам
+                    .swiper-button-prev
+                    .swiper-button-next
+
+        // Новости
+        section.main-news.mb-90
+            .container
+                .main-news__header.title-wb.mb-60
+                    h2.main-news__title.title-second Новости
+                    a.main-news__more.title-wb__link(href="#") Смотреть все
+                ul.main-news__list.news-cards
+                    li.news-cards__item
+                        include ../components/news-card
+                    li.news-cards__item
+                        include ../components/news-card
+                    li.news-cards__item
+                        include ../components/news-card
+
+        // О компании
+        include ../components/about-block
