@@ -1,0 +1,24 @@
+.breadcrumbs {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    @include list-reset;
+
+    &__link {
+        color: var(--color-black);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    &__active {
+        color: var(--color-bc);
+    }
+}

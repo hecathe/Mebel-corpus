@@ -179,6 +179,7 @@ main {
 @import "./common/header.scss";
 @import "./pages/index.scss";
 @import "./common/footer.scss";
+@import "./common/breadcrumbs.scss";
 
 //components
 // main page
@@ -190,6 +191,9 @@ main {
 @import "./common/main-news.scss";
 @import "./common/news-card.scss";
 @import "./common/about-block.scss";
+
+//catalog page
+@import "./common/catalog.scss";
 
 // @media screen and (max-width: 1274px) {
 

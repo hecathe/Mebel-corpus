@@ -1,0 +1,79 @@
+extends ../template
+
+block variables
+    - var title = 'Каталог'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        // Каталог
+        section.catalog.mb-90
+            .container
+                h1.title-first.mb-60 Каталог
+                ul.catalog__list.catalog-menu
+                    li.catalog-menu__item
+                        .main-catalog__card
+                            img.main-catalog__img(src="assets/images/Rectangle323-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Мебель для гостинной
+                                ul.catalog-menu__inner-list.catalog-all
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Стенки
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Журнальные столы
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Шкафы
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Мягкая мебель
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Тумбы ТВ
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Стулья
+                                a.main-catalog__btn.button(href="#") Смотреть все
+                    li.catalog-menu__item
+                        .main-catalog__card
+                            img.main-catalog__img(src="assets/images/Rectangle324-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Прихожие
+                                ul.catalog-menu__inner-list.catalog-all
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Модульные прихожие
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Готовые решения
+                                    li.catalog-all__item
+                                        a.catalog-all__link(href="#") Обувницы
+                                a.main-catalog__btn.button(href="#") Смотреть все
+                    li.catalog-menu__item
+                        a.main-catalog__card(href="#")
+                            img.main-catalog__img(src="assets/images/Rectangle325-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Мебель для спальни
+                                .main-catalog__btn.button Смотреть все
+                    li.catalog-menu__item
+                        a.main-catalog__card(href="#")
+                            img.main-catalog__img(src="assets/images/Rectangle323-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Мебель для кухни
+                                .main-catalog__btn.button Смотреть все
+                    li.catalog-menu__item
+                        a.main-catalog__card(href="#")
+                            img.main-catalog__img(src="assets/images/Rectangle340-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Детская мебель
+                                .main-catalog__btn.button Смотреть все
+                    li.catalog-menu__item
+                        a.main-catalog__card(href="#")
+                            img.main-catalog__img(src="assets/images/Rectangle334-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Мягкая мебель
+                                .main-catalog__btn.button Смотреть все
+                    li.catalog-menu__item
+                        a.main-catalog__card(href="#")
+                            img.main-catalog__img(src="assets/images/Rectangle339-min.jpg", alt="")
+                            .main-catalog__wrap
+                                h3.main-catalog__caption.title-third Кабинет
+                                .main-catalog__btn.button Смотреть все
+                    
+
+        include ../components/about-block.pug
