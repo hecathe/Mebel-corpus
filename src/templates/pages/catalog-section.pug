@@ -8,14 +8,14 @@ block content
         include ../components/breadcrumbs.pug
 
         // Каталог
-        section.catalog-section
+        section.catalog-section.mb-90
             .container
                 h1.catalog-section__title.title-first.mb-60 Мебель для гостинной
                 .catalog-section__wrap
                     .catalog-section__aside.catalog-aside
                         ul.catalog-aside__list
                             li.catalog-aside__item
-                                a.catalog-aside__link(href="#") Стенки
+                                a.catalog-aside__link.active(href="#") Стенки
                             li.catalog-aside__item
                                 a.catalog-aside__link(href="#") Модульные гостиные
                             li.catalog-aside__item
@@ -43,17 +43,40 @@ block content
                             .filter-menu__select
                                 select(name="")
                                     option(value="") Сортировка
-                            .filter-menu__select
-                                select(name="")
+                                    option(value="") Сортировка
                                     option(value="") Сортировка
                             .filter-menu__select
                                 select(name="")
-                                    option(value="") Сортировка
+                                    option(value="") Цена
+                            .filter-menu__select
+                                select(name="")
+                                    option(value="") Материал
                             button.filter-menu__btn
+                                svg(width="12" height="12")
+                                    use(xlink:href="assets/images/sprite.svg#settings")
                                 span Фильтр
                         ul.catalog-section__grid.catalog-list
                             li.catalog-list__item
                                 include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                        
+                        .catalog-section__bottom
+                            include ../components/pagination.pug
 
 
 

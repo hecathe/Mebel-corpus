@@ -1,0 +1,46 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 10px;
+        @include list-reset;
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--color-main-text);
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        transition: color 150ms ease-in-out;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        &.active {
+            color: var(--color-white);
+            background-color: var(--color-primary);
+        }
+    }
+
+    &__nav {
+        &:hover {
+            svg {
+                --arrows-color: #{var(--color-primary)};
+            }
+        }
+    }
+
+    &__nav--next {
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+}
