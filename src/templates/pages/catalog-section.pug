@@ -1,0 +1,61 @@
+extends ../template
+
+block variables
+    - var title = 'Раздел каталога'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        // Каталог
+        section.catalog-section
+            .container
+                h1.catalog-section__title.title-first.mb-60 Мебель для гостинной
+                .catalog-section__wrap
+                    .catalog-section__aside.catalog-aside
+                        ul.catalog-aside__list
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Стенки
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Модульные гостиные
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Тумбы под телевизор
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Журнальные столики
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Письменные столы
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Компьютерные столы
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Обеденные столы
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Столы книжки
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Офисные стулья
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Офисные и рабочие кресла
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Навесные полки
+                            li.catalog-aside__item
+                                a.catalog-aside__link(href="#") Стеллажи
+                    .catalog-section__content
+                        .catalog-section__filter-menu.filter-menu
+                            .filter-menu__select
+                                select(name="")
+                                    option(value="") Сортировка
+                            .filter-menu__select
+                                select(name="")
+                                    option(value="") Сортировка
+                            .filter-menu__select
+                                select(name="")
+                                    option(value="") Сортировка
+                            button.filter-menu__btn
+                                span Фильтр
+                        ul.catalog-section__grid.catalog-list
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+
+
+
+
+        include ../components/about-block.pug
