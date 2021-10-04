@@ -176,12 +176,13 @@ main {
 	margin-bottom: 60px;
 }
 
+// components
 @import "./common/header.scss";
 @import "./pages/index.scss";
 @import "./common/footer.scss";
 @import "./common/breadcrumbs.scss";
+@import "./common/pagination.scss";
 
-//components
 // main page
 @import "./common/main-slider.scss";
 @import "./common/main-catalog.scss";
@@ -194,6 +195,9 @@ main {
 
 //catalog page
 @import "./common/catalog.scss";
+
+//catalog section
+@import "./pages/catalog-section.scss";
 
 // @media screen and (max-width: 1274px) {
 
