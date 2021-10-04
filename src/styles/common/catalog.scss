@@ -43,6 +43,7 @@
 @media screen and (max-width: 975px) {
     .catalog-menu {
         grid-template-columns: 1fr;
+        row-gap: 20px;
 
         .main-catalog__card {
             padding: 20px;
