@@ -1,4 +1,5 @@
 const gulp = require("gulp");
+const uglify = require('gulp-uglify');
 const gulpif = require("gulp-if");
 const pug = require("gulp-pug");
 const del = require("del");
