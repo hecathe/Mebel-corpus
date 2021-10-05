@@ -92,15 +92,17 @@ const swiperWithoutPag = new Swiper('.sales__slider .swiper-container', {
 	},
 })
 
-//header
 const toggleFullMenu = document.querySelectorAll('[data-catalog-toggle]');
 const closeBtn = document.querySelector('[data-close]');
 const searchBtn = document.querySelector('.search-form__btn');
 const burgerBtn = document.querySelector('[data-burger]')
 const moreBtn = document.querySelector('[data-more-text]');
+const filterBtn = document.querySelector('[data-filter-menu]');
 
 window.onclick = (event) => {
+	//header
 	const fullMenu = document.querySelector('[data-full-menu');
+	const body = document.body;
 
 	toggleFullMenu.forEach((item) => {
 		if (event.target == item) {
@@ -120,8 +122,6 @@ window.onclick = (event) => {
 
 	if (event.target == burgerBtn) {
 		const header = document.querySelector('.header')
-		const body = document.body;
-
 		header.classList.toggle('active')
 
 		if (header.classList.contains('active')) {
@@ -131,6 +131,7 @@ window.onclick = (event) => {
 		}
 	}
 
+	//about block
 	if (event.target == moreBtn) {
 		moreBtn.previousElementSibling.classList.toggle('isOpen');
 
@@ -140,5 +141,44 @@ window.onclick = (event) => {
 			moreBtn.innerHTML = 'Развернуть'
 		}
 	}
+
+	//open filter
+	const fullFilter = document.querySelector('.full-filter');
+	const closeFilter = fullFilter.querySelector('[data-close]');
+
+	if (event.target == filterBtn) {
+		fullFilter.classList.add('active')
+		openedWindow(fullFilter)
+		// body.style.overflow = 'hidden'
+
+	} else if (event.target == closeFilter) {
+		fullFilter.classList.remove('active')
+		closeWindow(fullFilter)
+	}
+
+	if (fullFilter.classList.contains('active')) {
+		closeWindow(fullFilter)
+	}
 }
 
+function openedWindow(elem) {
+	let overlayForClose = document.querySelector('.overlay')
+
+	if (elem.classList.contains('active')) {
+		overlayForClose.classList.add('active')
+	}
+}
+
+function closeWindow(elem) {
+	let overlayForClose = document.querySelector('.overlay')
+	
+	if (!elem.classList.contains('active')) {
+		overlayForClose.classList.remove('active');
+	}
+
+	overlayForClose.addEventListener('click', function(event) {
+		elem.classList.remove('active')
+		overlayForClose.classList.remove('active')
+		// body.removeAttribute('style')
+	})
+}

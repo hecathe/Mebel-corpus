@@ -38,23 +38,29 @@ block content
                                 a.catalog-aside__link(href="#") Навесные полки
                             li.catalog-aside__item
                                 a.catalog-aside__link(href="#") Стеллажи
+                                
                     .catalog-section__content
                         .catalog-section__filter-menu.filter-menu
-                            .filter-menu__select
-                                select(name="")
+                            .filter-menu__select-wrap
+                                select.filter-menu__select(name="")
                                     option(value="") Сортировка
-                                    option(value="") Сортировка
-                                    option(value="") Сортировка
-                            .filter-menu__select
-                                select(name="")
+                                    option(value="") По наименованию
+                                    option(value="") По популярности
+                            .filter-menu__select-wrap
+                                select.filter-menu__select(name="")
                                     option(value="") Цена
-                            .filter-menu__select
-                                select(name="")
+                                    option(value="") Недорогие
+                                    option(value="") Дорогие
+                            .filter-menu__select-wrap
+                                select.filter-menu__select(name="")
                                     option(value="") Материал
-                            button.filter-menu__btn
+                                    option(value="") Дерево
+                            button.filter-menu__btn(data-filter-menu)
                                 svg(width="12" height="12")
                                     use(xlink:href="assets/images/sprite.svg#settings")
                                 span Фильтр
+
+                        // Сетка каталога
                         ul.catalog-section__grid.catalog-list
                             li.catalog-list__item
                                 include ../components/product-card.pug
@@ -75,10 +81,98 @@ block content
                             li.catalog-list__item
                                 include ../components/product-card.pug
                         
+                        // Пагинация
                         .catalog-section__bottom
                             include ../components/pagination.pug
+                        
+                        // Выезжающий фильтр
+                        .catalog-section__full-filter.full-filter
+                            button.full-filter__btn.button-close(data-close)
+                                svg(width="24" height="24")
+                                    use(xlink:href="assets/images/sprite.svg#close")
+                            form.full-filter__form
+                                .full-filter__title Все фильтры
+                                .full-filter__wrapper
+                                    .full-filter__select.filter-menu__select-wrap
+                                        select.filter-menu__select(name="")
+                                            option(value="") Город
+                                            option(value="") Санкт-Петербург
+                                            option(value="") Москва
+                                            option(value="") Краснодар
+                                    label.full-filter__label.checkbox
+                                        input.checkbox__input.visually-hidden(type="checkbox" name="sale" value="")
+                                        span.checkbox__caption Акционный товар
 
+                                fieldset.full-filter__group.full-filter__group--col
+                                    legend.full-filter__caption Производитель
+                                    label.full-filter__label.checkbox
+                                        input.checkbox__input.visually-hidden(type="checkbox" name="manufacturer" value="standmebel")
+                                        span.checkbox__caption Стендмебель
+                                    label.full-filter__label.checkbox
+                                        input.checkbox__input.visually-hidden(type="checkbox" name="manufacturer" value="mif")
+                                        span.checkbox__caption МИФ
+                                    label.full-filter__label.checkbox
+                                        input.checkbox__input.visually-hidden(type="checkbox" name="manufacturer" value="tex")
+                                        span.checkbox__caption Текс
+                                    label.full-filter__label.checkbox
+                                        input.checkbox__input.visually-hidden(type="checkbox" name="manufacturer" value="interior-center")
+                                        span.checkbox__caption Интерьер центр
+                                    label.full-filter__label.checkbox
+                                        input.checkbox__input.visually-hidden(type="checkbox" name="manufacturer" value="ololo")
+                                        span.checkbox__caption Интерьер центр
+                                    
+                                    button.full-filter__more-btn(type="button")
+                                        span еще 10
+                                        svg(width="10" height="10")
+                                            use(xlink:href="assets/images/sprite.svg#arrow-downward")
 
+                                fieldset.full-filter__group.full-filter__group--row
+                                    legend.full-filter__caption Ширина (мм)
+                                    .full-filter__wrap
+                                        label.full-filter__range
+                                            span От
+                                            input(type="number" min="0" placeholder="1 000")
+                                        label.full-filter__range
+                                            span До
+                                            input(type="number" min="0" placeholder="250 000")
+                                
+                                fieldset.full-filter__group.full-filter__group--row
+                                    legend.full-filter__caption Длина (мм)
+                                    .full-filter__wrap
+                                        label.full-filter__range
+                                            span От
+                                            input(type="number" min="0" max="100000" placeholder="1 000")
+                                        label.full-filter__range
+                                            span До
+                                            input(type="number" min="0" placeholder="250 000")
+                                
+                                fieldset.full-filter__group.full-filter__group--row
+                                    legend.full-filter__caption Высота (мм)
+                                    .full-filter__wrap
+                                        label.full-filter__range
+                                            span От
+                                            input(type="number" min="0" placeholder="1 000")
+                                        label.full-filter__range
+                                            span До
+                                            input(type="number" min="0" placeholder="250 000")
 
+                                fieldset.full-filter__group.full-filter__group--row
+                                    legend.full-filter__caption Цена (мм)
+                                    .full-filter__wrap
+                                        label.full-filter__range
+                                            span От
+                                            input(type="number" min="0" placeholder="1 000")
+                                        label.full-filter__range
+                                            span До
+                                            input(type="number" min="0" placeholder="250 000")
+                                
+                                .full-filter__radios
+                                    label.full-filter__label.radio-btn
+                                        input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                        span.radio-btn__caption Оптовые цены
+                                    label.full-filter__label.radio-btn
+                                        input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                        span.radio-btn__caption Розничные цены
+                                button.full-filter__reset-btn(type="reset") Сбросить фильтры
 
         include ../components/about-block.pug
