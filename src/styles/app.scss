@@ -257,6 +257,7 @@ main {
 @import "./common/footer.scss";
 @import "./common/breadcrumbs.scss";
 @import "./common/pagination.scss";
+@import "./common/accordion.scss";
 
 // main page
 @import "./common/main-slider.scss";
@@ -276,6 +277,9 @@ main {
 
 //catalog item
 @import "./pages/catalog-item.scss";
+
+//catalog item
+@import "./pages/about-company.scss";
 
 // @media screen and (max-width: 1274px) {
 
