@@ -3,6 +3,10 @@
         position: relative;
     }
 
+    &__list {
+        @include list-reset;
+    }
+
     .swiper-button-prev,
     .swiper-button-next {
         top: 35%;

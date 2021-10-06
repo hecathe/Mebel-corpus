@@ -1,0 +1,116 @@
+extends ../template
+
+block variables
+    - var title = 'Раздел каталога'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        // Карточка товара
+        section.catalog-item.mb-90
+            .container
+                .catalog-item__wrap.mb-90
+                    .catalog-item__slider
+                        .swiper-container.swiper-with-thumbs
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .catalog-item__slide.spotlight(data-src="assets/images/catalog-item.jpg")
+                                        img(src="assets/images/catalog-item.jpg", alt="")
+                                .swiper-slide
+                                    .catalog-item__slide.spotlight(data-src="assets/images/catalog-item-2.png")
+                                        img(src="assets/images/catalog-item-2.png", alt="")
+                            .swiper-button-prev
+                            .swiper-button-next
+                        .swiper-container.swiper-thumbs(thumbsSlider="")
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .catalog-item__slide
+                                        img(src="assets/images/catalog-item.jpg", alt="")
+                                .swiper-slide
+                                    .catalog-item__slide
+                                        img(src="assets/images/catalog-item-2.png", alt="")
+
+                    .catalog-item__info
+                        h1.catalog-item__title.title-first Гостиная "Лима"
+                        .catalog-item__list
+                            .catalog-item__row
+                                span Артикул:
+                                span 107203
+                            .catalog-item__row
+                                span Остаток на складе:
+                                span.catalog-item__value 12 шт.
+                        .catalog-item__price
+                            span.catalog-item__new-price 125 000 ₽
+                            span.catalog-item__old-price 165 000 ₽
+                        .catalog-item__radios
+                            label.catalog-item__label.radio-btn
+                                input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                span.radio-btn__caption Оптовые цены
+                            label.catalog-item__label.radio-btn
+                                input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                span.radio-btn__caption Розничные цены
+                        .catalog-item__color.mb-60
+                            span.catalog-item__caption Цвет
+                            span.catalog-item__desc Венге – Дуб белфорд
+                            ul.catalog-item__color-list.color-list
+                                li.color-list__item
+                                    img.color-list__img(src="assets/images/color-1.jpg", alt="")
+                                li.color-list__item
+                                    img.color-list__img(src="assets/images/color-2.jpg", alt="")
+                                li.color-list__item
+                                    img.color-list__img(src="assets/images/color-1.jpg", alt="")
+                                li.color-list__item
+                                    img.color-list__img(src="assets/images/color-2.jpg", alt="")
+                        .catalog-item__btn-wrap
+                            button.catalog-item__btn.catalog-item__btn--cart.button
+                                svg(width="21" height="21")
+                                    use(xlink:href="assets/images/sprite.svg#cart")
+                                span В корзину
+                            button.catalog-item__btn.button.button--ghost
+                                span Добавить в избранное
+
+                .catalog-item__tab-wrap.tab
+                    ul.tab__nav
+                        li.tab__item
+                            button.tab__btn(type="button" data-tab-id="tabId1" data-tab-control="tab1") Описание
+                        li.tab__item
+                            button.tab__btn(type="button" data-tab-id="tabId1" data-tab-control="tab2") Характеристики
+                        li.tab__item
+                            button.tab__btn(type="button" data-tab-id="tabId1" data-tab-control="tab3") Доставка
+                    
+                    .tab__content
+                        .tab__block(data-tab-id="tabId1" data-tab-block="tab1")
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            p Tempus sem dignissim tortor, habitant varius sed. Porttitor id facilisis maecenas eget. 
+                            p Nisl neque fermentum vitae dolor tortor viverra porttitor rhoncus, elementum.
+                        .tab__block(data-tab-id="tabId1" data-tab-block="tab2")
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            p Tempus sem dignissim tortor, habitant varius sed. Porttitor id facilisis maecenas eget. 
+                        .tab__block(data-tab-id="tabId1" data-tab-block="tab3")
+                            p Nisl neque fermentum vitae dolor tortor viverra porttitor rhoncus, elementum.
+
+        // Похожие товары
+        section.cards.mb-90
+            .container
+                .cards__header.mb-60
+                    h2.title-second Похожие товары
+                .cards__slider
+                    .swiper-container.swiper-fourslide
+                        ul.cards__list.swiper-wrapper
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                    .swiper-button-prev
+                    .swiper-button-next
+
+        include ../components/about-block.pug

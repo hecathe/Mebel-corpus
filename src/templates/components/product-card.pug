@@ -1,17 +1,21 @@
-a(href="#").product-cards__link
-    img.product-cards__img(src="assets/images/card-min.jpg" alt="")
-    .product-cards__info
-        span.product-cards__caption Наименование товара в одну или две строки
-        .product-cards__wrap
-            .product-cards__row
-                span.product-cards__term Размеры: 
-                span.product-cards__value 2000х2700х500 (ШхВхГ)
-            .product-cards__row
-                span.product-cards__term Остаток на складе: 
-                span.product-cards__value.product-cards__value--weight 12 шт
-        .product-cards__bot
-            .product-cards__price 125 000 ₽
-            .product-cards__btn.button
-                svg(width="21" height="21")
-                    use(xlink:href="assets/images/sprite.svg#cart")
-                span В корзину
+.product-card
+    a(href="#").product-card__link
+        img.product-card__img(src="assets/images/card-min.jpg" alt="")
+        .product-card__info
+            span.product-card__caption Наименование товара в одну или две строки
+            .product-card__wrap
+                .product-card__row
+                    span.product-card__term Размеры: 
+                    span.product-card__value 2000х2700х500 (ШхВхГ)
+                .product-card__row
+                    span.product-card__term Остаток на складе: 
+                    span.product-card__value.product-card__value--weight 12 шт
+            .product-card__bot
+                .product-card__price 125 000 ₽
+                .product-card__btn.button
+                    svg(width="21" height="21")
+                        use(xlink:href="assets/images/sprite.svg#cart")
+                    span В корзину
+    button.product-card__like-btn(aria-label="Добавить в избранное")
+        svg(width="20" height="20")
+            use(xlink:href="assets/images/sprite.svg#heart")
