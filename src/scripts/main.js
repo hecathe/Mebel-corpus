@@ -92,6 +92,27 @@ const swiperWithoutPag = new Swiper('.sales__slider .swiper-container', {
 	},
 })
 
+const thumbsSwiper = new Swiper('.swiper-thumbs', {
+	// Optional parameters
+	speed: 500,
+	slidesPerView: 5,
+	spaceBetween: 20,
+})
+const sliderWithThumbs = new Swiper('.swiper-with-thumbs', {
+	// Optional parameters
+	speed: 500,
+	allowTouchMove: false,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-with-thumbs .swiper-button-next',
+		prevEl: '.swiper-with-thumbs .swiper-button-prev',
+	},
+	thumbs: {
+		swiper: thumbsSwiper,
+	}
+})
+
 const toggleFullMenu = document.querySelectorAll('[data-catalog-toggle]');
 const closeBtn = document.querySelector('[data-close]');
 const searchBtn = document.querySelector('.search-form__btn');
@@ -144,21 +165,24 @@ window.onclick = (event) => {
 
 	//open filter
 	const fullFilter = document.querySelector('.full-filter');
-	const closeFilter = fullFilter.querySelector('[data-close]');
-
-	if (event.target == filterBtn) {
-		fullFilter.classList.add('active')
-		openedWindow(fullFilter)
-		// body.style.overflow = 'hidden'
-
-	} else if (event.target == closeFilter) {
-		fullFilter.classList.remove('active')
-		closeWindow(fullFilter)
+	
+	if (fullFilter) {
+		const closeFilter = fullFilter.querySelector('[data-close]');
+		if (event.target == filterBtn) {
+			fullFilter.classList.add('active')
+			openedWindow(fullFilter)
+			// body.style.overflow = 'hidden'
+	
+		} else if (event.target == closeFilter) {
+			fullFilter.classList.remove('active')
+			closeWindow(fullFilter)
+		}
+	
+		if (fullFilter.classList.contains('active')) {
+			closeWindow(fullFilter)
+		}
 	}
-
-	if (fullFilter.classList.contains('active')) {
-		closeWindow(fullFilter)
-	}
+	
 }
 
 function openedWindow(elem) {

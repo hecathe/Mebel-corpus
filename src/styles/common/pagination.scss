@@ -12,6 +12,7 @@
     }
 
     &__link {
+        display: flex;
         font-size: 16px;
         line-height: 22px;
         color: var(--color-main-text);
@@ -41,6 +42,17 @@
     &__nav--next {
         svg {
             transform: rotate(-180deg);
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .pagination {
+        flex-direction: column;
+        row-gap: 15px;
+
+        &__btn {
+            width: 100%;
         }
     }
 }

@@ -1,7 +1,8 @@
-.product-cards {
-    @include list-reset;
+.product-card {
+    position: relative;
 
     &__link {
+        position: relative;
         display: grid;
         color: var(--color-main-text);
         text-decoration: none;
@@ -12,6 +13,25 @@
         height: 270px;
         object-fit: cover;
         background-color: var(--color-background);
+    }
+
+    &__like-btn {
+        position: absolute;
+        top: 13px;
+        right: 12px;
+        @include button-reset;
+        z-index: 5;
+
+        svg {
+            --heart-fill: transparent;
+        }
+
+        &:hover {
+            svg {
+                --heart-fill: #{var(--color-primary)};
+                --heart-stroke: #{var(--color-primary)};
+            }
+        }
     }
 
     &__info {

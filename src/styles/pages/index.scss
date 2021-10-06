@@ -1,7 +1,9 @@
 .site-map {
-    border-collapse: collapse;
-    margin: 30px 0;
-
+    &__table {
+        border-collapse: collapse;
+        margin: 30px 0;
+    }
+    
     &__cell {
         border: 1px solid #000000;
         padding: 15px;
@@ -15,6 +17,14 @@
 
         &:hover {
             color: var(--color-primary);
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .site-map {
+        &__row {
+            display: grid;
         }
     }
 }
