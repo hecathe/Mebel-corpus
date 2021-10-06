@@ -206,3 +206,7 @@ function closeWindow(elem) {
 		// body.removeAttribute('style')
 	})
 }
+
+if (document.querySelectorAll('.accordion').length) {
+	new Accordion('.accordion');
+}
