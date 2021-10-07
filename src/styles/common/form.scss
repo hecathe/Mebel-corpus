@@ -1,0 +1,19 @@
+.form {
+    &__item {
+        display: grid;
+        row-gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__input {
+        border: 1px solid var(--standart-grey);
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        outline: none;
+
+        &:focus {
+            border-color: var(--color-primary);
+        }
+    }
+}
