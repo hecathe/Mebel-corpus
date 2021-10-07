@@ -185,17 +185,16 @@ window.onclick = (event) => {
 	
 }
 
-function openedWindow(elem) {
-	let overlayForClose = document.querySelector('.overlay')
 
+let overlayForClose = document.querySelector('.overlay')
+
+function openedWindow(elem) {
 	if (elem.classList.contains('active')) {
 		overlayForClose.classList.add('active')
 	}
 }
 
 function closeWindow(elem) {
-	let overlayForClose = document.querySelector('.overlay')
-	
 	if (!elem.classList.contains('active')) {
 		overlayForClose.classList.remove('active');
 	}
