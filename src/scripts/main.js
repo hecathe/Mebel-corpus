@@ -208,5 +208,13 @@ function closeWindow(elem) {
 }
 
 if (document.querySelectorAll('.accordion').length) {
-	new Accordion('.accordion');
+	const newBtn = document.querySelectorAll('.accordion__btn');
+	const accordion = new Accordion('.accordion');
+
+	newBtn.forEach((item) => {
+
+		item.addEventListener('click', function() {
+			accordion.open()
+		})
+	})
 }
