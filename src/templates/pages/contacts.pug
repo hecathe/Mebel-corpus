@@ -1,0 +1,42 @@
+extends ../template
+
+block variables
+    - var title = 'Контакты'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.contacts.mb-90
+            .container
+                h1.contacts__title.title-first.mb-60 Контакты
+                .contacts__map
+                    .contacts__side
+                        .contacts__select
+                            select(name="map-select")
+                                option(value="59.808459, 30.459113") ТД Андрей Санкт-Петербург
+                                option(value="55.947616, 37.773673") ТД Андрей Москва
+                                option(value="45.035477, 39.045427") ТД Андрей Краснодар
+                            svg(width="24" height="24")
+                                use(xlink:href="assets/images/sprite.svg#arrow-downward")
+                        .contacts__content
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#location")
+                                address.contacts__address Николаевский проезд, дом 37
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#telephone-fill")
+                                .contacts__
+                                    a.contacts__tel(href="tel:+7 (812) 309 31 54") +7 (812) 309 31 54 
+                                    span (многоканальный)
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#email")
+                                a(href="mailto:info@mebelcorpus.ru") info@mebelcorpus.ru
+
+                    .map#map
+
+
+        // О компании блок
+        include ../components/about-block.pug
