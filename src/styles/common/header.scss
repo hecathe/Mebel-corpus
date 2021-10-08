@@ -181,8 +181,8 @@
 }
 
 .full-menu {
-    min-height: 100%;
-    position: absolute;
+    height: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -190,6 +190,7 @@
     z-index: 12;
     transform: translateY(-100%);
     transition: transform 300ms ease-in-out;
+    overflow-y: auto;
 
     &.show {
         transform: translateY(0);
