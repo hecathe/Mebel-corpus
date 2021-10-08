@@ -42,7 +42,7 @@ block content
                                     p Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Рendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis.
                                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                     p Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Рendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis.
-                                    button.accordion__content-btn.button Откликнуться на вакансию
+                                    button.accordion__content-btn.button(data-modal-trigger="vacancy-form") Откликнуться на вакансию
                             button.accordion__btn.ac-trigger
                                 svg(width="30" height="30")
                                     use(xlink:href="assets/images/sprite.svg#arrow-incircle")
@@ -61,7 +61,7 @@ block content
                                     p Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Рendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis.
                                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                     p Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Рendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis.
-                                    button.accordion__content-btn.button Откликнуться на вакансию
+                                    button.accordion__content-btn.button(data-modal-trigger="vacancy-form") Откликнуться на вакансию
                             button.accordion__btn.ac-trigger
                                 svg(width="30" height="30")
                                     use(xlink:href="assets/images/sprite.svg#arrow-incircle")
@@ -80,12 +80,12 @@ block content
                                     p Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Рendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis.
                                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                     p Hendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis. Рendrerit viverra est euismod velit nec. Ridiculus at quam id elementum vulputate sagittis.
-                                    button.accordion__content-btn.button Откликнуться на вакансию
+                                    button.accordion__content-btn.button(data-modal-trigger="vacancy-form") Откликнуться на вакансию
                             button.accordion__btn.ac-trigger
                                 svg(width="30" height="30")
                                     use(xlink:href="assets/images/sprite.svg#arrow-incircle")
 
-                    .vacancy__window.modal
+                    .vacancy__window.modal#vacancy-form
                         .modal__container
                             h2.modal__title.title-second Отклик на вакансию
                             p.modal__value Руководитель отдела продаж
@@ -108,9 +108,14 @@ block content
                                     label.form__label(for="form-comment") Сообщение
                                     input.form__input(id="form-comment" type="comment" name="comment")
                                 
-                                label.form__file
-                                    input(type="file", name="file")
+                                .form__file(data-file-field)
+                                    input.visually-hidden(id="form-file" type="file", name="file")
+                                    label(for="form-file") 
+                                        span Прикрепить резюме
+                                        svg(width="24" height="24")
+                                            use(xlink:href="assets/images/sprite.svg#attach")
+                                    span Информация о поддерживаемых форматах и максимально-возможному весу файлов
                                 
-                                button(type="submit").button Отправить
+                                button(type="submit").form__submit-btn.button Отправить
 
         include ../components/about-block.pug

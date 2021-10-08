@@ -55,7 +55,7 @@ block content
                                 select.filter-menu__select(name="")
                                     option(value="") Материал
                                     option(value="") Дерево
-                            button.filter-menu__btn(data-filter-menu)
+                            button.filter-menu__btn(data-modal-trigger="full-filter")
                                 svg(width="12" height="12")
                                     use(xlink:href="assets/images/sprite.svg#settings")
                                 span Фильтр
@@ -86,7 +86,7 @@ block content
                             include ../components/pagination.pug
                         
                         // Выезжающий фильтр
-                        .catalog-section__full-filter.full-filter
+                        .catalog-section__full-filter.full-filter.modal#full-filter
                             button.full-filter__btn.button-close(data-close)
                                 svg(width="24" height="24")
                                     use(xlink:href="assets/images/sprite.svg#close")

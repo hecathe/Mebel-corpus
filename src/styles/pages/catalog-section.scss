@@ -107,20 +107,15 @@
 }
 
 .full-filter {
-    position: fixed;
-    top: 0;
+    left: initial;
     right: -100%;
     max-width: 600px;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-white);
-    z-index: 11;
     padding: 60px;
     padding-top: 100px;
     transition: right 450ms ease-in-out;
-    overflow-y: auto;
 
     &.active {
+        left: initial;
         right: 0;
     }
 

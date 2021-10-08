@@ -113,26 +113,26 @@ const sliderWithThumbs = new Swiper('.swiper-with-thumbs', {
 	}
 })
 
-const toggleFullMenu = document.querySelectorAll('[data-catalog-toggle]');
+const toggleFullMenu = document.querySelector('[data-catalog-toggle]');
+const fullMenu = document.querySelector('[data-full-menu');
 const closeBtn = document.querySelector('[data-close]');
 const searchBtn = document.querySelector('.search-form__btn');
 const burgerBtn = document.querySelector('[data-burger]')
 const moreBtn = document.querySelector('[data-more-text]');
-const filterBtn = document.querySelector('[data-filter-menu]');
+const overlayForClose = document.querySelector('.overlay')
+const body = document.body;
 
 window.onclick = (event) => {
 	//header
-	const fullMenu = document.querySelector('[data-full-menu');
-	const body = document.body;
 
-	toggleFullMenu.forEach((item) => {
-		if (event.target == item) {
-			fullMenu.classList.add('show')
-		}
-	})
+	if (event.target == toggleFullMenu) {
+		fullMenu.classList.add('show')
+		body.style.overflow = 'hidden'
+	}
 
 	if (event.target == closeBtn) {
 		fullMenu.classList.remove('show')
+		body.removeAttribute('style')
 	}
 
 	if (event.target == searchBtn) {
@@ -162,50 +162,56 @@ window.onclick = (event) => {
 			moreBtn.innerHTML = 'Развернуть'
 		}
 	}
+	
+	// modal
+	const modalTriggerButtons = document.querySelectorAll('[data-modal-trigger]');
 
-	//open filter
-	const fullFilter = document.querySelector('.full-filter');
-	
-	if (fullFilter) {
-		const closeFilter = fullFilter.querySelector('[data-close]');
-		if (event.target == filterBtn) {
-			fullFilter.classList.add('active')
-			openedWindow(fullFilter)
-			// body.style.overflow = 'hidden'
-	
-		} else if (event.target == closeFilter) {
-			fullFilter.classList.remove('active')
-			closeWindow(fullFilter)
+	modalTriggerButtons.forEach((triggerModal) => {
+		if (event.target == triggerModal) {
+			const triggerData = triggerModal.getAttribute('data-modal-trigger')
+			const modals = document.querySelectorAll('.modal')
+
+			modals.forEach((modal) => {
+				const modalId = modal.id
+
+				if (triggerData === modalId) {
+					modal.classList.add('active')
+					openedWindow(modal);
+				}
+
+				if (modal.classList.contains('active')) {
+					closeWindow(modal)
+				}
+			})
 		}
-	
-		if (fullFilter.classList.contains('active')) {
-			closeWindow(fullFilter)
-		}
-	}
-	
+	})
 }
-
-
-let overlayForClose = document.querySelector('.overlay')
 
 function openedWindow(elem) {
 	if (elem.classList.contains('active')) {
 		overlayForClose.classList.add('active')
+		body.style.overflowY = 'hidden'
 	}
 }
 
 function closeWindow(elem) {
-	if (!elem.classList.contains('active')) {
+	const closeModal = elem.querySelector('[data-close]')
+
+	closeModal.addEventListener('click', function() {
+		elem.classList.remove('active')
 		overlayForClose.classList.remove('active');
-	}
+		body.removeAttribute('style')
+	})
 
 	overlayForClose.addEventListener('click', function(event) {
 		elem.classList.remove('active')
 		overlayForClose.classList.remove('active')
-		// body.removeAttribute('style')
+		body.removeAttribute('style')
 	})
 }
 
+
+// accordion
 if (document.querySelectorAll('.accordion').length) {
 	const newBtn = document.querySelectorAll('.accordion__btn');
 	const accordion = new Accordion('.accordion');
@@ -217,3 +223,16 @@ if (document.querySelectorAll('.accordion').length) {
 		})
 	})
 }
+
+
+// input
+const fileFields = document.querySelectorAll('[data-file-field]');
+
+fileFields.forEach((item) => {
+	const label = item.querySelector('label span');
+	const input = item.querySelector('input[type="file"]');
+
+	input.addEventListener('change', () => {
+		label.innerHTML = input.files[0].name
+	})
+})
