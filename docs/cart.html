@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Карта сайта</title>
+    <title>Корзина</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -184,25 +184,54 @@
         </nav>
       </header>
       <main>
-        <section class="site-map mb-90">
+        <div class="breadcrumbs container">
+          <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-list__item"><a class="breadcrumbs-list__link" href="/">Главная</a></li>
+            <li class="breadcrumbs-list__item"><span>/</span></li>
+            <li class="breadcrumbs-list__item"><a class="breadcrumbs-list__link" href="/">Раздел каталога</a></li>
+            <li class="breadcrumbs-list__item"><span>/</span></li>
+            <li class="breadcrumbs-list__item"><span class="breadcrumbs-list__active">Подраздел</span></li>
+          </ul>
+        </div>
+        <section class="cart mb-90">
           <div class="container">
-            <table class="site-map__table">
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="main.html">Главная</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="about-company.html">О компании</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="catalog.html">Каталог</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="catalog-section.html">Раздел каталога</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="catalog-item.html">Карточка товара</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="contacts.html">Контакты</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="cart.html">Корзина</a></td>
-              </tr>
-            </table>
+            <h1 class="cart__title title-first mb-60">Корзина</h1>
+            <div class="cart__wrap">
+              <ul class="cart__list cart-list">
+                <li class="cart-list__item">
+                  <div class="cart-list__img"><img src="assets/images/cart-image.jpg" alt="Гостиная Лима"></div>
+                  <div class="cart-list__info"><span>Артикул: 107203</span><a href="#">Гостиная "Лима"</a><span>Цвет: Светлый дуб</span></div>
+                  <div class="cart-list__range">
+                    <button class="cart-list__decrease-btn" type="button" aria-label="Уменьшить количество">
+                      <svg width="16" height="16">
+                        <use xlink:href="assets/images/sprite.svg#plus-square"></use>
+                      </svg>
+                    </button>
+                    <input type="number" min="0" placeholder="1">
+                    <button class="cart-list__increase-btn" type="button" aria-label="Увеличить количество">
+                      <svg width="16" height="16">
+                        <use xlink:href="assets/images/sprite.svg#plus-square"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="cart-list__price">1 000 руб</div>
+                  <button class="cart-list__delete-button" type="button">
+                    <svg width="16" height="16">
+                      <use xlink:href="assets/images/sprite.svg#trash-can"></use>
+                    </svg><span>Удалить</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="cart__side cart-side">
+                <div class="cart-side__top">
+                  <div class="cart-side__wrap"><span class="cart-side__">Товары (3):</span><span class="cart-side__price">3 000 руб.</span></div>
+                  <p class="cart-side__info">Дата и стоимость доставки определяются при оформлении заказа</p>
+                </div>
+                <div class="cart-side__bot">
+                  <div class="cart-side__wrap cart-side__wrap--summary"><span class="cart-side__">Итого</span><span class="cart-side__">3 000 руб.</span></div><a class="cart-side__btn button" href="#">Оформление заказа</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>

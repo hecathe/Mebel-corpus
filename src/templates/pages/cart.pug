@@ -1,0 +1,47 @@
+extends ../template
+
+block variables
+    - var title = 'Корзина'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.cart.mb-90
+            .container
+                h1.cart__title.title-first.mb-60 Корзина
+
+                .cart__wrap
+                    ul.cart__list.cart-list
+                        li.cart-list__item
+                            .cart-list__img
+                                img(src="assets/images/cart-image.jpg", alt="Гостиная Лима")
+                            .cart-list__info
+                                span Артикул: 107203
+                                a(href="#") Гостиная "Лима"
+                                span Цвет: Светлый дуб
+                            .cart-list__range
+                                button.cart-list__decrease-btn(type="button" aria-label="Уменьшить количество")
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#plus-square")
+                                input(type="number" min="0" placeholder="1")
+                                button.cart-list__increase-btn(type="button" aria-label="Увеличить количество")
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#plus-square")
+                            .cart-list__price 1 000 руб
+                            button(type="button").cart-list__delete-button
+                                svg(width="16" height="16")
+                                    use(xlink:href="assets/images/sprite.svg#trash-can")
+                                span Удалить
+
+                    .cart__side.cart-side
+                        .cart-side__top
+                            .cart-side__wrap
+                                span.cart-side__ Товары (3):
+                                span.cart-side__price 3 000 руб.
+                            p.cart-side__info Дата и стоимость доставки определяются при оформлении заказа
+                        .cart-side__bot
+                            .cart-side__wrap.cart-side__wrap--summary
+                                span.cart-side__ Итого
+                                span.cart-side__ 3 000 руб.
+                            a(href="#").cart-side__btn.button Оформление заказа

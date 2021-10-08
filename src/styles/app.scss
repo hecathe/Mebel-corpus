@@ -276,17 +276,15 @@ main {
 @import "./common/news-card.scss";
 @import "./common/about-block.scss";
 
-//catalog page
+
 @import "./common/catalog.scss";
-
-//catalog section
 @import "./pages/catalog-section.scss";
-
-//catalog item
 @import "./pages/catalog-item.scss";
-
-//catalog item
 @import "./pages/about-company.scss";
+//
+@import "./pages/contacts.scss";
+//
+@import "./pages/cart.scss";
 
 // @media screen and (max-width: 1274px) {
 

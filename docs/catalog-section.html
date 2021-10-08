@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/images/fav.png">
+    <link rel="apple-touch-icon" href="assets/images/fav.png"><script src="https://api-maps.yandex.ru/2.1/?apikey=3298e558-aff8-4488-95dc-510505f05ade&lang=ru_RU"></script>
     <link rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/accordion.min.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/app.min.css">
@@ -236,7 +236,7 @@
                       <option value="">Дерево</option>
                     </select>
                   </div>
-                  <button class="filter-menu__btn" data-filter-menu>
+                  <button class="filter-menu__btn" data-modal-trigger="full-filter">
                     <svg width="12" height="12">
                       <use xlink:href="assets/images/sprite.svg#settings"></use>
                     </svg><span>Фильтр</span>
@@ -244,141 +244,213 @@
                 </div>
                 <!-- Сетка каталога-->
                 <ul class="catalog-section__grid catalog-list">
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
                           </div>
-                        </div>
-                      </div></a></li>
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
                           </div>
-                        </div>
-                      </div></a></li>
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
                           </div>
-                        </div>
-                      </div></a></li>
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
                           </div>
-                        </div>
-                      </div></a></li>
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
                           </div>
-                        </div>
-                      </div></a></li>
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
                           </div>
-                        </div>
-                      </div></a></li>
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
                           </div>
-                        </div>
-                      </div></a></li>
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
                           </div>
-                        </div>
-                      </div></a></li>
-                  <li class="catalog-list__item"><a class="product-cards__link" href="#"><img class="product-cards__img" src="assets/images/card-min.jpg" alt="">
-                      <div class="product-cards__info"><span class="product-cards__caption">Наименование товара в одну или две строки</span>
-                        <div class="product-cards__wrap">
-                          <div class="product-cards__row"><span class="product-cards__term">Размеры: </span><span class="product-cards__value">2000х2700х500 (ШхВхГ)</span></div>
-                          <div class="product-cards__row"><span class="product-cards__term">Остаток на складе: </span><span class="product-cards__value product-cards__value--weight">12 шт</span></div>
-                        </div>
-                        <div class="product-cards__bot">
-                          <div class="product-cards__price">125 000 ₽</div>
-                          <div class="product-cards__btn button">
-                            <svg width="21" height="21">
-                              <use xlink:href="assets/images/sprite.svg#cart"></use>
-                            </svg><span>В корзину</span>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
                           </div>
-                        </div>
-                      </div></a></li>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
+                          </div>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
+                          </div>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
+                          </div>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="catalog-list__item">
+                    <div class="product-card"><a class="product-card__link" href="#"><img class="product-card__img" src="assets/images/card-min.jpg" alt="">
+                        <div class="product-card__info"><span class="product-card__caption">Наименование товара в одну или две строки</span>
+                          <div class="product-card__wrap">
+                            <div class="product-card__row"><span class="product-card__term">Размеры: </span><span class="product-card__value">2000х2700х500 (ШхВхГ)</span></div>
+                            <div class="product-card__row"><span class="product-card__term">Остаток на складе: </span><span class="product-card__value product-card__value--weight">12 шт</span></div>
+                          </div>
+                          <div class="product-card__bot">
+                            <div class="product-card__price">125 000 ₽</div>
+                            <div class="product-card__btn button">
+                              <svg width="21" height="21">
+                                <use xlink:href="assets/images/sprite.svg#cart"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div></a>
+                      <button class="product-card__like-btn" aria-label="Добавить в избранное">
+                        <svg width="20" height="20">
+                          <use xlink:href="assets/images/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
                 </ul>
                 <!-- Пагинация-->
                 <div class="catalog-section__bottom">
@@ -400,7 +472,7 @@
                   </div>
                 </div>
                 <!-- Выезжающий фильтр-->
-                <div class="catalog-section__full-filter full-filter">
+                <div class="catalog-section__full-filter full-filter modal" id="full-filter">
                   <button class="full-filter__btn button-close" data-close>
                     <svg width="24" height="24">
                       <use xlink:href="assets/images/sprite.svg#close"></use>
@@ -625,6 +697,7 @@
     <script src="assets/scripts/swiper-bundle.min.js"></script>
     <script src="assets/scripts/spotlight.bundle.js"></script>
     <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/map.js"></script>
     <script src="assets/scripts/main.js"></script>
   </body>
 </html>
