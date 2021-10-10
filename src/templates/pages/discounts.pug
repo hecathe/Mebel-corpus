@@ -1,0 +1,103 @@
+extends ../template
+
+block variables
+    - var title = 'Акции'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.discounts
+            .container
+                h1.discounts__title.title-first.mb-60 Акции
+
+                ul.discounts__list.discounts-list
+                    li.discounts-list__item
+                        a.discounts-list__card(href="#")
+                            .discounts-list__img
+                                img(src="assets/images/sale-image.jpg", alt="")
+                                .discounts-list__wrap
+                                    .discounts-list__cap Скидки<br> на кровати 
+                                    .discounts-list__val
+                                        span до 
+                                        | 50%
+                            .discounts-list__text-wrap
+                                .discounts-list__caption Заголовок
+                                .discounts-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ultricies scelerisque amet, commodo ut. Sed venenatis porttitor id cursus lacus. Suspendisse aliquet duis tincidunt malesuada donec.
+                                .discounts-list__btn.button.button--ghost Перейти
+                    
+                    li.discounts-list__item
+                        a.discounts-list__card(href="#")
+                            .discounts-list__img
+                                img(src="assets/images/sale-image-2.jpg", alt="")
+                                .discounts-list__wrap
+                                    .discounts-list__cap Скидки<br> на кухни 
+                                    .discounts-list__val
+                                        span до 
+                                        | 20%
+                            .discounts-list__text-wrap
+                                .discounts-list__caption Заголовок
+                                .discounts-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ultricies scelerisque amet, commodo ut. Sed venenatis porttitor id cursus lacus. Suspendisse aliquet duis tincidunt malesuada donec.
+                                .discounts-list__btn.button.button--ghost Перейти
+
+                    li.discounts-list__item
+                        a.discounts-list__card(href="#")
+                            .discounts-list__img
+                                img(src="assets/images/sale-image-2.jpg", alt="")
+                                .discounts-list__wrap
+                                    .discounts-list__cap Скидки<br> на кухни 
+                                    .discounts-list__val
+                                        span до 
+                                        | 20%
+                            .discounts-list__text-wrap
+                                .discounts-list__caption Заголовок
+                                .discounts-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ultricies scelerisque amet, commodo ut. Sed venenatis porttitor id cursus lacus. Suspendisse aliquet duis tincidunt malesuada donec.
+                                .discounts-list__btn.button.button--ghost Перейти
+
+                    li.discounts-list__item
+                        a.discounts-list__card(href="#")
+                            .discounts-list__img
+                                img(src="assets/images/sale-image.jpg", alt="")
+                                .discounts-list__wrap
+                                    .discounts-list__cap Скидки<br> на кровати 
+                                    .discounts-list__val
+                                        span до 
+                                        | 50%
+                            .discounts-list__text-wrap
+                                .discounts-list__caption Заголовок
+                                .discounts-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ultricies scelerisque amet, commodo ut. Sed venenatis porttitor id cursus lacus. Suspendisse aliquet duis tincidunt malesuada donec.
+                                .discounts-list__btn.button.button--ghost Перейти
+
+                    li.discounts-list__item
+                        a.discounts-list__card(href="#")
+                            .discounts-list__img
+                                img(src="assets/images/sale-image.jpg", alt="")
+                                .discounts-list__wrap
+                                    .discounts-list__cap Скидки<br> на кровати 
+                                    .discounts-list__val
+                                        span до 
+                                        | 50%
+                            .discounts-list__text-wrap
+                                .discounts-list__caption Заголовок
+                                .discounts-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ultricies scelerisque amet, commodo ut. Sed venenatis porttitor id cursus lacus. Suspendisse aliquet duis tincidunt malesuada donec.
+                                .discounts-list__btn.button.button--ghost Перейти
+
+                    li.discounts-list__item
+                        a.discounts-list__card(href="#")
+                            .discounts-list__img
+                                img(src="assets/images/sale-image.jpg", alt="")
+                                .discounts-list__wrap
+                                    .discounts-list__cap Скидки<br> на кухни 
+                                    .discounts-list__val
+                                        span до 
+                                        | 20%
+                            .discounts-list__text-wrap
+                                .discounts-list__caption Заголовок
+                                .discounts-list__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ultricies scelerisque amet, commodo ut. Sed venenatis porttitor id cursus lacus. Suspendisse aliquet duis tincidunt malesuada donec.
+                                .discounts-list__btn.button.button--ghost Перейти
+
+                .discounts__pagination.mb-90
+                    include ../components/pagination.pug
+
+
+        include ../components/about-block.pug

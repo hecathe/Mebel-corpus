@@ -1,0 +1,50 @@
+extends ../template
+
+block variables
+    - var title = 'Акции'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.discount-item.mb-90
+            .container
+                h1.discount-item__title.title-first.mb-60 Скидки на кровати до 50%
+                .discount-item__banner.mb-60
+                    img(src="assets/images/discount-banner.jpg", alt="Скидки на кровати до 50%")
+                
+                .discount-item__text-wrap.container__narrow
+                    .discount-item__caption Условия проведения акции:
+                    .discount-item__timing
+                        svg(width="20" height="20")
+                            use(xlink:href="assets/images/sprite.svg#calendar")
+                        span c 19 сентября 2021 по 25 сентября 2021
+                    p.discount-item__bold-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. In arcu vitae etiam consequat adipiscing ullamcorper ultrices. Molestie neque platea risus integer sed in fusce leo. Ullamcorper venenatis fringilla quis eget at purus. Vulputate urna, est, dolor consectetur duis curabitur.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In arcu vitae etiam consequat adipiscing ullamcorper ultrices. Molestie neque platea risus integer sed in fusce leo. Ullamcorper venenatis fringilla quis eget at purus. Vulputate urna, est, dolor consectetur duis curabitur.
+
+        // Товары учавствующие в акции
+        section.cards.mb-90
+            .container
+                .cards__header.title-wb.mb-60
+                    h2.title-second Товары учавствующие в акции
+                    a.cards__more.title-wb__link(href="#") Смотреть все
+                .cards__slider
+                    .swiper-container.swiper-fourslide
+                        ul.cards__list.swiper-wrapper
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                            li.cards__item.swiper-slide
+                                include  ../components/product-card
+                    .swiper-button-prev
+                    .swiper-button-next
+
+        // О компании
+        include ../components/about-block
