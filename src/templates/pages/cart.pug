@@ -14,16 +14,36 @@ block content
                 .cart__wrap
                     ul.cart__list.cart-list
                         li.cart-list__item
-                            .cart-list__img
-                                img(src="assets/images/cart-image.jpg", alt="Гостиная Лима")
-                            .cart-list__info
-                                span Артикул: 107203
-                                a(href="#") Гостиная "Лима"
-                                span Цвет: Светлый дуб
+                            .cart-list__col
+                                img.cart-list__img(src="assets/images/cart-image.jpg", alt="Гостиная Лима")
+                                .cart-list__info
+                                    span.cart-list__text.cart-list__text--light Артикул: 107203
+                                    a.cart-list__name(href="#") Гостиная "Лима"
+                                    span.cart-list__text Цвет: Светлый дуб
                             .cart-list__range
                                 button.cart-list__decrease-btn(type="button" aria-label="Уменьшить количество")
                                     svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#minus-square")
+                                input(type="number" min="0" placeholder="1")
+                                button.cart-list__increase-btn(type="button" aria-label="Увеличить количество")
+                                    svg(width="16" height="16")
                                         use(xlink:href="assets/images/sprite.svg#plus-square")
+                            .cart-list__price 1 000 руб
+                            button(type="button").cart-list__delete-button
+                                svg(width="16" height="16")
+                                    use(xlink:href="assets/images/sprite.svg#trash-can")
+                                span Удалить
+                        li.cart-list__item
+                            .cart-list__col
+                                img.cart-list__img(src="assets/images/cart-image.jpg", alt="Гостиная Лима")
+                                .cart-list__info
+                                    span.cart-list__text.cart-list__text--light Артикул: 107203
+                                    a.cart-list__name(href="#") Гостиная "Лима"
+                                    span.cart-list__text Цвет: Светлый дуб
+                            .cart-list__range
+                                button.cart-list__decrease-btn(type="button" aria-label="Уменьшить количество")
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#minus-square")
                                 input(type="number" min="0" placeholder="1")
                                 button.cart-list__increase-btn(type="button" aria-label="Увеличить количество")
                                     svg(width="16" height="16")
@@ -42,6 +62,6 @@ block content
                             p.cart-side__info Дата и стоимость доставки определяются при оформлении заказа
                         .cart-side__bot
                             .cart-side__wrap.cart-side__wrap--summary
-                                span.cart-side__ Итого
-                                span.cart-side__ 3 000 руб.
+                                span Итого
+                                span 3 000 руб.
                             a(href="#").cart-side__btn.button Оформление заказа

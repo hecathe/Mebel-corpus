@@ -1,4 +1,6 @@
-ymaps.ready(init);
+if (document.querySelector('#map')) {
+    ymaps.ready(init);
+}
 
 function init () {
     var myMap = new ymaps.Map('map', {
