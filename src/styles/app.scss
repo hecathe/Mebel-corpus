@@ -88,6 +88,10 @@ select {
 	&__narrow {
 		max-width: 700px;
 	}
+
+	&__narrow--center {
+		margin: 0 auto;
+	}
 }
 
 .visually-hidden {
@@ -288,6 +292,8 @@ select {
 @import "./pages/discounts.scss";
 @import "./pages/discount-item.scss";
 @import "./pages/payment.scss";
+@import "./pages/news.scss";
+@import "./pages/news-item.scss";
 //
 @import "./pages/contacts.scss";
 //
