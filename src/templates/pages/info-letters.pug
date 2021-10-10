@@ -1,0 +1,22 @@
+extends ../template
+
+block variables
+    - var title = 'Информационные письма'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        // Другие новости
+        section.info-letters.mb-90
+            .container
+                h2.info-letters__title.title-second.mb-60 Информационные письма
+                ul.info-letters__list.news-cards
+                    li.news-cards__item
+                        include ../components/info-letter-card
+                    li.news-cards__item
+                        include ../components/info-letter-card
+                    li.news-cards__item
+                        include ../components/info-letter-card
+
+        include ../components/about-block.pug

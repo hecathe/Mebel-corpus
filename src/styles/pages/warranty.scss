@@ -1,0 +1,40 @@
+.warranty {
+    &__content {
+        line-height: 19px;
+        color: var(--color-black);
+    }
+
+    &__main-text {
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    &__block {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.bold-text {
+    font-weight: 600;
+}
+
+.bold-text--800 {
+    font-weight: 800;
+}
+
+.important-text {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    margin-bottom: 30px;
+}

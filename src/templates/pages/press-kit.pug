@@ -1,0 +1,33 @@
+extends ../template
+
+block variables
+    - var title = 'Пресс-кит'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.press-kit.mb-90
+            .container
+                .press-kit__head.mb-90
+                    h1.press-kit__title.title-first.mb-60 Пресс-кит
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ullamcorper sagittis ornare amet dictumst lectus duis. Turpis volutpat nec nisl leo. Scelerisque amet bibendum felis neque tortor feugiat. Non est ipsum viverra egestas eu placerat. Eget ullamcorper aenean est tempus. Eget urna, nibh mi elit consectetur id tincidunt sed. Id vivamus libero sagittis, consectetur sed lacinia mauris amet. 
+                .press-kit__block.mb-60
+                    h2.press-kit__caption.documents__caption CSV - файл
+                    ul.press-kit__list.download-list
+                        li.download-list__item
+                            a.download-list__card(href="#")
+                                span Скачать CSV файл для клонирования сайта
+                                svg(width="32" height="32")
+                                    use(xlink:href="assets/images/sprite.svg#file")
+
+                .press-kit__block
+                    h2.press-kit__caption.documents__caption Обновление сентябрь-октябрь 2021
+                    ul.press-kit__list.download-list
+                        li.download-list__item
+                            a.download-list__card(href="#")
+                                span Скачать файл обновления
+                                svg(width="32" height="32")
+                                    use(xlink:href="assets/images/sprite.svg#file")
+
+        include ../components/about-block.pug
