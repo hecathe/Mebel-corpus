@@ -1,0 +1,38 @@
+extends ../template
+
+block variables
+    - var title = 'Новости'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.news.mb-90
+            .container
+                h1.news__title.title-first.mb-60 Новости
+
+                ul.news__list.news-list
+                    li.news-list__item
+                        include ../components/news-card.pug
+                    li.news-list__item
+                        include ../components/news-card.pug
+                    li.news-list__item
+                        include ../components/news-card.pug
+                    li.news-list__item
+                        include ../components/news-card.pug
+                    li.news-list__item
+                        include ../components/news-card.pug
+                    li.news-list__item
+                        include ../components/news-card.pug
+                    li.news-list__item
+                        include ../components/news-card.pug
+                    li.news-list__item
+                        include ../components/news-card.pug
+                    li.news-list__item
+                        include ../components/news-card.pug
+                
+                .news__pagination
+                    include ../components/pagination.pug
+            
+
+        include ../components/about-block.pug

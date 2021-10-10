@@ -1,0 +1,51 @@
+extends ../template
+
+block variables
+    - var title = 'Новость'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.news-item.mb-90
+            .container
+                .container__narrow.container__narrow--center
+                    h1.news-item__title.title-first.mb-60 Интервью с руководителем коммерческого департамента
+
+                    .news-item__block
+                        .news-item__banner
+                            img(src="assets/images/news-card-min.jpg", alt="")
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ullamcorper sagittis ornare amet dictumst lectus duis. Turpis volutpat nec nisl leo. Scelerisque amet bibendum felis neque tortor feugiat. Non est ipsum viverra egestas eu placerat. Eget ullamcorper aenean est tempus. Eget urna, nibh mi elit consectetur id tincidunt sed. Id vivamus libero sagittis, consectetur sed lacinia mauris amet. 
+                        p Enim sollicitudin dui diam vel mattis. Ipsum mi, et pellentesque varius faucibus sapien. Ultrices nisl accumsan elementum velit aliquam aliquam nunc, tortor, nunc. Adipiscing aliquam dignissim pharetra, sit nunc sem feugiat. Quam tempus, velit auctor id. Mauris, urna cum nunc egestas ultrices in. Euismod quam est sem tincidunt libero purus, in. Morbi dolor nam amet pellentesque at. Sit mauris gravida id ultricies. Neque, aliquet nisl venenatis tincidunt vulputate ut quis. Vehicula adipiscing libero convallis amet. Bibendum sed cursus sed nisl placerat tellus integer egestas faucibus. At arcu, sapien dignissim nunc. 
+
+                    .news-item__block
+                        .news-item__slider.slider-withone
+                            .swiper-container
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .news-item__slide
+                                            img(src="assets/images/news-slide.jpg", alt="")
+                                    .swiper-slide
+                                        .news-item__slide
+                                            img(src="assets/images/news-slide.jpg", alt="")
+                            .swiper-button-prev
+                            .swiper-button-next
+
+                        p Eu arcu, et faucibus purus dapibus. Turpis accumsan dictum nisl egestas quam quis. Amet, varius volutpat rhoncus nisl velit arcu. Ultrices eu aliquet aenean eget. Adipiscing nunc, at enim, nunc curabitur facilisis nunc, turpis accumsan. Adipiscing ac, nec, enim auctor tellus vel vestibulum. Diam elementum, nullam urna, congue pharetra. Aliquet dictum posuere nibh non ut. Nec nisi urna mauris tortor elit molestie aliquam sit aliquam. Morbi neque diam pharetra, nibh eu consectetur mattis turpis posuere. Sollicitudin donec orci duis vitae scelerisque quisque. Eu elementum purus faucibus risus, mattis. 
+                        p Odio ultrices mattis donec adipiscing libero, lectus condimentum diam. Enim commodo ipsum massa ipsum interdum egestas. Nunc mi, sed sem at etiam. Elementum morbi curabitur ipsum rhoncus. Id morbi leo purus quam et massa ornare. Sit sed nunc, pretium at arcu, senectus ullamcorper rhoncus at. Elementum tortor eget tortor, eu felis convallis. Nulla nunc, quisque eleifend nec. Amet scelerisque vitae ac, magna at at. Ultrices amet ultrices at ultrices accumsan nisl. Cursus nulla volutpat nam ornare tristique purus. Velit lectus iaculis eget potenti arcu vitae. Ornare vitae in sagittis vitae faucibus eget. 
+                        p Platea vulputate sed iaculis sit nulla orci. Purus fermentum nulla nec nisl magna pharetra, vestibulum sociis turpis. Sit tristique condimentum felis pharetra, ut eu. Diam amet eget amet leo vitae quam ultrices quam non.
+
+        // Другие новости
+        section.main-news.mb-90
+            .container
+                .main-news__header.mb-60
+                    h2.main-news__title.title-second Другие новости
+                ul.main-news__list.news-cards
+                    li.news-cards__item
+                        include ../components/news-card
+                    li.news-cards__item
+                        include ../components/news-card
+                    li.news-cards__item
+                        include ../components/news-card
+
+        include ../components/about-block.pug

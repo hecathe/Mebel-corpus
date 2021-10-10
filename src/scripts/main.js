@@ -80,15 +80,15 @@ const cardsSwiper = new Swiper('.cards__slider .swiper-fourslide', {
 	},
 })
 
-const swiperWithoutPag = new Swiper('.sales__slider .swiper-container', {
+const swiperWithoutPag = new Swiper('.slider-withone .swiper-container', {
 	// Optional parameters
 	loop: true,
 	speed: 500,
 
 	// Navigation arrows
 	navigation: {
-		nextEl: '.sales__slider .swiper-button-next',
-		prevEl: '.sales__slider .swiper-button-prev',
+		nextEl: '.slider-withone .swiper-button-next',
+		prevEl: '.slider-withone .swiper-button-prev',
 	},
 })
 
