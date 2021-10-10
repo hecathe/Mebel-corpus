@@ -1,0 +1,21 @@
+extends ../template
+
+block variables
+    - var title = 'Информационное письмо'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.news-item.mb-90
+            .container
+                .container__narrow.container__narrow--center
+                    h1.news-item__title.title-first.mb-60 Информационное письмо №1 с заголовком в одну или две строки
+
+                    .news-item__block
+                        .news-item__banner
+                            img(src="assets/images/info-letter.jpg", alt="")
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ullamcorper sagittis ornare amet dictumst lectus duis. Turpis volutpat nec nisl leo. Scelerisque amet bibendum felis neque tortor feugiat. Non est ipsum viverra egestas eu placerat. Eget ullamcorper aenean est tempus. Eget urna, nibh mi elit consectetur id tincidunt sed. Id vivamus libero sagittis, consectetur sed lacinia mauris amet. 
+                        p Enim sollicitudin dui diam vel mattis. Ipsum mi, et pellentesque varius faucibus sapien. Ultrices nisl accumsan elementum velit aliquam aliquam nunc, tortor, nunc. Adipiscing aliquam dignissim pharetra, sit nunc sem feugiat. Quam tempus, velit auctor id. Mauris, urna cum nunc egestas ultrices in. Euismod quam est sem tincidunt libero purus, in. Morbi dolor nam amet pellentesque at. Sit mauris gravida id ultricies. Neque, aliquet nisl venenatis tincidunt vulputate ut quis. Vehicula adipiscing libero convallis amet. Bibendum sed cursus sed nisl placerat tellus integer egestas faucibus. At arcu, sapien dignissim nunc. 
+
+        include ../components/about-block.pug
