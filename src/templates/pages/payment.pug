@@ -1,0 +1,49 @@
+extends ../template
+
+block variables
+    - var title = 'Как купить'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        // Как купить
+        section.payment.mb-90
+            .container
+                .payment__content.container__narrow
+                    h1.payment__title.title-first.mb-60 Как купить
+                    p Способ оплаты заказа в нашем Интернет-магазине Вы выбираете при его оформлении.<br> Оплата производится только в рублях. После подтверждения заказа оператором Интернет-магазина способ оплаты изменен быть не может.
+                    p В сложившейся экономической ситуации рост цен на продукцию неизбежен. В виду этого если вы приобретаете товар из наличия, цена которая указана в нашем интернет-магазине неизменна. На товар которого нет в наличии и наш интернет-магазин заказывает его на фабрике производителя, цена на товар может измениться в том случае если производитель поднимет цену.
+
+                    .payment__item
+                        .payment__caption Наличный расчет
+                        p Самый распространенный и удобный способ оплаты покупок. Вы отдаете сотруднику Службы доставки деньги при получении заказа.
+                    .payment__item
+                        .payment__caption Онлайн банковской картой
+                        p К оплате не принимаются банковские карты МИР, Visa и MasterCard без кода CVV2 / CVC2.<br> Оплата заказа по банковской карте производится непосредственно в пункте самовывоза.
+                        p Мы принимаем к оплате:
+                        ul.payment__list.pay-list
+                            li.pay-list__item
+                                svg.pay-list__logo(width="56" height="17")
+                                    use(xlink:href="assets/images/sprite.svg#visa")
+                            li.pay-list__item
+                                svg.pay-list__logo(width="54" height="16")
+                                    use(xlink:href="assets/images/sprite.svg#mir")
+                            li.pay-list__item
+                                svg.pay-list__logo(width="40" height="25")
+                                    use(xlink:href="assets/images/sprite.svg#master-card")
+                            li.pay-list__item
+                                svg.pay-list__logo(width="40" height="25")
+                                    use(xlink:href="assets/images/sprite.svg#maestro")
+                            li.pay-list__item
+                                svg.pay-list__logo(width="61" height="25")
+                                    use(xlink:href="assets/images/sprite.svg#googlePay")
+                            li.pay-list__item
+                                svg.pay-list__logo(width="45" height="29")
+                                    use(xlink:href="assets/images/sprite.svg#applePay")
+                    .payment__item
+                        .payment__caption Безналичный расчет
+                        p Безналичный расчет предусмотрен для Юридических лиц и возможен только после выставления счета от нашего Интернет-магазина.
+
+        // О компании
+        include ../components/about-block

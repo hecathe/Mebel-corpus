@@ -108,6 +108,7 @@
     display: grid;
     grid-template-columns: repeat(3, max-content);
     justify-content: space-between;
+    align-items: center;
     row-gap: 20px;
     @include list-reset;
     padding: 20px 0 17px;

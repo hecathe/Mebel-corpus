@@ -1,0 +1,45 @@
+.payment {
+    color: var(--color-card-text);
+
+    p {
+        margin: 0;
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        margin-top: 30px;
+    }
+
+    &__caption {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--color-black);
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        justify-content: flex-start;
+        column-gap: 50px;
+        padding: 0;
+        margin-top: 10px;
+
+        svg {
+            --color-pay: #{var(--color-card-text)};
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .payment {
+        &__list {
+            grid-auto-flow: initial;
+            grid-template-columns: repeat(3, max-content);
+        }
+    }
+}
