@@ -199,12 +199,37 @@
             <div class="cart__wrap">
               <ul class="cart__list cart-list">
                 <li class="cart-list__item">
-                  <div class="cart-list__img"><img src="assets/images/cart-image.jpg" alt="Гостиная Лима"></div>
-                  <div class="cart-list__info"><span>Артикул: 107203</span><a href="#">Гостиная "Лима"</a><span>Цвет: Светлый дуб</span></div>
+                  <div class="cart-list__col"><img class="cart-list__img" src="assets/images/cart-image.jpg" alt="Гостиная Лима">
+                    <div class="cart-list__info"><span class="cart-list__text cart-list__text--light">Артикул: 107203</span><a class="cart-list__name" href="#">Гостиная "Лима"</a><span class="cart-list__text">Цвет: Светлый дуб</span></div>
+                  </div>
                   <div class="cart-list__range">
                     <button class="cart-list__decrease-btn" type="button" aria-label="Уменьшить количество">
                       <svg width="16" height="16">
+                        <use xlink:href="assets/images/sprite.svg#minus-square"></use>
+                      </svg>
+                    </button>
+                    <input type="number" min="0" placeholder="1">
+                    <button class="cart-list__increase-btn" type="button" aria-label="Увеличить количество">
+                      <svg width="16" height="16">
                         <use xlink:href="assets/images/sprite.svg#plus-square"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="cart-list__price">1 000 руб</div>
+                  <button class="cart-list__delete-button" type="button">
+                    <svg width="16" height="16">
+                      <use xlink:href="assets/images/sprite.svg#trash-can"></use>
+                    </svg><span>Удалить</span>
+                  </button>
+                </li>
+                <li class="cart-list__item">
+                  <div class="cart-list__col"><img class="cart-list__img" src="assets/images/cart-image.jpg" alt="Гостиная Лима">
+                    <div class="cart-list__info"><span class="cart-list__text cart-list__text--light">Артикул: 107203</span><a class="cart-list__name" href="#">Гостиная "Лима"</a><span class="cart-list__text">Цвет: Светлый дуб</span></div>
+                  </div>
+                  <div class="cart-list__range">
+                    <button class="cart-list__decrease-btn" type="button" aria-label="Уменьшить количество">
+                      <svg width="16" height="16">
+                        <use xlink:href="assets/images/sprite.svg#minus-square"></use>
                       </svg>
                     </button>
                     <input type="number" min="0" placeholder="1">
@@ -228,7 +253,7 @@
                   <p class="cart-side__info">Дата и стоимость доставки определяются при оформлении заказа</p>
                 </div>
                 <div class="cart-side__bot">
-                  <div class="cart-side__wrap cart-side__wrap--summary"><span class="cart-side__">Итого</span><span class="cart-side__">3 000 руб.</span></div><a class="cart-side__btn button" href="#">Оформление заказа</a>
+                  <div class="cart-side__wrap cart-side__wrap--summary"><span>Итого</span><span>3 000 руб.</span></div><a class="cart-side__btn button" href="#">Оформление заказа</a>
                 </div>
               </div>
             </div>
