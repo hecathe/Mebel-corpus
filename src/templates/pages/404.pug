@@ -1,0 +1,12 @@
+extends ../template
+
+block variables
+    - var title = 'Оформление заказа'
+
+block content
+    main
+        section.not-found
+            .container
+                img(src="assets/images/404.png", alt="")
+                h1 Запрашиваемая страница не найдена
+                a.button(href="/") Вернуться на главную

@@ -1,0 +1,47 @@
+extends ../template
+
+block variables
+    - var title = 'Личный кабинет Мои заказы'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.account.mb-90
+            .container
+                h1.account__title.title-first.mb-60 Личный кабинет
+                .account__subtitle.mb-60 Здравствуйте, Евгения
+                .account__wrap
+                    .account__side.account-side
+                        ul.account-side__list
+                            li.account-side__item
+                                a.account-side__link(href="#") Личные данные
+                            li.account-side__item
+                                a.account-side__link(href="#") Мои заказы
+                            li.account-side__item
+                                a.account-side__link.active(href="#") Избранное
+                            li.account-side__item
+                                a.account-side__link(href="#") Выйти
+                    .account__content
+                        ul.account__fav.catalog-list
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                            li.catalog-list__item
+                                include ../components/product-card.pug
+                        // Пагинация
+                        .account__fav-pagination
+                            include ../components/pagination.pug

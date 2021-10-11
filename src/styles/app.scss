@@ -75,7 +75,7 @@ select {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1240px;
 	width: 100%;
 	margin: 0 auto;
 	padding-right: 20px;
@@ -296,6 +296,7 @@ select {
 @import "./pages/warranty.scss";
 @import "./pages/cart.scss";
 @import "./pages/ordering.scss";
+@import "./pages/account.scss";
 
 // @media screen and (max-width: 1274px) {
 

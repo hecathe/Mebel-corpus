@@ -1,0 +1,196 @@
+extends ../template
+
+block variables
+    - var title = 'Личный кабинет Мои заказы'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.account.mb-90
+            .container
+                h1.account__title.title-first.mb-60 Личный кабинет
+                .account__subtitle.mb-60 Здравствуйте, Евгения
+                .account__wrap
+                    .account__side.account-side
+                        ul.account-side__list
+                            li.account-side__item
+                                a.account-side__link(href="#") Личные данные
+                            li.account-side__item
+                                a.account-side__link.active(href="#") Мои заказы
+                            li.account-side__item
+                                a.account-side__link(href="#") Избранное
+                            li.account-side__item
+                                a.account-side__link(href="#") Выйти
+                    .account__content
+                        .account__block.mb-90
+                            h2.account__content-title Текущие заказы
+                            ul.account__order.order-list
+                                li.order-list__item
+                                    .order-list__info
+                                        .order-list__num
+                                            span.order-list__date Заказ от 24 сентября 2021
+                                            span.order-list__order-num 29837567871
+                                        .order-list__wrap
+                                            button.order-list__btn Отменить заказ
+                                            .order-list__detail
+                                                span.order-list__price 350 500 руб
+
+                                                // data-status="in-progress", data-status="waiting-pay", data-status="ready"
+                                                .order-list__status(data-status="in-progress") Заказ собирается
+                                    .order-list__ac.accordion
+                                        .order-list__ac-item.ac
+                                            .order-list__ac-header.ac-header
+                                                .order-list__ac-trigger.ac-trigger
+                                                    span 8 товаров
+                                                    .order-list__ac-btn
+                                                        span Показать подробности
+                                                        svg(width="18" height="14")
+                                                            use(xlink:href="assets/images/sprite.svg#arrow-downward")
+                                            .order-list__ac-panel.ac-panel
+                                                ul.order-list__good-list
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                li.order-list__item
+                                    .order-list__info
+                                        .order-list__num
+                                            span.order-list__date Заказ от 24 сентября 2021
+                                            span.order-list__order-num 29837567871
+                                        .order-list__wrap
+                                            button.order-list__btn Отменить заказ
+                                            .order-list__detail
+                                                span.order-list__price 350 500 руб
+
+                                                // data-status="in-progress", data-status="waiting-pay", data-status="ready"
+                                                .order-list__status(data-status="waiting-pay") Ожидается оплата
+                                    .order-list__ac.accordion
+                                        .order-list__ac-item.ac
+                                            .order-list__ac-header.ac-header
+                                                .order-list__ac-trigger.ac-trigger
+                                                    span 8 товаров
+                                                    .order-list__ac-btn
+                                                        span Показать подробности
+                                                        svg(width="18" height="14")
+                                                            use(xlink:href="assets/images/sprite.svg#arrow-downward")
+                                            .order-list__ac-panel.ac-panel
+                                                ul.order-list__good-list
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+
+                        .account__block
+                            h2.account__content-title История заказов
+                            ul.account__order.order-list
+                                li.order-list__item
+                                    .order-list__info
+                                        .order-list__num
+                                            span.order-list__date Заказ от 24 сентября 2021
+                                            span.order-list__order-num 29837567871
+                                        .order-list__wrap
+                                            button.order-list__btn Отменить заказ
+                                            .order-list__detail
+                                                span.order-list__price 350 500 руб
+
+                                                // data-status="in-progress", data-status="waiting-pay", data-status="ready"
+                                                .order-list__status(data-status="ready") Заказ доставлен
+                                    .order-list__ac.accordion
+                                        .order-list__ac-item.ac
+                                            .order-list__ac-header.ac-header
+                                                .order-list__ac-trigger.ac-trigger
+                                                    span 8 товаров
+                                                    .order-list__ac-btn
+                                                        span Показать подробности
+                                                        svg(width="18" height="14")
+                                                            use(xlink:href="assets/images/sprite.svg#arrow-downward")
+                                            .order-list__ac-panel.ac-panel
+                                                ul.order-list__good-list
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                li.order-list__item
+                                    .order-list__info
+                                        .order-list__num
+                                            span.order-list__date Заказ от 24 сентября 2021
+                                            span.order-list__order-num 29837567871
+                                        .order-list__wrap
+                                            button.order-list__btn Отменить заказ
+                                            .order-list__detail
+                                                span.order-list__price 350 500 руб
+
+                                                // data-status="in-progress", data-status="waiting-pay", data-status="ready"
+                                                .order-list__status(data-status="ready") Заказ доставлен
+                                    .order-list__ac.accordion
+                                        .order-list__ac-item.ac
+                                            .order-list__ac-header.ac-header
+                                                .order-list__ac-trigger.ac-trigger
+                                                    span 8 товаров
+                                                    .order-list__ac-btn
+                                                        span Показать подробности
+                                                        svg(width="18" height="14")
+                                                            use(xlink:href="assets/images/sprite.svg#arrow-downward")
+                                            .order-list__ac-panel.ac-panel
+                                                ul.order-list__good-list
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб
+                                                    li.order-list__goods-item
+                                                        .order-list__goods-name Гостиная "Лима"
+                                                        .order-list__goods-articul
+                                                            span Артикул: 107203
+                                                            span 1 шт.
+                                                        .order-list__goods-price 50 500 руб

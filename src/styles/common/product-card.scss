@@ -26,7 +26,7 @@
             --heart-fill: transparent;
         }
 
-        &:hover {
+        &:hover, &.active {
             svg {
                 --heart-fill: #{var(--color-primary)};
                 --heart-stroke: #{var(--color-primary)};

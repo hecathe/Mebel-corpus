@@ -37,6 +37,10 @@
 
     &__input {
         width: 100%;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--color-form-text);
         border: 1px solid var(--standart-grey);
         border-radius: 5px;
         box-sizing: border-box;
