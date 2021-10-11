@@ -17,14 +17,10 @@
 	--color-gray: #F1F1F1;
 	--color-white: #ffffff;
 }
-// 008535
+
 // Размеры
 $content-max-weight: 1200px;
 $content-padding: 0 16px;
-
-//Цвета
-$color-primary: #00AB44;
-$color-white: #ffffff;
 
 // Шрифт
 $font-primary: sans-serif;
@@ -299,6 +295,7 @@ select {
 @import "./pages/documents.scss";
 @import "./pages/warranty.scss";
 @import "./pages/cart.scss";
+@import "./pages/ordering.scss";
 
 // @media screen and (max-width: 1274px) {
 
