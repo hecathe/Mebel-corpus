@@ -1,0 +1,129 @@
+extends ../template
+
+block variables
+    - var title = 'Оформление заказа'
+
+block content
+    main
+        include ../components/breadcrumbs.pug
+
+        section.ordering.mb-90
+            .container
+                h1.title-first.mb-60 Оформление заказа
+
+                .ordering__wrap
+                    .ordering__form-wrap
+                        .ordering__toggle.mb-60
+                            button.ordering__btn(data-tab-id="toggle-cart" data-tab-control="tab-fiz") Физическое лицо
+                            button.ordering__btn(data-tab-id="toggle-cart" data-tab-control="tab-ur") Юридическое лицо
+                        form.ordering__form.form(action="#" data-tab-id="toggle-cart" data-tab-block="tab-fiz")
+                            fieldset.form__group
+                                legend.form__caption Получатель
+                                .form__item
+                                    label.form__label(for="form-name") ФИО
+                                    input.form__input(id="form-name" type="text" name="name")
+                                .form__item
+                                    label.form__label(for="form-tel") Телефон
+                                    input.form__input(id="form-tel" type="tel" name="tel")
+                                .form__item
+                                    label.form__label(for="form-email") E-mail
+                                    input.form__input(id="form-email" type="email" name="email")
+                                label.form__checkbox.checkbox
+                                    input.checkbox__input.visually-hidden(type="checkbox" name="" value="")
+                                    span.checkbox__caption Получать информацию о скидках и новостях
+                            fieldset.form__group
+                                legend.form__caption Адрес доставки
+                                .form__item
+                                    label.form__label
+                                        input.form__input(id="form-address" type="text" name="address" placeholder="Населенный пункт, улица, дом")
+                                .form__item
+                                    label.form__label
+                                        input.form__input(id="form-apartment" type="text" name="apartment" placeholder="Квартира или офис")
+                                .form__item
+                                    label.form__label
+                                        input.form__input(id="form-comment" type="text" name="comment" placeholder="Комментарий к доставке")
+                            fieldset.form__group
+                                legend.form__caption Дата и время
+                                .form__select-group
+                                    .form__select.select
+                                        select(name="delivery-date")
+                                            option(value="Пятница, 24 сентября") Пятница, 24 сентября
+                                            option(value="Пятница, 24 сентября") Пятница, 24 сентября
+                                    .form__select.select
+                                        select(name="delivery-time")
+                                            option(value="11:00 - 14:00") 11:00 - 14:00
+                                            option(value="11:00 - 14:00") 11:00 - 14:00
+                            fieldset.form__group
+                                legend.form__caption Способ оплаты
+                                .form__radio-group
+                                    label.form__radio.radio-btn
+                                        input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                        span.radio-btn__caption Оптовые цены
+                                    label.form__radio.radio-btn
+                                        input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                        span.radio-btn__caption Розничные цены
+                        form.ordering__form.form(action="#" data-tab-id="toggle-cart" data-tab-block="tab-ur")
+                            fieldset.form__group
+                                legend.form__caption Заполните данные организации и контакты получателя
+                                .form__item
+                                    label.form__label(for="form-org-inn") ИНН организации
+                                    input.form__input(id="form-org-inn" type="text" name="name")
+                                .form__item
+                                    label.form__label(for="form-org-name") Название организации
+                                    input.form__input(id="form-org-name" type="text" name="name")
+                                .form__item
+                                    label.form__label(for="form-name") Фамилия и имя
+                                    input.form__input(id="form-name" type="text" name="name")
+                                .form__item
+                                    label.form__label(for="form-tel") Телефон
+                                    input.form__input(id="form-tel" type="tel" name="tel")
+                                .form__item
+                                    label.form__label(for="form-email") E-mail
+                                    input.form__input(id="form-email" type="email" name="email")
+                                label.form__checkbox.checkbox
+                                    input.checkbox__input.visually-hidden(type="checkbox" name="" value="")
+                                    span.checkbox__caption Получать информацию о скидках и новостях
+                            fieldset.form__group
+                                legend.form__caption Адрес доставки
+                                .form__item
+                                    label.form__label
+                                        input.form__input(id="form-address" type="text" name="address" placeholder="Населенный пункт, улица, дом")
+                                .form__item
+                                    label.form__label
+                                        input.form__input(id="form-apartment" type="text" name="apartment" placeholder="Квартира или офис")
+                                .form__item
+                                    label.form__label
+                                        input.form__input(id="form-comment" type="text" name="comment" placeholder="Комментарий к доставке")
+                            fieldset.form__group
+                                legend.form__caption Дата и время
+                                .form__select-group
+                                    .form__select.select
+                                        select(name="delivery-date")
+                                            option(value="Пятница, 24 сентября") Пятница, 24 сентября
+                                            option(value="Пятница, 24 сентября") Пятница, 24 сентября
+                                    .form__select.select
+                                        select(name="delivery-time")
+                                            option(value="11:00 - 14:00") 11:00 - 14:00
+                                            option(value="11:00 - 14:00") 11:00 - 14:00
+                            fieldset.form__group
+                                legend.form__caption Способ оплаты
+                                .form__radio-group
+                                    label.form__radio.radio-btn
+                                        input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                        span.radio-btn__caption Оптовые цены
+                                    label.form__radio.radio-btn
+                                        input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                        span.radio-btn__caption Розничные цены
+
+
+                    .ordering__side.cart-side
+                        .cart-side__top
+                            .cart-side__wrap
+                                span.cart-side__ Товары (3):
+                                span.cart-side__price 3 000 руб.
+                            p.cart-side__info Дата и стоимость доставки определяются при оформлении заказа
+                        .cart-side__bot
+                            .cart-side__wrap.cart-side__wrap--summary
+                                span Итого
+                                span 3 000 руб.
+                            button(type="submit").cart-side__btn.button Оформление заказа

@@ -44,42 +44,6 @@
     column-gap: 15px;
     margin-bottom: 40px;
 
-    &__select-wrap {
-        position: relative;
-
-        &::after {
-            position: absolute;
-            content: '';
-            top: 50%;
-            right: 30px;
-            width: 10px;
-            height: 10px;
-            background-image: url('../images/sprite.svg#arrow-downward');
-            background-repeat: no-repeat;
-            background-position: center;
-            transform: translateY(-50%);
-        }
-
-        &.active::after {
-            top: 40%;
-            transform: rotate(180deg);
-        }
-    }
-
-    &__select {
-        width: 100%;
-        text-overflow: ellipsis;
-        border: 1px solid #E4E4E4;
-        border-radius: 5px;
-        padding: 10px 30px;
-        cursor: pointer;
-        transition: border-color 150ms ease-in-out;
-
-        &:hover {
-            border-color: var(--color-primary);
-        }
-    }
-
     &__btn {
         display: flex;
         justify-content: center;
