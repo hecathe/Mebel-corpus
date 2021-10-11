@@ -1,5 +1,11 @@
 const activeClass = "active";
 
+document.querySelectorAll('input[type="tel"]').forEach((elem) => {
+	const phoneMask = IMask(elem, {
+		mask: '+{7} (000) 000-00-00'
+	}); 
+})
+
 // Переключение табов
 // demo
 // button(data-tab-id="tabId1", data-tab-control="tab1") 1
@@ -214,12 +220,15 @@ function closeWindow(elem) {
 // accordion
 if (document.querySelectorAll('.accordion').length) {
 	const newBtn = document.querySelectorAll('.accordion__btn');
-	const accordion = new Accordion('.accordion');
+	const accordions = document.querySelectorAll('.accordion');
 
-	newBtn.forEach((item) => {
+	accordions.forEach((accordion) => {
+		new Accordion(accordion);
 
-		item.addEventListener('click', function() {
-			accordion.open()
+		newBtn.forEach((item) => {
+			item.addEventListener('click', function() {
+				accordion.open()
+			})
 		})
 	})
 }

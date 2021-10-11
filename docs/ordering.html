@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Карта сайта</title>
+    <title>Оформление заказа</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -184,49 +184,176 @@
         </nav>
       </header>
       <main>
-        <section class="site-map mb-90">
+        <div class="breadcrumbs container">
+          <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-list__item"><a class="breadcrumbs-list__link" href="/">Главная</a></li>
+            <li class="breadcrumbs-list__item"><span>/</span></li>
+            <li class="breadcrumbs-list__item"><a class="breadcrumbs-list__link" href="/">Раздел каталога</a></li>
+            <li class="breadcrumbs-list__item"><span>/</span></li>
+            <li class="breadcrumbs-list__item"><span class="breadcrumbs-list__active">Подраздел</span></li>
+          </ul>
+        </div>
+        <section class="ordering mb-90">
           <div class="container">
-            <table class="site-map__table">
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="main.html">Главная</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="about-company.html">О компании</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="services.html">Услуги</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="documents.html">Документы</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="press-kit.html">Пресс-кит</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="catalog.html">Каталог</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="catalog-section.html">Раздел каталога</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="catalog-item.html">Карточка товара</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="new-items.html">Новинки</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="out-of.html">Снято с производства</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="discounts.html">Акции</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="discount-item.html">Акция</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="news.html">Новости</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="news-item.html">Новость</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="info-letters.html">Информационные письма</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="info-letters-item.html">Информационное письмо</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="contacts.html">Контакты</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="payment.html">Как купить</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="warranty.html">Гарантии</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="cart.html">Корзина</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="ordering.html">Оформление заказа</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="account.html">Личный кабинет (Личные данные)</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="account-1.html">Личный кабинет (Мои заказы)</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="account-2.html">Личный кабинет (Избранное)</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="404.html">404</a></td>
-              </tr>
-            </table>
+            <h1 class="title-first mb-60">Оформление заказа</h1>
+            <div class="ordering__wrap">
+              <div class="ordering__form-wrap">
+                <div class="ordering__toggle mb-60">
+                  <button class="ordering__btn" data-tab-id="toggle-cart" data-tab-control="tab-fiz">Физическое лицо</button>
+                  <button class="ordering__btn" data-tab-id="toggle-cart" data-tab-control="tab-ur">Юридическое лицо</button>
+                </div>
+                <form class="ordering__form form" action="#" data-tab-id="toggle-cart" data-tab-block="tab-fiz">
+                  <fieldset class="form__group">
+                    <legend class="form__caption">Получатель</legend>
+                    <div class="form__item">
+                      <label class="form__label" for="form-name">ФИО</label>
+                      <input class="form__input" id="form-name" type="text" name="name">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="form-tel">Телефон</label>
+                      <input class="form__input" id="form-tel" type="tel" name="tel">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="form-email">E-mail</label>
+                      <input class="form__input" id="form-email" type="email" name="email">
+                    </div>
+                    <label class="form__checkbox checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="" value=""><span class="checkbox__caption">Получать информацию о скидках и новостях</span>
+                    </label>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__caption">Адрес доставки</legend>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <input class="form__input" id="form-address" type="text" name="address" placeholder="Населенный пункт, улица, дом">
+                      </label>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <input class="form__input" id="form-apartment" type="text" name="apartment" placeholder="Квартира или офис">
+                      </label>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <input class="form__input" id="form-comment" type="text" name="comment" placeholder="Комментарий к доставке">
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__caption">Дата и время</legend>
+                    <div class="form__select-group">
+                      <div class="form__select select">
+                        <select name="delivery-date">
+                          <option value="Пятница, 24 сентября">Пятница, 24 сентября</option>
+                          <option value="Пятница, 24 сентября">Пятница, 24 сентября</option>
+                        </select>
+                      </div>
+                      <div class="form__select select">
+                        <select name="delivery-time">
+                          <option value="11:00 - 14:00">11:00 - 14:00</option>
+                          <option value="11:00 - 14:00">11:00 - 14:00</option>
+                        </select>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__caption">Способ оплаты</legend>
+                    <div class="form__radio-group">
+                      <label class="form__radio radio-btn">
+                        <input class="radio-btn__input visually-hidden" type="radio" name="price" value=""><span class="radio-btn__caption">Оптовые цены</span>
+                      </label>
+                      <label class="form__radio radio-btn">
+                        <input class="radio-btn__input visually-hidden" type="radio" name="price" value=""><span class="radio-btn__caption">Розничные цены</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </form>
+                <form class="ordering__form form" action="#" data-tab-id="toggle-cart" data-tab-block="tab-ur">
+                  <fieldset class="form__group">
+                    <legend class="form__caption">Заполните данные организации и контакты получателя</legend>
+                    <div class="form__item">
+                      <label class="form__label" for="form-org-inn">ИНН организации</label>
+                      <input class="form__input" id="form-org-inn" type="text" name="name">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="form-org-name">Название организации</label>
+                      <input class="form__input" id="form-org-name" type="text" name="name">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="form-name">Фамилия и имя</label>
+                      <input class="form__input" id="form-name" type="text" name="name">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="form-tel">Телефон</label>
+                      <input class="form__input" id="form-tel" type="tel" name="tel">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="form-email">E-mail</label>
+                      <input class="form__input" id="form-email" type="email" name="email">
+                    </div>
+                    <label class="form__checkbox checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="" value=""><span class="checkbox__caption">Получать информацию о скидках и новостях</span>
+                    </label>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__caption">Адрес доставки</legend>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <input class="form__input" id="form-address" type="text" name="address" placeholder="Населенный пункт, улица, дом">
+                      </label>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <input class="form__input" id="form-apartment" type="text" name="apartment" placeholder="Квартира или офис">
+                      </label>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <input class="form__input" id="form-comment" type="text" name="comment" placeholder="Комментарий к доставке">
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__caption">Дата и время</legend>
+                    <div class="form__select-group">
+                      <div class="form__select select">
+                        <select name="delivery-date">
+                          <option value="Пятница, 24 сентября">Пятница, 24 сентября</option>
+                          <option value="Пятница, 24 сентября">Пятница, 24 сентября</option>
+                        </select>
+                      </div>
+                      <div class="form__select select">
+                        <select name="delivery-time">
+                          <option value="11:00 - 14:00">11:00 - 14:00</option>
+                          <option value="11:00 - 14:00">11:00 - 14:00</option>
+                        </select>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__caption">Способ оплаты</legend>
+                    <div class="form__radio-group">
+                      <label class="form__radio radio-btn">
+                        <input class="radio-btn__input visually-hidden" type="radio" name="price" value=""><span class="radio-btn__caption">Оптовые цены</span>
+                      </label>
+                      <label class="form__radio radio-btn">
+                        <input class="radio-btn__input visually-hidden" type="radio" name="price" value=""><span class="radio-btn__caption">Розничные цены</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+              <div class="ordering__side cart-side">
+                <div class="cart-side__top">
+                  <div class="cart-side__wrap"><span class="cart-side__">Товары (3):</span><span class="cart-side__price">3 000 руб.</span></div>
+                  <p class="cart-side__info">Дата и стоимость доставки определяются при оформлении заказа</p>
+                </div>
+                <div class="cart-side__bot">
+                  <div class="cart-side__wrap cart-side__wrap--summary"><span>Итого</span><span>3 000 руб.</span></div>
+                  <button class="cart-side__btn button" type="submit">Оформление заказа</button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>

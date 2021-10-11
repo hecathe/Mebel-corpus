@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Карта сайта</title>
+    <title>Личный кабинет Личные данные</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -184,49 +184,101 @@
         </nav>
       </header>
       <main>
-        <section class="site-map mb-90">
+        <div class="breadcrumbs container">
+          <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-list__item"><a class="breadcrumbs-list__link" href="/">Главная</a></li>
+            <li class="breadcrumbs-list__item"><span>/</span></li>
+            <li class="breadcrumbs-list__item"><a class="breadcrumbs-list__link" href="/">Раздел каталога</a></li>
+            <li class="breadcrumbs-list__item"><span>/</span></li>
+            <li class="breadcrumbs-list__item"><span class="breadcrumbs-list__active">Подраздел</span></li>
+          </ul>
+        </div>
+        <section class="account mb-90">
           <div class="container">
-            <table class="site-map__table">
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="main.html">Главная</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="about-company.html">О компании</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="services.html">Услуги</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="documents.html">Документы</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="press-kit.html">Пресс-кит</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="catalog.html">Каталог</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="catalog-section.html">Раздел каталога</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="catalog-item.html">Карточка товара</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="new-items.html">Новинки</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="out-of.html">Снято с производства</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="discounts.html">Акции</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="discount-item.html">Акция</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="news.html">Новости</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="news-item.html">Новость</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="info-letters.html">Информационные письма</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="info-letters-item.html">Информационное письмо</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="contacts.html">Контакты</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="payment.html">Как купить</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="warranty.html">Гарантии</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="cart.html">Корзина</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="ordering.html">Оформление заказа</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="account.html">Личный кабинет (Личные данные)</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="account-1.html">Личный кабинет (Мои заказы)</a></td>
-                <td class="site-map__cell"><a class="site-map__link" href="account-2.html">Личный кабинет (Избранное)</a></td>
-              </tr>
-              <tr class="site-map__row">
-                <td class="site-map__cell"><a class="site-map__link" href="404.html">404</a></td>
-              </tr>
-            </table>
+            <h1 class="account__title title-first mb-60">Личный кабинет</h1>
+            <div class="account__subtitle mb-60">Здравствуйте, Евгения</div>
+            <div class="account__wrap">
+              <div class="account__side account-side">
+                <ul class="account-side__list">
+                  <li class="account-side__item"><a class="account-side__link active" href="#">Личные данные</a></li>
+                  <li class="account-side__item"><a class="account-side__link" href="#">Мои заказы</a></li>
+                  <li class="account-side__item"><a class="account-side__link" href="#">Избранное</a></li>
+                  <li class="account-side__item"><a class="account-side__link" href="#">Выйти</a></li>
+                </ul>
+              </div>
+              <div class="account__content">
+                <div class="account__block mb-60">
+                  <div class="account__head">
+                    <h2 class="account__content-title">Личная информация</h2>
+                    <button class="account__edit-btn" data-change-data="person">Редактировать данные</button>
+                  </div>
+                  <form class="account__form form" action="#" data-change-data="person">
+                    <div class="form__item">
+                      <label class="form__label" for="surname">Фамилия</label>
+                      <input class="form__input" id="surname" type="text" name="surname" value="Константинопольская">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="name">Имя</label>
+                      <input class="form__input" id="name" type="text" name="name" value="Евгения">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="patronymic">Имя</label>
+                      <input class="form__input" id="patronymic" type="text" name="patronymic" value="Константиновна">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="form-tel">Телефон</label>
+                      <input class="form__input" id="form-tel" type="tel" name="tel">
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label" for="form-email">E-mail</label>
+                      <input class="form__input" id="form-email" type="email" name="email">
+                    </div>
+                    <label class="form__checkbox checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="" value=""><span class="checkbox__caption">Получать информацию о скидках и новостях</span>
+                    </label>
+                    <div class="account__btns" data-change-block="person">
+                      <button class="account__save-btn button" type="submit">Сохранить</button>
+                      <button class="account__save-btn button button--ghost" type="submit">Отмена</button>
+                    </div>
+                  </form>
+                </div>
+                <!-- Форма смены пароля-->
+                <div class="account__block">
+                  <div class="account__head">
+                    <button class="account__edit-btn" data-change-data="password">Изменить пароль</button>
+                  </div>
+                  <div class="account__form-wrap" data-change-block="password">
+                    <form class="account__form form" action="#" data-change-data="password">
+                      <div class="form__item">
+                        <label>
+                          <input class="form__input" id="" type="password" name="" placeholder="Введите старый пароль">
+                        </label>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <input class="form__input" id="" type="password" name="" placeholder="Новый пароль">
+                        </label>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <input class="form__input" id="" type="password" name="" placeholder="Повторите новый пароль">
+                        </label>
+                      </div>
+                      <div class="account__btns">
+                        <button class="account__save-btn button" type="submit">Сохранить</button>
+                        <button class="account__save-btn button button--ghost" type="submit">Отмена</button>
+                      </div>
+                    </form>
+                    <div class="account__warning">
+                      <svg width="20" height="20">
+                        <use xlink:href="assets/images/sprite.svg#attention"></use>
+                      </svg>
+                      <p>Пароль должен содержать десять букв, букву другого регистра, три буквы на клингонском, и прочая ерунда</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
