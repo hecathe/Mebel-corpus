@@ -21,7 +21,7 @@ block content
                             li.account-side__item
                                 a.account-side__link.active(href="#") Избранное
                             li.account-side__item
-                                a.account-side__link(href="#") Выйти
+                                a.account-side__link(href="#" data-modal-trigger="logout") Выйти
                     .account__content
                         ul.account__fav.catalog-list
                             li.catalog-list__item
@@ -45,3 +45,6 @@ block content
                         // Пагинация
                         .account__fav-pagination
                             include ../components/pagination.pug
+
+        include ../components/modal-logout.pug
+        

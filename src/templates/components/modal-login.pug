@@ -1,0 +1,22 @@
+// Выезжающее модальное окно
+.modal.modal--account#login
+    .modal__container
+        h2.modal__title.title-second Войти в личный кабинет
+        p.modal__warning Неверный логин или пароль
+
+        button(type="button" aria-label="Закрыть окно" data-close).modal__close-btn.button-close
+            svg(width="24" height="24")
+                use(xlink:href="assets/images/sprite.svg#close")
+
+        form.modal__form.form(action="#" method="post")
+            .form__item
+                label.form__label
+                    input.form__input(type="email" name="email" placeholder="Email")
+            .form__item
+                label.form__label
+                    input.form__input(type="password" name="password" placeholder="Пароль")
+
+            button(type="submit").form__submit-btn.button Войти
+        
+        p.modal__bot-text Нет аккаунта? 
+            a(href="#" data-modal-trigger="registration") Зарегистрироваться

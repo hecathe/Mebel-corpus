@@ -108,6 +108,10 @@
 
         svg {
             margin-right: 13px;
+            pointer-events: none;
+        }
+        span {
+            pointer-events: none;
         }
     }
     &__cart {

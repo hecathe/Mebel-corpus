@@ -1,0 +1,22 @@
+// Попап окно; добавляем класс active чтобы окно открывалось по умолчанию
+.popup#select-city
+    .popup__container
+        h2.popup__title Выберите город
+
+        button(type="button" aria-label="Закрыть окно" data-close).popup__close-btn.button-close
+            svg(width="24" height="24")
+                use(xlink:href="assets/images/sprite.svg#close")
+
+        form.search-form(method="get" action="#")
+            label
+                input.search-form__input(type="search" placeholder="Введите название города")
+            button.search-form__btn(type="button")
+                svg(width="20" height="20")
+                    use(xlink:href="assets/images/sprite.svg#icons-search")
+        ul.popup__list.city-list
+            li.city-list__item
+                a(href="#").city-list__link.active Санкт-Петербург
+            li.city-list__item
+                a(href="#").city-list__link Москва
+            li.city-list__item
+                a(href="#").city-list__link Краснодар

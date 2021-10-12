@@ -21,7 +21,7 @@ block content
                             li.account-side__item
                                 a.account-side__link(href="#") Избранное
                             li.account-side__item
-                                a.account-side__link(href="#") Выйти
+                                a.account-side__link(href="#" data-modal-trigger="logout") Выйти
                     .account__content
                         .account__block.mb-60
                             .account__head
@@ -72,3 +72,5 @@ block content
                                     svg(width="20" height="20")
                                         use(xlink:href="assets/images/sprite.svg#attention")
                                     p Пароль должен содержать десять букв, букву другого регистра, три буквы на клингонском, и прочая ерунда
+
+        include ../components/modal-logout.pug

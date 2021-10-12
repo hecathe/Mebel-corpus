@@ -1,0 +1,90 @@
+.popup {
+    position: fixed;
+    max-width: 500px;
+    height: max-content;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    margin: auto;
+    padding: 40px 50px;
+    transform: translateY(-100%);
+    z-index: 123;
+
+    &.active {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        color: var(--color-black);
+        margin-bottom: 30px;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .search-form {
+        height: 39px;
+    }
+    .search-form__input {
+        font-size: 14px;
+        line-height: 19px;
+        background: none;
+        border: 1px solid #D7D7D7;
+        padding: 10px;
+    }
+    .search-form__btn {
+        top: 10px;
+        left: initial;
+        right: 10px;
+    }
+}
+
+.city-list {
+    display: grid;
+    row-gap: 20px;
+    @include list-reset;
+    margin-top: 31px;
+
+    &__link {
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--color-black);
+        text-decoration: none;
+
+        &.active {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .popup {
+        margin: auto 20px;
+        padding: 30px 20px;
+
+        .search-form {
+            position: relative;
+            width: 100%;
+
+            label {
+                input {
+                    position: static;
+                    width: 100%;
+                }
+            }
+        }
+        .search-form__btn {
+            position: absolute;
+        }
+    }
+}

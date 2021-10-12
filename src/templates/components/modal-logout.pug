@@ -1,0 +1,12 @@
+// Выезжающее модальное окно
+.modal.modal--account#logout
+    .modal__container
+        h2.modal__title.title-second Вы действительно<br> хотите выйти?
+
+        button(type="button" aria-label="Закрыть окно" data-close).modal__close-btn.button-close
+            svg(width="24" height="24")
+                use(xlink:href="assets/images/sprite.svg#close")
+
+        .modal__btn-wrap
+            button.modal__btn.button.button--ghost Выйти
+            button.modal__btn.button(data-cancel-btn) Отмена

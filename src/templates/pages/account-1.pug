@@ -21,7 +21,7 @@ block content
                             li.account-side__item
                                 a.account-side__link(href="#") Избранное
                             li.account-side__item
-                                a.account-side__link(href="#") Выйти
+                                a.account-side__link(href="#" data-modal-trigger="logout") Выйти
                     .account__content
                         .account__block.mb-90
                             h2.account__content-title Текущие заказы
@@ -194,3 +194,5 @@ block content
                                                             span Артикул: 107203
                                                             span 1 шт.
                                                         .order-list__goods-price 50 500 руб
+        
+        include ../components/modal-logout.pug
