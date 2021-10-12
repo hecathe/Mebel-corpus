@@ -6,27 +6,6 @@
         justify-content: space-between;
         align-items: flex-start;
     }
-
-    &__toggle {
-        width: max-content;
-        display: flex;
-        column-gap: 5px;
-        border: 1px solid var(--standart-grey);
-        border-radius: 5px;
-        padding: 5px;
-    }
-
-    &__btn {
-        @include button-reset;
-        color: var(--color-form-text);
-        border-radius: 5px;
-        padding: 10px 15px;
-
-        &.active {
-            color: var(--color-white);
-            background-color: var(--color-primary);
-        }
-    }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -34,12 +13,6 @@
         &__wrap {
             grid-template-columns: 100%;
             row-gap: 30px;
-        }
-
-        &__toggle {
-            font-size: 12px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         &__btn {

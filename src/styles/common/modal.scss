@@ -9,6 +9,7 @@
     z-index: 123;
     padding-top: 90px;
     padding-left: 200px;
+    padding-bottom: 60px;
     transition: left 200ms ease-in-out;
     overflow-y: auto;
 
@@ -34,11 +35,78 @@
         top: 50px;
         right: 50px;
     }
+
+    &__bot-text {
+        line-height: 19px;
+        color: #707070;
+        margin: 0;
+        margin-top: 36px;
+
+        a {
+            color: var(--color-primary);
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__warning {
+        color: #ED1A3B;
+        margin: 0;
+        margin-top: -40px;
+        margin-bottom: 20px;
+    }
+
+    .toggle-form {
+        margin: 0 0 30px;
+    }
+
+    &__btn-wrap {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        column-gap: 20px;
+    }
+    &__btn {
+        padding: 10px 30px;
+    }
+}
+
+.modal--account {
+    padding-top: 180px;
+
+    .modal__title {
+        margin-bottom: 60px;
+    }
+
+    .form {
+        max-width: 330px;
+    }
+
+    .form__submit-btn {
+        margin-top: 30px;
+    }
+}
+
+.modal--callback {
+    .modal__title {
+        margin-bottom: 60px;
+    }
+
+    .modal__bot-text {
+        color: var(--color-main-text);
+        margin-top: 20px;
+
+        a {
+            color: var(--color-main-text);
+        }
+    }
 }
 
 @media screen and (max-width: 975px) {
     .modal {
-        padding: 60px 30px;
+        padding: 60px 20px;
 
         &__close-btn {
             top: 20px;

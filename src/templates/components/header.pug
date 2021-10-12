@@ -2,7 +2,7 @@ header.header
     nav.header__nav
         .header__top
             .container.header-wrap
-                button.header__location-btn
+                button.header__location-btn(data-modal-trigger="select-city")
                     svg(width="15" height="15")
                         use(xlink:href="assets/images/sprite.svg#icon-gps-device")
                     span Санкт-Петербург
@@ -38,7 +38,7 @@ header.header
 
                 // форма поиска
                 form.header__search.search-form(method="get" action="#")
-                    button.search-form__btn(type="submit")
+                    button.search-form__btn(type="button")
                         svg(width="20" height="20")
                             use(xlink:href="assets/images/sprite.svg#icons-search")
                     label
@@ -46,7 +46,7 @@ header.header
                 // форма поиска конец
 
                 .header__user-menu
-                    a(href="#").header__account
+                    a.header__account(href="#" data-modal-trigger="login")
                         svg(width="25" height="25")
                             use(xlink:href="assets/images/sprite.svg#user-outlined")
                         span Личный кабинет
@@ -65,7 +65,7 @@ header.header
                         svg(width="14" height="14")
                             use(xlink:href="assets/images/sprite.svg#hamburger-button")
                         span Каталог
-                    button.header__location-btn
+                    button.header__location-btn(data-modal-trigger="select-city")
                         svg(width="15" height="15")
                             use(xlink:href="assets/images/sprite.svg#icon-gps-device")
                         span Санкт-Петербург
@@ -197,3 +197,4 @@ header.header
                             a.full-menu__link(href="#") Модульные диваны
                         li.full-menu__item
                             a.full-menu__link(href="#") Кресла
+                            

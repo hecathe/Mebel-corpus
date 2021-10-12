@@ -1,0 +1,47 @@
+// Выезжающее модальное окно
+.modal.modal--account#registration
+    .modal__container
+        h2.modal__title.title-second Зарегистрироваться
+
+        button(type="button" aria-label="Закрыть окно" data-close).modal__close-btn.button-close
+            svg(width="24" height="24")
+                use(xlink:href="assets/images/sprite.svg#close")
+
+        .toggle-form.mb-60
+            button.toggle-form__btn(data-tab-id="toggle-reg" data-tab-control="fiz") Физическое лицо
+            button.toggle-form__btn(data-tab-id="toggle-reg" data-tab-control="ur") Юридическое лицо
+
+        form.modal__form.form(action="#" method="post" data-tab-id="toggle-reg" data-tab-block="fiz")
+            .form__item
+                label.form__label
+                    input.form__input(type="email" name="email" placeholder="Email")
+            .form__item
+                label.form__label
+                    input.form__input(type="password" name="password" placeholder="Пароль")
+            .form__item
+                label.form__label
+                    input.form__input(type="password" name="password" placeholder="Повторите пароль")
+
+            button(type="submit").form__submit-btn.button Регистрация
+
+        form.modal__form.form(action="#" method="post" data-tab-id="toggle-reg" data-tab-block="ur")
+            .form__item
+                label.form__label
+                    input.form__input(type="text" name="name" placeholder="ИНН организации")
+            .form__item
+                label.form__label
+                    input.form__input(type="text" name="name" placeholder="Название организации")
+            .form__item
+                label.form__label
+                    input.form__input(type="text" name="name" placeholder="Фамилия и имя")
+            .form__item
+                label.form__label
+                    input.form__input(type="tel" name="tel" placeholder="Телефон")
+            .form__item
+                label.form__label
+                    input.form__input(type="email" name="email" placeholder="E-mail")
+
+            button(type="submit").form__submit-btn.button Подать заявку
+
+        p.modal__bot-text Уже зарегистрированы? 
+            a(href="#" data-modal-trigger="login") Войти
