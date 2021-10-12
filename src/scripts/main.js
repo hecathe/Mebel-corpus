@@ -6,6 +6,18 @@ document.querySelectorAll('input[type="tel"]').forEach((elem) => {
 	}); 
 })
 
+document.querySelectorAll('[data-thousands-separator]').forEach((input) => {
+	input.addEventListener('change', function() {
+		const thousandMask = IMask(input, {
+			mask: Number,
+			min: 0,
+			max: 999999,
+			thousandsSeparator: ' ',
+			normalizeZeros: true,
+		});
+	})	
+})
+
 // Переключение табов
 // demo
 // button(data-tab-id="tabId1", data-tab-control="tab1") 1
@@ -107,7 +119,7 @@ const thumbsSwiper = new Swiper('.swiper-thumbs', {
 const sliderWithThumbs = new Swiper('.swiper-with-thumbs', {
 	// Optional parameters
 	speed: 500,
-	allowTouchMove: false,
+	// allowTouchMove: false,
 
 	// Navigation arrows
 	navigation: {
@@ -275,3 +287,9 @@ fileFields.forEach((item) => {
 		label.innerHTML = input.files[0].name
 	})
 })
+
+
+const zoomBtn = Spotlight.addControl(".zoom-btn", function (event) {
+	// handle click event
+	console.log("button clicked");
+});
