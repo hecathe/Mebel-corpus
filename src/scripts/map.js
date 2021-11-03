@@ -19,6 +19,8 @@ function init () {
     myMap.geoObjects.add(myGeoObject)
 
     const select = document.querySelector('.contacts__select select');
+    const cityList = select.querySelectorAll('[data-city]');
+    const cityInfoList = document.querySelectorAll(`[data-city-info]`);
 
     select.addEventListener('change', () => {
         const coords = select.value.split(',')
@@ -32,9 +34,18 @@ function init () {
             },
         });
         myMap.geoObjects.add(myGeoObject)
-    })
 
-    
-    
+        
+        // console.log(cityInfoList);
+        cityList.forEach((cityItem) => {
+            cityInfoList.forEach((cityInfoBlock) => {
+                cityInfoBlock.style.display = 'none'
+                if (cityItem.dataset === cityInfoBlock.dataset) {
+                    cityInfoBlock.style.display = 'block'
+                }
+            })
+
+        })
+    })
 }
 

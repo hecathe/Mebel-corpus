@@ -14,12 +14,12 @@ block content
                     .contacts__side
                         .contacts__select
                             select(name="map-select")
-                                option(value="59.808459, 30.459113") ТД Андрей Санкт-Петербург
-                                option(value="55.947616, 37.773673") ТД Андрей Москва
-                                option(value="45.035477, 39.045427") ТД Андрей Краснодар
+                                option(value="59.808459, 30.459113" data-city="sankt-peterburg") ТД Андрей Санкт-Петербург
+                                option(value="55.947616, 37.773673" data-city="moscow") ТД Андрей Москва
+                                option(value="45.035477, 39.045427" data-city="krasnodar") ТД Андрей Краснодар
                             svg(width="24" height="24")
                                 use(xlink:href="assets/images/sprite.svg#arrow-downward")
-                        .contacts__content
+                        .contacts__content(data-city-info="sankt-peterburg")
                             .contacts__item
                                 svg(width="20" height="20")
                                     use(xlink:href="assets/images/sprite.svg#location")
@@ -27,9 +27,39 @@ block content
                             .contacts__item
                                 svg(width="20" height="20")
                                     use(xlink:href="assets/images/sprite.svg#telephone-fill")
-                                .contacts__
+                                .contacts__tel-wrap
                                     a.contacts__tel(href="tel:+7 (812) 309 31 54") +7 (812) 309 31 54 
                                     span (многоканальный)
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#email")
+                                a(href="mailto:info@mebelcorpus.ru") info@mebelcorpus.ru
+                        .contacts__content(data-city-info="moscow")
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#location")
+                                address.contacts__address ул. Силикатная, дом 53, кор.3
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#telephone-fill")
+                                .contacts__tel-wrap
+                                    a.contacts__tel(href="tel:+74951396098") +7 (495) 139-60-98
+                                    //- span (многоканальный)
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#email")
+                                a(href="mailto:info@mebelcorpus.ru") info@mebelcorpus.ru
+                        .contacts__content(data-city-info="krasnodar")
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#location")
+                                address.contacts__address ул. Новороссийская, дом 220, литера Е
+                            .contacts__item
+                                svg(width="20" height="20")
+                                    use(xlink:href="assets/images/sprite.svg#telephone-fill")
+                                .contacts__tel-wrap
+                                    a.contacts__tel(href="tel:+78612139513") +7 (861) 213-95-13
+                                    //- span (многоканальный)
                             .contacts__item
                                 svg(width="20" height="20")
                                     use(xlink:href="assets/images/sprite.svg#email")

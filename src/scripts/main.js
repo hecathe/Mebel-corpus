@@ -289,7 +289,7 @@ fileFields.forEach((item) => {
 })
 
 
-const zoomBtn = Spotlight.addControl(".zoom-btn", function (event) {
-	// handle click event
-	console.log("button clicked");
-});
+// const zoomBtn = Spotlight.addControl(".zoom-btn", function (event) {
+// 	// handle click event
+// 	console.log("button clicked");
+// });
