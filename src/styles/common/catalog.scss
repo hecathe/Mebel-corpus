@@ -13,13 +13,12 @@
 }
 
 .catalog-all {
-    max-height: 113px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     column-gap: 40px;
     row-gap: 10px;
     @include list-reset;
+    margin: 20px 0;
 
     &__link {
         width: max-content;
@@ -51,11 +50,16 @@
     }
 
     .catalog-all {
-        max-height: 160px;
         column-gap: 20px;
 
         &__link {
             font-size: 12px;
         }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .catalog-all {
+        grid-template-columns: 1fr;
     }
 }

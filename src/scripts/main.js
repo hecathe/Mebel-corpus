@@ -142,7 +142,6 @@ const body = document.body;
 
 window.onclick = (event) => {
 	//header
-
 	if (event.target == toggleFullMenu) {
 		fullMenu.classList.add('show')
 		body.style.overflow = 'hidden'
@@ -203,8 +202,21 @@ window.onclick = (event) => {
 				}
 			})
 		}
-	})	
+	})
 }
+
+function modalIsOpen() {
+	const modals = document.querySelectorAll('.modal')
+
+	modals.forEach((modal) => {
+		if (modal.classList.contains('active')) {
+			openedWindow(modal)
+			closeWindow(modal)
+		}
+	})
+}
+
+modalIsOpen()
 
 function openedWindow(elem) {
 	if (elem.classList.contains('active')) {
