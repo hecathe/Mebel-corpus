@@ -19,7 +19,8 @@
     &__card {
         position: relative;
         display: flex;
-        height: 300px;
+        min-height: 300px;
+        height: 100%;
         color: var(--color-main-text);
         background-color: var(--color-background);
         border-radius: 10px;
@@ -30,7 +31,6 @@
     &__wrap {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         z-index: 2;
     }
 
@@ -47,6 +47,10 @@
         border-radius: 10px;
         object-fit: cover;
         z-index: 1;
+    }
+
+    &__btn {
+        margin-top: auto;
     }
 }
 
@@ -78,6 +82,15 @@
 
         &__link {
             height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .main-catalog {
+        &__card {
+            min-height: 300px;
+            height: auto;
         }
     }
 }

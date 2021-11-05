@@ -6,6 +6,7 @@ function init () {
     var myMap = new ymaps.Map('map', {
         center: [59.808459, 30.459113],
         zoom: 9,
+        // controls: ['smallMapDefaultSet']
         controls: []
     });
 
@@ -17,6 +18,11 @@ function init () {
         },
     });
     myMap.geoObjects.add(myGeoObject)
+    myMap.behaviors.disable('scrollZoom')
+
+    myMap.events.add('click', function(){
+        myMap.behaviors.enable('scrollZoom')
+    })
 
     const select = document.querySelector('.contacts__select select');
     const cityList = select.querySelectorAll('[data-city]');

@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-// const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify');
 const gulpif = require("gulp-if");
 const pug = require("gulp-pug");
 const del = require("del");
@@ -77,7 +77,13 @@ function styles() {
 
 //scripts
 function scripts() {
-	return gulp.src(paths.scripts.src).pipe(gulp.dest(paths.scripts.dest));
+	// return gulp.src(paths.scripts.src).pipe(gulp.dest(paths.scripts.dest));
+	return (
+        gulp
+			.src(paths.scripts.src)
+        	.pipe(uglify())
+        	.pipe(gulp.dest(paths.scripts.dest))
+  );
 }
 
 //styles

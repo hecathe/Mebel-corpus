@@ -10,6 +10,7 @@
         column-gap: 10px;
         align-items: center;
         @include list-reset;
+        margin-left: auto;
     }
 
     &__link {
