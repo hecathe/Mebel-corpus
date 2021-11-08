@@ -181,42 +181,42 @@ window.onclick = (event) => {
 	}
 	
 	// modal
-	const modalTriggerButtons = document.querySelectorAll('[data-modal-trigger]');
+	// const modalTriggerButtons = document.querySelectorAll('[data-modal-trigger]');
 
-	modalTriggerButtons.forEach((triggerModal) => {
-		if (event.target == triggerModal) {
-			const triggerData = triggerModal.getAttribute('data-modal-trigger')
-			const modals = document.querySelectorAll('.modal')
+	// modalTriggerButtons.forEach((triggerModal) => {
+	// 	if (event.target == triggerModal) {
+	// 		const triggerData = triggerModal.getAttribute('data-modal-trigger')
+	// 		const modals = document.querySelectorAll('[data-popup]')
 
-			modals.forEach((modal) => {
-				const modalId = modal.id
-				modal.classList.remove('active')
+	// 		modals.forEach((modal) => {
+	// 			const modalId = modal.id
+	// 			modal.classList.remove('active')
 
-				if (triggerData === modalId) {
-					modal.classList.add('active')
-					openedWindow(modal);
-				}
+	// 			if (triggerData === modalId) {
+	// 				modal.classList.add('active')
+	// 				openedWindow(modal);
+	// 			}
 
-				if (modal.classList.contains('active')) {
-					closeWindow(modal)
-				}
-			})
-		}
-	})
+	// 			if (modal.classList.contains('active')) {
+	// 				closeWindow(modal)
+	// 			}
+	// 		})
+	// 	}
+	// })
 }
 
-function modalIsOpen() {
-	const modals = document.querySelectorAll('.modal')
+// function modalIsOpen() {
+// 	const modals = document.querySelectorAll('[data-popup]')
 
-	modals.forEach((modal) => {
-		if (modal.classList.contains('active')) {
-			openedWindow(modal)
-			closeWindow(modal)
-		}
-	})
-}
+// 	modals.forEach((modal) => {
+// 		if (modal.classList.contains('active')) {
+// 			openedWindow(modal)
+// 			closeWindow(modal)
+// 		}
+// 	})
+// }
 
-modalIsOpen()
+// modalIsOpen()
 
 function openedWindow(elem) {
 	if (elem.classList.contains('active')) {
@@ -254,25 +254,34 @@ function closeWindow(elem) {
 
 //popup
 function popup() {
-	const selectCity = document.querySelector('#select-city');
-	const selectCityBtns = document.querySelectorAll('[data-modal-trigger="select-city"]');
+	const popups = document.querySelectorAll('[data-popup]');
+	const popupTriggers = document.querySelectorAll('[data-modal-trigger]');
 	
-	openedWindow(selectCity)
-	closeWindow(selectCity)
-	
-	selectCityBtns.forEach((item) => {
-		item.addEventListener('click', function() {
-			selectCity.classList.add('active')
-			openedWindow(selectCity)
-			closeWindow(selectCity)
+	popups.forEach((popup) => {
+		openedWindow(popup)
+		closeWindow(popup)
+
+		popupTriggers.forEach((item) => {
+			item.addEventListener('click', function(event) {
+				event.preventDefault();
+				const trigger = item.getAttribute('data-modal-trigger')
+				popup.classList.remove('active')
+
+
+				if (trigger === popup.id) {
+					popup.classList.add('active')
+					openedWindow(popup)
+				}
+
+				if (popup.classList.contains('active')) {
+					closeWindow(popup)
+				}
+			})
 		})
 	})
 }
 
 popup()
-
-openedWindow(document.querySelector('#addincart-success'))
-closeWindow(document.querySelector('#addincart-success'))
 
 
 // accordion
