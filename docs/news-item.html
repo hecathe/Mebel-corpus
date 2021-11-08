@@ -503,6 +503,23 @@
           </ul>
         </div>
       </div>
+      <!-- Попап окно; добавляем класс active чтобы окно открывалось по умолчанию-->
+      <div class="popup" id="addincart-success">
+        <div class="popup__container">
+          <h2 class="popup__title">Товар успешно добавлен в корзину</h2>
+          <button class="popup__close-btn button-close" type="button" aria-label="Закрыть окно" data-close>
+            <svg width="24" height="24">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <ul class="popup__list btn-list">
+            <li class="btn-list__item"><a class="btn-list__btn button" href="#">Оформить заказ</a></li>
+            <li class="btn-list__item">
+              <button class="btn-list__btn button button--ghost" data-close>Продолжить покупки</button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="overlay" aria-label="Закрыть окно"></div>
     <script src="assets/scripts/imask.min.js"></script>
