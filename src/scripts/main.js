@@ -226,13 +226,15 @@ function openedWindow(elem) {
 }
 
 function closeWindow(elem) {
-	const closeModal = elem.querySelector('[data-close]')
+	const closeModal = elem.querySelectorAll('[data-close]')
 	const cancelBtn = elem.querySelector('[data-cancel-btn]')
 
-	closeModal.addEventListener('click', function() {
-		elem.classList.remove('active')
-		overlayForClose.classList.remove('active');
-		body.removeAttribute('style')
+	closeModal.forEach(closeBtn => {
+		closeBtn.addEventListener('click', function() {
+			elem.classList.remove('active')
+			overlayForClose.classList.remove('active');
+			body.removeAttribute('style')
+		})
 	})
 
 	overlayForClose.addEventListener('click', function(event) {
@@ -258,7 +260,6 @@ function popup() {
 	openedWindow(selectCity)
 	closeWindow(selectCity)
 	
-	
 	selectCityBtns.forEach((item) => {
 		item.addEventListener('click', function() {
 			selectCity.classList.add('active')
@@ -269,6 +270,9 @@ function popup() {
 }
 
 popup()
+
+openedWindow(document.querySelector('#addincart-success'))
+closeWindow(document.querySelector('#addincart-success'))
 
 
 // accordion

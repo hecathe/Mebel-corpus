@@ -10,6 +10,7 @@
     margin: auto;
     padding: 40px 50px;
     transform: translateY(-100%);
+    // transition: top 150ms ease-in-out;
     z-index: 123;
 
     &.active {
@@ -22,6 +23,7 @@
         font-size: 20px;
         line-height: 27px;
         color: var(--color-black);
+        margin: 0;
         margin-bottom: 30px;
     }
 
@@ -48,10 +50,13 @@
     }
 }
 
+.popup__list {
+    @include list-reset;
+}
+
 .city-list {
     display: grid;
     row-gap: 20px;
-    @include list-reset;
     margin-top: 31px;
 
     &__link {
@@ -64,6 +69,15 @@
             font-weight: 600;
             color: var(--color-primary);
         }
+    }
+}
+
+.btn-list {
+    display: grid;
+    row-gap: 15px;
+
+    &__btn {
+        width: 100%;
     }
 }
 

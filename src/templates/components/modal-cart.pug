@@ -1,0 +1,14 @@
+// Попап окно; добавляем класс active чтобы окно открывалось по умолчанию
+.popup#addincart-success
+    .popup__container
+        h2.popup__title Товар успешно добавлен в корзину
+
+        button(type="button" aria-label="Закрыть окно" data-close).popup__close-btn.button-close
+            svg(width="24" height="24")
+                use(xlink:href="assets/images/sprite.svg#close")
+
+        ul.popup__list.btn-list
+            li.btn-list__item
+                a(href="#").btn-list__btn.button Оформить заказ
+            li.btn-list__item
+                button(data-close).btn-list__btn.button.button--ghost Продолжить покупки
