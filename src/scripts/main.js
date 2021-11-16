@@ -119,7 +119,7 @@ const thumbsSwiper = new Swiper('.swiper-thumbs', {
 const sliderWithThumbs = new Swiper('.swiper-with-thumbs', {
 	// Optional parameters
 	speed: 500,
-	// allowTouchMove: false,
+	allowTouchMove: false,
 
 	// Navigation arrows
 	navigation: {
@@ -313,6 +313,16 @@ fileFields.forEach((item) => {
 	})
 })
 
+const showBlockBtns = document.querySelectorAll('[data-change-data]');
+
+showBlockBtns.forEach((showBtn) => {
+	const block = document.querySelector(`[data-change-block="${showBtn.dataset.changeData}"]`)
+	block.classList.remove('active')
+
+	showBtn.addEventListener('click', function() {
+		block.classList.toggle('active')
+	})
+})
 
 // const zoomBtn = Spotlight.addControl(".zoom-btn", function (event) {
 // 	// handle click event

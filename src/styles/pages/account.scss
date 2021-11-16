@@ -79,17 +79,23 @@
     }
 
     &__btns {
-        display: flex;
+        display: none;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
         column-gap: 20px;
         margin-top: 30px;
     }
 
     &__form-wrap {
-        display: grid;
+        display: none;
         grid-template-columns: 1fr minmax(auto, 280px);
         column-gap: 40px;
         align-items: flex-start;
         margin-top: 30px;
+
+        .account__btns {
+            display: grid;
+        }
     }
 
     &__form {
@@ -115,6 +121,10 @@
     &__fav {
         margin-bottom: 90px;
     }
+}
+
+[data-change-block].active {
+    display: grid;
 }
 
 .order-list {
