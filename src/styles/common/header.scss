@@ -49,6 +49,13 @@
         grid-auto-columns: max-content;
         column-gap: 30px;
     }
+
+    &__graphic {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &__time {
         span {
             font-weight: 600;

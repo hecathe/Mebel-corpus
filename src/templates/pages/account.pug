@@ -27,7 +27,7 @@ block content
                             .account__head
                                 h2.account__content-title Личная информация
                                 button.account__edit-btn(data-change-data="person") Редактировать данные
-                            form.account__form.form(action="#" data-change-data="person")
+                            form.account__form.form(action="#")
                                 .form__item
                                     label.form__label(for="surname") Фамилия
                                     input.form__input(id="surname" type="text" name="surname" value="Константинопольская")
@@ -48,14 +48,14 @@ block content
                                     span.checkbox__caption Получать информацию о скидках и новостях
                                 .account__btns(data-change-block="person")
                                     button.account__save-btn.button(type="submit") Сохранить
-                                    button.account__save-btn.button.button--ghost(type="submit") Отмена
+                                    button.account__save-btn.button.button--ghost(type="button" data-change-cancel) Отмена
 
                         // Форма смены пароля
                         .account__block
                             .account__head
                                 button.account__edit-btn(data-change-data="password") Изменить пароль
                             .account__form-wrap(data-change-block="password")
-                                form.account__form.form(action="#" data-change-data="password")
+                                form.account__form.form(action="#")
                                     .form__item
                                         label
                                             input.form__input(id="" type="password" name="" placeholder="Введите старый пароль")
@@ -67,7 +67,7 @@ block content
                                             input.form__input(id="" type="password" name="" placeholder="Повторите новый пароль")
                                     .account__btns
                                         button.account__save-btn.button(type="submit") Сохранить
-                                        button.account__save-btn.button.button--ghost(type="submit") Отмена
+                                        button.account__save-btn.button.button--ghost(type="button" data-change-cancel) Отмена
                                 .account__warning
                                     svg(width="20" height="20")
                                         use(xlink:href="assets/images/sprite.svg#attention")

@@ -212,7 +212,7 @@
                     <h2 class="account__content-title">Личная информация</h2>
                     <button class="account__edit-btn" data-change-data="person">Редактировать данные</button>
                   </div>
-                  <form class="account__form form" action="#" data-change-data="person">
+                  <form class="account__form form" action="#">
                     <div class="form__item">
                       <label class="form__label" for="surname">Фамилия</label>
                       <input class="form__input" id="surname" type="text" name="surname" value="Константинопольская">
@@ -238,7 +238,7 @@
                     </label>
                     <div class="account__btns" data-change-block="person">
                       <button class="account__save-btn button" type="submit">Сохранить</button>
-                      <button class="account__save-btn button button--ghost" type="submit">Отмена</button>
+                      <button class="account__save-btn button button--ghost" type="button" data-change-cancel>Отмена</button>
                     </div>
                   </form>
                 </div>
@@ -248,7 +248,7 @@
                     <button class="account__edit-btn" data-change-data="password">Изменить пароль</button>
                   </div>
                   <div class="account__form-wrap" data-change-block="password">
-                    <form class="account__form form" action="#" data-change-data="password">
+                    <form class="account__form form" action="#">
                       <div class="form__item">
                         <label>
                           <input class="form__input" id="" type="password" name="" placeholder="Введите старый пароль">
@@ -266,7 +266,7 @@
                       </div>
                       <div class="account__btns">
                         <button class="account__save-btn button" type="submit">Сохранить</button>
-                        <button class="account__save-btn button button--ghost" type="submit">Отмена</button>
+                        <button class="account__save-btn button button--ghost" type="button" data-change-cancel>Отмена</button>
                       </div>
                     </form>
                     <div class="account__warning">

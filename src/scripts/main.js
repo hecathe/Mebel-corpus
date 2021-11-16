@@ -319,8 +319,14 @@ showBlockBtns.forEach((showBtn) => {
 	const block = document.querySelector(`[data-change-block="${showBtn.dataset.changeData}"]`)
 	block.classList.remove('active')
 
+	cancelBtn = block.querySelector('[data-change-cancel]')
+
 	showBtn.addEventListener('click', function() {
 		block.classList.toggle('active')
+	})
+
+	cancelBtn.addEventListener('click', function() {
+		block.classList.remove('active')
 	})
 })
 
