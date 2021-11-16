@@ -23,6 +23,8 @@
     }
 
     &__col {
+        max-width: 290px;
+        width: 100%;
         display: flex;
         column-gap: 20px;
     }

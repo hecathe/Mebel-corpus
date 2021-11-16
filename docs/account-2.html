@@ -217,7 +217,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -240,7 +240,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -263,7 +263,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -286,7 +286,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -309,7 +309,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -332,7 +332,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -355,7 +355,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -378,7 +378,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -401,7 +401,7 @@
                           </div>
                           <div class="product-card__bot">
                             <div class="product-card__price">125 000 ₽</div>
-                            <div class="product-card__btn button">
+                            <div class="product-card__btn button" data-modal-trigger="addincart-success">
                               <svg width="21" height="21">
                                 <use xlink:href="assets/images/sprite.svg#cart"></use>
                               </svg><span>В корзину</span>
@@ -440,7 +440,7 @@
           </div>
         </section>
         <!-- Выезжающее модальное окно-->
-        <div class="modal modal--account" id="logout">
+        <div class="modal modal--account" id="logout" data-popup>
           <div class="modal__container">
             <h2 class="modal__title title-second">Вы действительно<br> хотите выйти?</h2>
             <button class="modal__close-btn button-close" type="button" aria-label="Закрыть окно" data-close>
@@ -550,7 +550,7 @@
         </div>
       </footer>
       <!-- Выезжающее модальное окно-->
-      <div class="modal modal--account" id="login">
+      <div class="modal modal--account" id="login" data-popup>
         <div class="modal__container">
           <h2 class="modal__title title-second">Войти в личный кабинет</h2>
           <p class="modal__warning">Неверный логин или пароль</p>
@@ -576,7 +576,7 @@
         </div>
       </div>
       <!-- Выезжающее модальное окно-->
-      <div class="modal modal--account" id="registration">
+      <div class="modal modal--account" id="registration" data-popup>
         <div class="modal__container">
           <h2 class="modal__title title-second">Зарегистрироваться</h2>
           <button class="modal__close-btn button-close" type="button" aria-label="Закрыть окно" data-close>
@@ -638,7 +638,7 @@
         </div>
       </div>
       <!-- Выезжающее модальное окно-->
-      <div class="modal modal--callback" id="callback">
+      <div class="modal modal--callback" id="callback" data-popup>
         <div class="modal__container">
           <h2 class="modal__title title-second">Заказать звонок</h2>
           <button class="modal__close-btn button-close" type="button" aria-label="Закрыть окно" data-close>
@@ -665,7 +665,7 @@
         </div>
       </div>
       <!-- Попап окно; добавляем класс active чтобы окно открывалось по умолчанию-->
-      <div class="popup" id="select-city">
+      <div class="popup" id="select-city" data-popup>
         <div class="popup__container">
           <h2 class="popup__title">Выберите город</h2>
           <button class="popup__close-btn button-close" type="button" aria-label="Закрыть окно" data-close>
@@ -691,7 +691,7 @@
         </div>
       </div>
       <!-- Попап окно; добавляем класс active чтобы окно открывалось по умолчанию-->
-      <div class="popup" id="addincart-success">
+      <div class="popup" id="addincart-success" data-popup>
         <div class="popup__container">
           <h2 class="popup__title">Товар успешно добавлен в корзину</h2>
           <button class="popup__close-btn button-close" type="button" aria-label="Закрыть окно" data-close>
