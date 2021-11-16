@@ -30,25 +30,25 @@ block content
                             form.account__form.form(action="#")
                                 .form__item
                                     label.form__label(for="surname") Фамилия
-                                    input.form__input(id="surname" type="text" name="surname" value="Константинопольская")
+                                    input.form__input(id="surname" type="text" name="surname" value="Константинопольская" disabled)
                                 .form__item
                                     label.form__label(for="name") Имя
-                                    input.form__input(id="name" type="text" name="name" value="Евгения")
+                                    input.form__input(id="name" type="text" name="name" value="Евгения" disabled)
                                 .form__item
                                     label.form__label(for="patronymic") Имя
-                                    input.form__input(id="patronymic" type="text" name="patronymic" value="Константиновна")
+                                    input.form__input(id="patronymic" type="text" name="patronymic" value="Константиновна" disabled)
                                 .form__item
                                     label.form__label(for="form-tel") Телефон
-                                    input.form__input(id="form-tel" type="tel" name="tel")
+                                    input.form__input(id="form-tel" type="tel" name="tel" disabled)
                                 .form__item
                                     label.form__label(for="form-email") E-mail
-                                    input.form__input(id="form-email" type="email" name="email")
-                                label.form__checkbox.checkbox
-                                    input.checkbox__input.visually-hidden(type="checkbox" name="" value="")
+                                    input.form__input(id="form-email" type="email" name="email" disabled)
+                                label.form__checkbox.checkbox.disabled
+                                    input.checkbox__input.visually-hidden(type="checkbox" name="" value="" disabled)
                                     span.checkbox__caption Получать информацию о скидках и новостях
                                 .account__btns(data-change-block="person")
                                     button.account__save-btn.button(type="submit") Сохранить
-                                    button.account__save-btn.button.button--ghost(type="button" data-change-cancel) Отмена
+                                    button.account__save-btn.button.button--ghost(type="reset" data-change-cancel) Отмена
 
                         // Форма смены пароля
                         .account__block
@@ -67,7 +67,7 @@ block content
                                             input.form__input(id="" type="password" name="" placeholder="Повторите новый пароль")
                                     .account__btns
                                         button.account__save-btn.button(type="submit") Сохранить
-                                        button.account__save-btn.button.button--ghost(type="button" data-change-cancel) Отмена
+                                        button.account__save-btn.button.button--ghost(type="reset" data-change-cancel) Отмена
                                 .account__warning
                                     svg(width="20" height="20")
                                         use(xlink:href="assets/images/sprite.svg#attention")

@@ -267,7 +267,6 @@ function popup() {
 				const trigger = item.getAttribute('data-modal-trigger')
 				popup.classList.remove('active')
 
-
 				if (trigger === popup.id) {
 					popup.classList.add('active')
 					openedWindow(popup)
@@ -286,7 +285,7 @@ popup()
 
 // accordion
 if (document.querySelectorAll('.accordion').length) {
-	const newBtn = document.querySelectorAll('.accordion__btn');
+	// const newBtn = document.querySelectorAll('.accordion__btn');
 	const accordions = document.querySelectorAll('.accordion');
 
 	accordions.forEach((accordion) => {
@@ -313,21 +312,32 @@ fileFields.forEach((item) => {
 	})
 })
 
+//account blocks
 const showBlockBtns = document.querySelectorAll('[data-change-data]');
 
 showBlockBtns.forEach((showBtn) => {
-	const block = document.querySelector(`[data-change-block="${showBtn.dataset.changeData}"]`)
-	block.classList.remove('active')
+	const block = document.querySelector(`[data-change-block="${showBtn.dataset.changeData}"]`);
+	let accBlock = block.closest('.account__block')
+	let inputs = accBlock.querySelectorAll('input');
+	let cancelBtn = block.querySelector('[data-change-cancel]');
+	
+	block.classList.remove('active');
 
-	cancelBtn = block.querySelector('[data-change-cancel]')
+	accBlock.onclick = (event) => {
+		if (event.target === showBtn || event.target === cancelBtn) {
+			block.classList.toggle('active')
 
-	showBtn.addEventListener('click', function() {
-		block.classList.toggle('active')
-	})
-
-	cancelBtn.addEventListener('click', function() {
-		block.classList.remove('active')
-	})
+			inputs.forEach((input) => {
+				if (!block.classList.contains('active')) {
+					input.setAttribute("disabled", "disabled");
+					input.parentElement.classList.add('disabled');
+				} else {
+					input.removeAttribute("disabled");
+					input.parentElement.classList.remove('disabled');
+				}
+			})
+		}
+	}
 })
 
 // const zoomBtn = Spotlight.addControl(".zoom-btn", function (event) {

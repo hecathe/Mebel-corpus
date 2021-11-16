@@ -215,30 +215,30 @@
                   <form class="account__form form" action="#">
                     <div class="form__item">
                       <label class="form__label" for="surname">Фамилия</label>
-                      <input class="form__input" id="surname" type="text" name="surname" value="Константинопольская">
+                      <input class="form__input" id="surname" type="text" name="surname" value="Константинопольская" disabled>
                     </div>
                     <div class="form__item">
                       <label class="form__label" for="name">Имя</label>
-                      <input class="form__input" id="name" type="text" name="name" value="Евгения">
+                      <input class="form__input" id="name" type="text" name="name" value="Евгения" disabled>
                     </div>
                     <div class="form__item">
                       <label class="form__label" for="patronymic">Имя</label>
-                      <input class="form__input" id="patronymic" type="text" name="patronymic" value="Константиновна">
+                      <input class="form__input" id="patronymic" type="text" name="patronymic" value="Константиновна" disabled>
                     </div>
                     <div class="form__item">
                       <label class="form__label" for="form-tel">Телефон</label>
-                      <input class="form__input" id="form-tel" type="tel" name="tel">
+                      <input class="form__input" id="form-tel" type="tel" name="tel" disabled>
                     </div>
                     <div class="form__item">
                       <label class="form__label" for="form-email">E-mail</label>
-                      <input class="form__input" id="form-email" type="email" name="email">
+                      <input class="form__input" id="form-email" type="email" name="email" disabled>
                     </div>
-                    <label class="form__checkbox checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="" value=""><span class="checkbox__caption">Получать информацию о скидках и новостях</span>
+                    <label class="form__checkbox checkbox disabled">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="" value="" disabled><span class="checkbox__caption">Получать информацию о скидках и новостях</span>
                     </label>
                     <div class="account__btns" data-change-block="person">
                       <button class="account__save-btn button" type="submit">Сохранить</button>
-                      <button class="account__save-btn button button--ghost" type="button" data-change-cancel>Отмена</button>
+                      <button class="account__save-btn button button--ghost" type="reset" data-change-cancel>Отмена</button>
                     </div>
                   </form>
                 </div>
@@ -266,7 +266,7 @@
                       </div>
                       <div class="account__btns">
                         <button class="account__save-btn button" type="submit">Сохранить</button>
-                        <button class="account__save-btn button button--ghost" type="button" data-change-cancel>Отмена</button>
+                        <button class="account__save-btn button button--ghost" type="reset" data-change-cancel>Отмена</button>
                       </div>
                     </form>
                     <div class="account__warning">
