@@ -113,13 +113,13 @@ const swiperWithoutPag = new Swiper('.slider-withone .swiper-container', {
 const thumbsSwiper = new Swiper('.swiper-thumbs', {
 	// Optional parameters
 	speed: 500,
-	slidesPerView: 5,
 	spaceBetween: 20,
+	slidesPerView: 4,
 })
 const sliderWithThumbs = new Swiper('.swiper-with-thumbs', {
 	// Optional parameters
 	speed: 500,
-	allowTouchMove: false,
+    watchSlidesProgress: true,
 
 	// Navigation arrows
 	navigation: {
@@ -204,19 +204,6 @@ window.onclick = (event) => {
 	// 	}
 	// })
 }
-
-// function modalIsOpen() {
-// 	const modals = document.querySelectorAll('[data-popup]')
-
-// 	modals.forEach((modal) => {
-// 		if (modal.classList.contains('active')) {
-// 			openedWindow(modal)
-// 			closeWindow(modal)
-// 		}
-// 	})
-// }
-
-// modalIsOpen()
 
 function openedWindow(elem) {
 	if (elem.classList.contains('active')) {
@@ -313,17 +300,10 @@ popup()
 
 // accordion
 if (document.querySelectorAll('.accordion').length) {
-	// const newBtn = document.querySelectorAll('.accordion__btn');
 	const accordions = document.querySelectorAll('.accordion');
 
 	accordions.forEach((accordion) => {
 		new Accordion(accordion);
-
-		// newBtn.forEach((item) => {
-		// 	item.addEventListener('click', function() {
-		// 		accordion.open()
-		// 	})
-		// })
 	})
 }
 
@@ -367,21 +347,3 @@ showBlockBtns.forEach((showBtn) => {
 		}
 	}
 })
-
-
-const colorBtns = document.querySelectorAll('.color-list__item');
-
-colorBtns.forEach((colorBtnItem) => {
-	colorBtnItem.addEventListener('click', function() {
-		if (colorBtnItem.classList.contains('active')) {
-			colorBtnItem.classList.remove('active')
-		} else {
-			colorBtnItem.classList.add('active')
-		}
-	})
-})
-
-// const zoomBtn = Spotlight.addControl(".zoom-btn", function (event) {
-// 	// handle click event
-// 	console.log("button clicked");
-// });

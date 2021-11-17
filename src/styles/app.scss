@@ -229,12 +229,13 @@ select {
 	&__input:checked + span::before {
 		position: absolute;
 		content: '';
-		top: 3px;
+		top: 50%;
 		left: 2px;
 		width: 12px;
 		height: 12px;
 		background-color: var(--color-primary);
 		border-radius: 100%;
+		transform: translateY(-50%);
 	}
 }
 

@@ -201,8 +201,8 @@
                 <div class="swiper-container swiper-with-thumbs">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="catalog-item__slide spotlight" data-src="assets/images/catalog-item.jpg"><img src="assets/images/catalog-item.jpg" alt="">
-                        <button class="catalog-item__zoom-btn zoom-btn">
+                      <div class="catalog-item__slide"><img src="assets/images/catalog-item.jpg" alt="">
+                        <button class="catalog-item__zoom-btn zoom-btn spotlight" data-src="assets/images/catalog-item.jpg">
                           <svg width="30" height="30">
                             <use xlink:href="assets/images/sprite.svg#bi_zoom-in"></use>
                           </svg>
@@ -210,8 +210,8 @@
                       </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="catalog-item__slide spotlight" data-src="assets/images/catalog-item.jpg"><img src="assets/images/catalog-item.jpg" alt="">
-                        <button class="catalog-item__zoom-btn zoom-btn">
+                      <div class="catalog-item__slide"><img src="assets/images/catalog-item.jpg" alt="">
+                        <button class="catalog-item__zoom-btn zoom-btn spotlight" data-src="assets/images/catalog-item.jpg">
                           <svg width="30" height="30">
                             <use xlink:href="assets/images/sprite.svg#bi_zoom-in"></use>
                           </svg>
@@ -224,12 +224,8 @@
                 </div>
                 <div class="swiper-container swiper-thumbs" thumbsSlider="">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="catalog-item__slide"><img src="assets/images/catalog-item.jpg" alt=""></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="catalog-item__slide"><img src="assets/images/catalog-item-2.png" alt=""></div>
-                    </div>
+                    <div class="swiper-slide"><img class="catalog-item__thumb-img" src="assets/images/catalog-item.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="catalog-item__thumb-img" src="assets/images/catalog-item-2.png" alt=""></div>
                   </div>
                 </div>
               </div>
@@ -250,10 +246,18 @@
                 </div>
                 <div class="catalog-item__color mb-60"><span class="catalog-item__caption">Цвет</span><span class="catalog-item__desc">Венге – Дуб белфорд</span>
                   <div class="catalog-item__color-list color-list">
-                    <button class="color-list__item active"><img class="color-list__img" src="assets/images/color-1.jpg" alt=""></button>
-                    <button class="color-list__item"><img class="color-list__img" src="assets/images/color-2.jpg" alt=""></button>
-                    <button class="color-list__item"><img class="color-list__img" src="assets/images/color-1.jpg" alt=""></button>
-                    <button class="color-list__item"><img class="color-list__img" src="assets/images/color-2.jpg" alt=""></button>
+                    <label class="color-list__item active">
+                      <input class="visually-hidden" type="radio" name="colors" value="color-1" checked><img class="color-list__img" src="assets/images/color-1.jpg" alt="">
+                    </label>
+                    <label class="color-list__item">
+                      <input class="visually-hidden" type="radio" name="colors" value="color-2"><img class="color-list__img" src="assets/images/color-2.jpg" alt="">
+                    </label>
+                    <label class="color-list__item">
+                      <input class="visually-hidden" type="radio" name="colors" value="color-3"><img class="color-list__img" src="assets/images/color-1.jpg" alt="">
+                    </label>
+                    <label class="color-list__item">
+                      <input class="visually-hidden" type="radio" name="colors" value="color-4"><img class="color-list__img" src="assets/images/color-2.jpg" alt="">
+                    </label>
                   </div>
                 </div>
                 <div class="catalog-item__btn-wrap">
