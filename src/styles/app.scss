@@ -229,7 +229,7 @@ select {
 	&__input:checked + span::before {
 		position: absolute;
 		content: '';
-		top: 4px;
+		top: 3px;
 		left: 2px;
 		width: 12px;
 		height: 12px;

@@ -282,6 +282,34 @@ function popup() {
 
 popup()
 
+// function modals() {
+// 	const popupTriggers = document.querySelectorAll('[data-modal-trigger]');
+
+// 	popupTriggers.forEach((popupTrigger) => {
+// 		const popup = document.querySelector(`[id="${popupTrigger.dataset.modalTrigger}"]`)
+// 		// console.log(popup);
+// 		openedWindow(popup)
+// 		closeWindow(popup)
+
+// 		popupTrigger.addEventListener('click', function(event) {
+// 			event.preventDefault();
+// 			// console.log(popupTrigger);
+
+// 			if (popupTrigger.dataset.modalTrigger == popup.id) {
+// 				popup.classList.remove('active')
+// 				popup.classList.add('active')
+// 				openedWindow(popup)
+// 			}
+
+// 			if (popup.classList.contains('active')) {
+// 				closeWindow(popup)
+// 			}
+// 		})
+// 	})
+// }
+
+// modals()
+
 
 // accordion
 if (document.querySelectorAll('.accordion').length) {
@@ -338,6 +366,19 @@ showBlockBtns.forEach((showBtn) => {
 			})
 		}
 	}
+})
+
+
+const colorBtns = document.querySelectorAll('.color-list__item');
+
+colorBtns.forEach((colorBtnItem) => {
+	colorBtnItem.addEventListener('click', function() {
+		if (colorBtnItem.classList.contains('active')) {
+			colorBtnItem.classList.remove('active')
+		} else {
+			colorBtnItem.classList.add('active')
+		}
+	})
 })
 
 // const zoomBtn = Spotlight.addControl(".zoom-btn", function (event) {
