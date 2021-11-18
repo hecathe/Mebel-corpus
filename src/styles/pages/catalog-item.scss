@@ -29,10 +29,14 @@
     }
 
     &__price {
-        display: flex;
+        display: none;
         align-items: center;
         column-gap: 30px;
         margin-bottom: 20px;
+
+        &.active {
+            display: flex;
+        }
     }
 
     &__new-price {

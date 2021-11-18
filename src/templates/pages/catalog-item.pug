@@ -44,15 +44,18 @@ block content
                             .catalog-item__row
                                 span Остаток на складе:
                                 span.catalog-item__value 12 шт.
-                        .catalog-item__price
+                        .catalog-item__price.active(data-price-block="price-opt")
+                            span.catalog-item__new-price 115 000 ₽
+                            span.catalog-item__old-price 125 000 ₽
+                        .catalog-item__price(data-price-block="price-roz")
                             span.catalog-item__new-price 125 000 ₽
                             span.catalog-item__old-price 165 000 ₽
                         .catalog-item__radios
                             label.catalog-item__label.radio-btn
-                                input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                input.radio-btn__input.visually-hidden(type="radio" name="price" value="price-opt" data-price-btn="price-opt" checked)
                                 span.radio-btn__caption Оптовые цены
                             label.catalog-item__label.radio-btn
-                                input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
+                                input.radio-btn__input.visually-hidden(type="radio" name="price" value="price-roz" data-price-btn="price-roz")
                                 span.radio-btn__caption Розничные цены
                         .catalog-item__color.mb-60
                             span.catalog-item__caption Цвет

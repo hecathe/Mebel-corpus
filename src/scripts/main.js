@@ -347,3 +347,22 @@ showBlockBtns.forEach((showBtn) => {
 		}
 	}
 })
+
+//toggle opt&roz prices
+const cardInfoBlock = document.querySelector('.catalog-item__info');
+const priceToggles = cardInfoBlock.querySelectorAll('[data-price-btn]');
+const priceBlocks = cardInfoBlock.querySelectorAll('[data-price-block]');
+
+priceToggles.forEach((input) => {
+	priceBlocks.forEach((block) => {
+		input.addEventListener('change', function() {
+			if (input.dataset.priceBtn === block.dataset.priceBlock) {
+				block.classList.add('active')
+			} else {
+				block.classList.remove('active')
+			}
+		})
+	})	
+})
+
+//toggle opt&roz prices end
