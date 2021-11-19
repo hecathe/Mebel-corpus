@@ -51,6 +51,12 @@ body {
 	font-size: 14px;
 	line-height: 140%;
 	color: var(--color-main-text);
+	overflow-x: hidden;
+	margin-right: calc(-1 * (100vw - 100%));
+
+	&.scroll-hidden {
+		overflow: hidden;
+	}
 }
 
 img {

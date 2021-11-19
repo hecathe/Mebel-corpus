@@ -66,6 +66,13 @@
     &__caption {
         font-weight: 600;
     }
+    &__desc {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
 
     &__btn-wrap {
         display: flex;

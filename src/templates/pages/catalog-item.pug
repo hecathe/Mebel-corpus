@@ -59,19 +59,22 @@ block content
                                 span.radio-btn__caption Розничные цены
                         .catalog-item__color.mb-60
                             span.catalog-item__caption Цвет
-                            span.catalog-item__desc Венге – Дуб белфорд
+                            span.catalog-item__desc.active(data-color="color-1") Венге – Дуб белфорд
+                            span.catalog-item__desc(data-color="color-2") Бенге – Дуб черфорд
+                            span.catalog-item__desc(data-color="color-3") Женге – Дуб черфорд
+                            span.catalog-item__desc(data-color="color-4") Денге – Дуб черфорд
                             .catalog-item__color-list.color-list
                                 label.color-list__item.active
-                                    input.visually-hidden(type="radio" name="colors" value="color-1" checked)
+                                    input.visually-hidden(type="radio" name="colors" value="color-1" checked data-color-btn="color-1")
                                     img.color-list__img(src="assets/images/color-1.jpg", alt="")
                                 label.color-list__item
-                                    input.visually-hidden(type="radio" name="colors" value="color-2")
+                                    input.visually-hidden(type="radio" name="colors" value="color-2" data-color-btn="color-2")
                                     img.color-list__img(src="assets/images/color-2.jpg", alt="")
                                 label.color-list__item
-                                    input.visually-hidden(type="radio" name="colors" value="color-3")
+                                    input.visually-hidden(type="radio" name="colors" value="color-3" data-color-btn="color-3")
                                     img.color-list__img(src="assets/images/color-1.jpg", alt="")
                                 label.color-list__item
-                                    input.visually-hidden(type="radio" name="colors" value="color-4")
+                                    input.visually-hidden(type="radio" name="colors" value="color-4" data-color-btn="color-4")
                                     img.color-list__img(src="assets/images/color-2.jpg", alt="")
                         .catalog-item__btn-wrap
                             button.catalog-item__btn.catalog-item__btn--cart.button

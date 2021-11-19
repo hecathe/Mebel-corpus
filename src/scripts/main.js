@@ -144,12 +144,12 @@ window.onclick = (event) => {
 	//header
 	if (event.target == toggleFullMenu) {
 		fullMenu.classList.add('show')
-		body.style.overflow = 'hidden'
+		body.classList.add('scroll-hidden')
 	}
 
 	if (event.target == closeBtn) {
 		fullMenu.classList.remove('show')
-		body.removeAttribute('style')
+		body.classList.remove('scroll-hidden')
 	}
 
 	if (event.target == searchBtn) {
@@ -163,9 +163,9 @@ window.onclick = (event) => {
 		header.classList.toggle('active')
 
 		if (header.classList.contains('active')) {
-			body.style.overflow = 'hidden'
+			body.classList.add('scroll-hidden')
 		} else {
-			body.removeAttribute('style')
+			body.classList.remove('scroll-hidden')
 		}
 	}
 
@@ -208,7 +208,7 @@ window.onclick = (event) => {
 function openedWindow(elem) {
 	if (elem.classList.contains('active')) {
 		overlayForClose.classList.add('active')
-		body.style.overflowY = 'hidden'
+		body.classList.add('scroll-hidden')
 	}
 }
 
@@ -220,21 +220,21 @@ function closeWindow(elem) {
 		closeBtn.addEventListener('click', function() {
 			elem.classList.remove('active')
 			overlayForClose.classList.remove('active');
-			body.removeAttribute('style')
+			body.classList.remove('scroll-hidden')
 		})
 	})
 
 	overlayForClose.addEventListener('click', function(event) {
 		elem.classList.remove('active')
 		overlayForClose.classList.remove('active')
-		body.removeAttribute('style')
+		body.classList.remove('scroll-hidden')
 	})
 
 	if (cancelBtn) {
 		cancelBtn.addEventListener('click', function() {
 			elem.classList.remove('active')
 			overlayForClose.classList.remove('active');
-			body.removeAttribute('style')
+			body.classList.remove('scroll-hidden')
 		})
 	}
 }
@@ -350,19 +350,40 @@ showBlockBtns.forEach((showBtn) => {
 
 //toggle opt&roz prices
 const cardInfoBlock = document.querySelector('.catalog-item__info');
-const priceToggles = cardInfoBlock.querySelectorAll('[data-price-btn]');
-const priceBlocks = cardInfoBlock.querySelectorAll('[data-price-block]');
 
-priceToggles.forEach((input) => {
-	priceBlocks.forEach((block) => {
-		input.addEventListener('change', function() {
-			if (input.dataset.priceBtn === block.dataset.priceBlock) {
-				block.classList.add('active')
-			} else {
-				block.classList.remove('active')
-			}
+if (cardInfoBlock) {
+	const priceToggles = cardInfoBlock.querySelectorAll('[data-price-btn]');
+	const priceBlocks = cardInfoBlock.querySelectorAll('[data-price-block]');
+	
+	priceToggles.forEach((input) => {
+		priceBlocks.forEach((block) => {
+			input.addEventListener('change', function() {
+				if (input.dataset.priceBtn === block.dataset.priceBlock) {
+					block.classList.add('active')
+				} else {
+					block.classList.remove('active')
+				}
+			})
+		})	
+	})
+
+	//toggle colors
+	const colorBtnToggles = cardInfoBlock.querySelectorAll('[data-color-btn]');
+	const colorNames = cardInfoBlock.querySelectorAll('[data-color]');
+
+	colorBtnToggles.forEach((toggle) => {
+		toggle.addEventListener('change', function() {
+			colorNames.forEach(name => {
+				if (toggle.dataset.colorBtn === name.dataset.color) {
+					name.classList.add(activeClass)
+				} else {
+					name.classList.remove(activeClass)
+				}
+			});
 		})
-	})	
-})
-
+	})
+	//toggle colors end
+}
 //toggle opt&roz prices end
+
+
