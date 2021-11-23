@@ -9,7 +9,7 @@
 
 .catalog-aside {
     position: sticky;
-    top: 20px;
+    top: 150px;
     max-width: 280px;
     width: 100%;
 
@@ -67,7 +67,7 @@
 .catalog-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    column-gap: 30px;
     row-gap: 30px;
     @include list-reset;
 }

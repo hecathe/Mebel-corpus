@@ -386,4 +386,15 @@ if (cardInfoBlock) {
 }
 //toggle opt&roz prices end
 
+//fixed header
+const header = document.querySelector('.header');
+sticky = header.offsetTop
 
+window.onscroll = () => {
+	if (window.pageYOffset > sticky) {
+		header.classList.add('sticky');
+	} else {
+		header.classList.remove('sticky');
+	}
+}
+//fixed header end

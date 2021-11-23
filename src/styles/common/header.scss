@@ -5,6 +5,28 @@
 }
 
 .header {
+    background-color: var(--color-white);
+    box-shadow: 0px 4px 20px rgba(117, 130, 131, 0.16);
+    z-index: 10;
+    // transition: top 150ms ease-in-out;
+
+    &.sticky {
+        position: sticky;
+        top: 0;
+
+        .header__top {
+            // display: none;
+            position: absolute;
+            transform: translateY(-100%);
+            visibility: hidden;
+        }
+
+        .header__primary {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+
     a {
         text-decoration: none;
 
@@ -15,6 +37,7 @@
 
     &__top {
         background-color: var(--color-search-back);
+        transition: transform 200ms ease;
 
         .container {
             padding-top: 11px;
