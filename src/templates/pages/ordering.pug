@@ -13,11 +13,17 @@ block content
 
                 .ordering__wrap
                     .ordering__form-wrap
-                        .ordering__toggle.toggle-form.mb-60
-                            button.toggle-form__btn(data-tab-id="toggle-cart" data-tab-control="tab-fiz") Физическое лицо
-                            button.toggle-form__btn(data-tab-id="toggle-cart" data-tab-control="tab-ur") Юридическое лицо
-                        form.ordering__form.form(action="#" data-tab-id="toggle-cart" data-tab-block="tab-fiz")
-                            fieldset.form__group
+                        form.ordering__form.form(action="#")
+                            .ordering__toggle.toggle-form.mb-60
+                                label.toggle-form__label
+                                    input.visually-hidden(type="radio" name="toggle-form" value="form-fiz" data-tab-id="faces", data-tab-control="faces-fiz" checked)
+                                    span Физическое лицо
+                                label.toggle-form__label
+                                    input.visually-hidden(type="radio" name="toggle-form" value="form-ur" data-tab-id="faces", data-tab-control="faces-ur")
+                                    span Юридическое лицо
+
+                            // физлицо
+                            fieldset.form__group(data-tab-id="faces", data-tab-block="faces-fiz")
                                 legend.form__caption Получатель
                                 .form__item
                                     label.form__label(for="form-name") ФИО
@@ -31,39 +37,9 @@ block content
                                 label.form__checkbox.checkbox
                                     input.checkbox__input.visually-hidden(type="checkbox" name="" value="")
                                     span.checkbox__caption Получать информацию о скидках и новостях
-                            fieldset.form__group
-                                legend.form__caption Адрес доставки
-                                .form__item
-                                    label.form__label
-                                        input.form__input(id="form-address" type="text" name="address" placeholder="Населенный пункт, улица, дом")
-                                .form__item
-                                    label.form__label
-                                        input.form__input(id="form-apartment" type="text" name="apartment" placeholder="Квартира или офис")
-                                .form__item
-                                    label.form__label
-                                        input.form__input(id="form-comment" type="text" name="comment" placeholder="Комментарий к доставке")
-                            fieldset.form__group
-                                legend.form__caption Дата и время
-                                .form__select-group
-                                    .form__select.select
-                                        select(name="delivery-date")
-                                            option(value="Пятница, 24 сентября") Пятница, 24 сентября
-                                            option(value="Пятница, 24 сентября") Пятница, 24 сентября
-                                    .form__select.select
-                                        select(name="delivery-time")
-                                            option(value="11:00 - 14:00") 11:00 - 14:00
-                                            option(value="11:00 - 14:00") 11:00 - 14:00
-                            fieldset.form__group
-                                legend.form__caption Способ оплаты
-                                .form__radio-group
-                                    label.form__radio.radio-btn
-                                        input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
-                                        span.radio-btn__caption Оптовые цены
-                                    label.form__radio.radio-btn
-                                        input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
-                                        span.radio-btn__caption Розничные цены
-                        form.ordering__form.form(action="#" data-tab-id="toggle-cart" data-tab-block="tab-ur")
-                            fieldset.form__group
+
+                            // Юрлицо        
+                            fieldset.form__group(data-tab-id="faces", data-tab-block="faces-ur")
                                 legend.form__caption Заполните данные организации и контакты получателя
                                 .form__item
                                     label.form__label(for="form-org-inn") ИНН организации
@@ -83,6 +59,8 @@ block content
                                 label.form__checkbox.checkbox
                                     input.checkbox__input.visually-hidden(type="checkbox" name="" value="")
                                     span.checkbox__caption Получать информацию о скидках и новостях
+
+                            // Доставка
                             fieldset.form__group
                                 legend.form__caption Адрес доставки
                                 .form__item
@@ -94,6 +72,8 @@ block content
                                 .form__item
                                     label.form__label
                                         input.form__input(id="form-comment" type="text" name="comment" placeholder="Комментарий к доставке")
+
+                            // время доставки
                             fieldset.form__group
                                 legend.form__caption Дата и время
                                 .form__select-group
@@ -105,6 +85,8 @@ block content
                                         select(name="delivery-time")
                                             option(value="11:00 - 14:00") 11:00 - 14:00
                                             option(value="11:00 - 14:00") 11:00 - 14:00
+                            
+                            // способ оплаты
                             fieldset.form__group
                                 legend.form__caption Способ оплаты
                                 .form__radio-group
@@ -114,7 +96,6 @@ block content
                                     label.form__radio.radio-btn
                                         input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
                                         span.radio-btn__caption Розничные цены
-
 
                     .ordering__side.cart-side
                         .cart-side__top

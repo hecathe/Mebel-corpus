@@ -198,12 +198,17 @@
             <h1 class="title-first mb-60">Оформление заказа</h1>
             <div class="ordering__wrap">
               <div class="ordering__form-wrap">
-                <div class="ordering__toggle toggle-form mb-60">
-                  <button class="toggle-form__btn" data-tab-id="toggle-cart" data-tab-control="tab-fiz">Физическое лицо</button>
-                  <button class="toggle-form__btn" data-tab-id="toggle-cart" data-tab-control="tab-ur">Юридическое лицо</button>
-                </div>
-                <form class="ordering__form form" action="#" data-tab-id="toggle-cart" data-tab-block="tab-fiz">
-                  <fieldset class="form__group">
+                <form class="ordering__form form" action="#">
+                  <div class="ordering__toggle toggle-form mb-60">
+                    <label class="toggle-form__label">
+                      <input class="visually-hidden" type="radio" name="toggle-form" value="form-fiz" data-tab-id="faces" data-tab-control="faces-fiz" checked><span>Физическое лицо</span>
+                    </label>
+                    <label class="toggle-form__label">
+                      <input class="visually-hidden" type="radio" name="toggle-form" value="form-ur" data-tab-id="faces" data-tab-control="faces-ur"><span>Юридическое лицо</span>
+                    </label>
+                  </div>
+                  <!-- физлицо-->
+                  <fieldset class="form__group" data-tab-id="faces" data-tab-block="faces-fiz">
                     <legend class="form__caption">Получатель</legend>
                     <div class="form__item">
                       <label class="form__label" for="form-name">ФИО</label>
@@ -221,55 +226,8 @@
                       <input class="checkbox__input visually-hidden" type="checkbox" name="" value=""><span class="checkbox__caption">Получать информацию о скидках и новостях</span>
                     </label>
                   </fieldset>
-                  <fieldset class="form__group">
-                    <legend class="form__caption">Адрес доставки</legend>
-                    <div class="form__item">
-                      <label class="form__label">
-                        <input class="form__input" id="form-address" type="text" name="address" placeholder="Населенный пункт, улица, дом">
-                      </label>
-                    </div>
-                    <div class="form__item">
-                      <label class="form__label">
-                        <input class="form__input" id="form-apartment" type="text" name="apartment" placeholder="Квартира или офис">
-                      </label>
-                    </div>
-                    <div class="form__item">
-                      <label class="form__label">
-                        <input class="form__input" id="form-comment" type="text" name="comment" placeholder="Комментарий к доставке">
-                      </label>
-                    </div>
-                  </fieldset>
-                  <fieldset class="form__group">
-                    <legend class="form__caption">Дата и время</legend>
-                    <div class="form__select-group">
-                      <div class="form__select select">
-                        <select name="delivery-date">
-                          <option value="Пятница, 24 сентября">Пятница, 24 сентября</option>
-                          <option value="Пятница, 24 сентября">Пятница, 24 сентября</option>
-                        </select>
-                      </div>
-                      <div class="form__select select">
-                        <select name="delivery-time">
-                          <option value="11:00 - 14:00">11:00 - 14:00</option>
-                          <option value="11:00 - 14:00">11:00 - 14:00</option>
-                        </select>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <fieldset class="form__group">
-                    <legend class="form__caption">Способ оплаты</legend>
-                    <div class="form__radio-group">
-                      <label class="form__radio radio-btn">
-                        <input class="radio-btn__input visually-hidden" type="radio" name="price" value=""><span class="radio-btn__caption">Оптовые цены</span>
-                      </label>
-                      <label class="form__radio radio-btn">
-                        <input class="radio-btn__input visually-hidden" type="radio" name="price" value=""><span class="radio-btn__caption">Розничные цены</span>
-                      </label>
-                    </div>
-                  </fieldset>
-                </form>
-                <form class="ordering__form form" action="#" data-tab-id="toggle-cart" data-tab-block="tab-ur">
-                  <fieldset class="form__group">
+                  <!-- Юрлицо        -->
+                  <fieldset class="form__group" data-tab-id="faces" data-tab-block="faces-ur">
                     <legend class="form__caption">Заполните данные организации и контакты получателя</legend>
                     <div class="form__item">
                       <label class="form__label" for="form-org-inn">ИНН организации</label>
@@ -295,6 +253,7 @@
                       <input class="checkbox__input visually-hidden" type="checkbox" name="" value=""><span class="checkbox__caption">Получать информацию о скидках и новостях</span>
                     </label>
                   </fieldset>
+                  <!-- Доставка-->
                   <fieldset class="form__group">
                     <legend class="form__caption">Адрес доставки</legend>
                     <div class="form__item">
@@ -313,6 +272,7 @@
                       </label>
                     </div>
                   </fieldset>
+                  <!-- время доставки-->
                   <fieldset class="form__group">
                     <legend class="form__caption">Дата и время</legend>
                     <div class="form__select-group">
@@ -330,6 +290,7 @@
                       </div>
                     </div>
                   </fieldset>
+                  <!-- способ оплаты-->
                   <fieldset class="form__group">
                     <legend class="form__caption">Способ оплаты</legend>
                     <div class="form__radio-group">

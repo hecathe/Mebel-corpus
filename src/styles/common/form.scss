@@ -140,6 +140,21 @@
             background-color: var(--color-primary);
         }
     }
+
+    &__label {
+        span {
+            display: flex;
+            color: var(--color-form-text);
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        input:checked + span {
+            color: var(--color-white);
+            background-color: var(--color-primary);
+        }
+    }
 }
 
 @media screen and (max-width: 767.98px) {
