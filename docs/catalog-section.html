@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/accordion.min.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/app.min.css">
+    <!-- rangeslider-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
   </head>
   <body>
     <div class="wrapper">
@@ -493,6 +496,7 @@
                         <input class="checkbox__input visually-hidden" type="checkbox" name="sale" value=""><span class="checkbox__caption">Акционный товар</span>
                       </label>
                     </div>
+                    <div class="full-filter__divider"></div>
                     <fieldset class="full-filter__group full-filter__group--col">
                       <legend class="full-filter__caption">Производитель</legend>
                       <label class="full-filter__label checkbox">
@@ -516,50 +520,37 @@
                         </svg>
                       </button>
                     </fieldset>
+                    <div class="full-filter__divider"></div>
                     <fieldset class="full-filter__group full-filter__group--row">
                       <legend class="full-filter__caption">Ширина (мм)</legend>
-                      <div class="full-filter__wrap">
-                        <label class="full-filter__range"><span>От</span>
-                          <input type="number" placeholder="1 000" data-thousands-separator>
-                        </label>
-                        <label class="full-filter__range"><span>До</span>
-                          <input type="number" min="0" placeholder="250 000">
-                        </label>
+                      <div>
+                        <input class="js-range-slider" type="text" name="width" value="" data-type="double" data-min="1000" data-max="250000" data-from="1000" data-to="250000" data-grid="true">
+                        <input class="full-filter__hidden-input" type="text" name="width_MIN" value="1000">
+                        <input class="full-filter__hidden-input" type="text" name="width_MAX" value="250000">
                       </div>
                     </fieldset>
+                    <div class="full-filter__divider"></div>
                     <fieldset class="full-filter__group full-filter__group--row">
                       <legend class="full-filter__caption">Длина (мм)</legend>
-                      <div class="full-filter__wrap">
-                        <label class="full-filter__range"><span>От</span>
-                          <input type="number" min="0" max="100000" placeholder="1 000">
-                        </label>
-                        <label class="full-filter__range"><span>До</span>
-                          <input type="number" min="0" placeholder="250 000">
-                        </label>
+                      <div>
+                        <input class="js-range-slider" type="text" name="length" value="" data-type="double" data-min="1000" data-max="250000" data-from="1000" data-to="250000" data-grid="true">
                       </div>
                     </fieldset>
+                    <div class="full-filter__divider"></div>
                     <fieldset class="full-filter__group full-filter__group--row">
                       <legend class="full-filter__caption">Высота (мм)</legend>
-                      <div class="full-filter__wrap">
-                        <label class="full-filter__range"><span>От</span>
-                          <input type="number" min="0" placeholder="1 000">
-                        </label>
-                        <label class="full-filter__range"><span>До</span>
-                          <input type="number" min="0" placeholder="250 000">
-                        </label>
+                      <div>
+                        <input class="js-range-slider" type="text" name="height" value="" data-type="double" data-min="1000" data-max="250000" data-from="1000" data-to="250000" data-grid="true">
                       </div>
                     </fieldset>
+                    <div class="full-filter__divider"></div>
                     <fieldset class="full-filter__group full-filter__group--row">
-                      <legend class="full-filter__caption">Цена (мм)</legend>
-                      <div class="full-filter__wrap">
-                        <label class="full-filter__range"><span>От</span>
-                          <input type="number" min="0" placeholder="1 000">
-                        </label>
-                        <label class="full-filter__range"><span>До</span>
-                          <input type="number" min="0" placeholder="250 000">
-                        </label>
+                      <legend class="full-filter__caption">Цена (₽)</legend>
+                      <div>
+                        <input class="js-range-slider" type="text" name="price" value="" data-type="double" data-min="1000" data-max="250000" data-from="1000" data-to="250000" data-grid="true">
                       </div>
                     </fieldset>
+                    <div class="full-filter__divider"></div>
                     <div class="full-filter__radios">
                       <label class="full-filter__label radio-btn">
                         <input class="radio-btn__input visually-hidden" type="radio" name="price" value=""><span class="radio-btn__caption">Оптовые цены</span>
@@ -568,7 +559,10 @@
                         <input class="radio-btn__input visually-hidden" type="radio" name="price" value=""><span class="radio-btn__caption">Розничные цены</span>
                       </label>
                     </div>
-                    <button class="full-filter__reset-btn" type="reset">Сбросить фильтры</button>
+                    <div class="full-filter__buttons">
+                      <button class="full-filter__reset-btn button" type="submit">Принять</button>
+                      <button class="full-filter__reset-btn button button--ghost" type="reset">Сбросить фильтры</button>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -847,7 +841,13 @@
       </div>
     </div>
     <div class="overlay" aria-label="Закрыть окно"></div>
+    <!-- jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- range slider-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="assets/scripts/imask.min.js"></script>
+    <!--// rangeslider-->
+    <!--script(src="assets/scripts/rangeslider.js")-->
     <script src="assets/scripts/accordion.min.js"></script>
     <script src="assets/scripts/swiper-bundle.min.js"></script>
     <script src="assets/scripts/spotlight.bundle.js"></script>

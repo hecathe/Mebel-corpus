@@ -3,7 +3,7 @@ const activeClass = "active";
 document.querySelectorAll('input[type="tel"]').forEach((elem) => {
 	const phoneMask = IMask(elem, {
 		mask: '+{7} (000) 000-00-00'
-	}); 
+	});
 })
 
 document.querySelectorAll('[data-thousands-separator]').forEach((input) => {
@@ -15,7 +15,7 @@ document.querySelectorAll('[data-thousands-separator]').forEach((input) => {
 			thousandsSeparator: ' ',
 			normalizeZeros: true,
 		});
-	})	
+	})
 })
 
 // Переключение табов
@@ -179,7 +179,7 @@ window.onclick = (event) => {
 			moreBtn.innerHTML = 'Развернуть'
 		}
 	}
-	
+
 	// modal
 	// const modalTriggerButtons = document.querySelectorAll('[data-modal-trigger]');
 
@@ -243,7 +243,7 @@ function closeWindow(elem) {
 function popup() {
 	const popups = document.querySelectorAll('[data-popup]');
 	const popupTriggers = document.querySelectorAll('[data-modal-trigger]');
-	
+
 	popups.forEach((popup) => {
 		openedWindow(popup)
 		closeWindow(popup)
@@ -328,7 +328,7 @@ showBlockBtns.forEach((showBtn) => {
 	let accBlock = block.closest('.account__block')
 	let inputs = accBlock.querySelectorAll('input');
 	let cancelBtn = block.querySelector('[data-change-cancel]');
-	
+
 	block.classList.remove('active');
 
 	accBlock.onclick = (event) => {
@@ -354,7 +354,7 @@ const cardInfoBlock = document.querySelector('.catalog-item__info');
 if (cardInfoBlock) {
 	const priceToggles = cardInfoBlock.querySelectorAll('[data-price-btn]');
 	const priceBlocks = cardInfoBlock.querySelectorAll('[data-price-block]');
-	
+
 	priceToggles.forEach((input) => {
 		priceBlocks.forEach((block) => {
 			input.addEventListener('change', function() {
@@ -364,7 +364,7 @@ if (cardInfoBlock) {
 					block.classList.remove('active')
 				}
 			})
-		})	
+		})
 	})
 
 	//toggle colors
@@ -380,6 +380,41 @@ if (cardInfoBlock) {
 					name.classList.remove(activeClass)
 				}
 			});
+
+			const possibleOptions = document.querySelector('.possible_options');
+			if (possibleOptions) {
+				const images = possibleOptions.querySelectorAll(`[data-color-xmlid=${toggle.dataset.colorBtn}] > img`);
+				if (images.length) {
+					let htmlMain = '';
+					let htmlThumb = '';
+
+					images.forEach((image) => {
+						htmlMain += `
+						<div class="swiper-slide">
+							<div class="catalog-item__slide">
+								<img src="${image.src}" alt="">
+								<button class="catalog-item__zoom-btn zoom-btn spotlight" data-src="${image.src}">
+									<svg width="30" height="30">
+										<use xlink:href="assets/images/sprite.svg#bi_zoom-in"></use>
+									</svg>
+								</button>
+							</div>
+						</div>`;
+
+						htmlThumb += `
+						<div class="swiper-slide">
+							<img src="${image.src}" alt="" class="catalog-item__thumb-img">
+						</div>
+					`;
+					});
+
+					document.querySelector('.catalog-item__slider .swiper-with-thumbs .swiper-wrapper').innerHTML = htmlMain;
+					document.querySelector('.catalog-item__slider .swiper-thumbs .swiper-wrapper').innerHTML = htmlThumb;
+
+					thumbsSwiper.update();
+					sliderWithThumbs.update();
+				}
+			}
 		})
 	})
 	//toggle colors end
@@ -398,3 +433,41 @@ window.onscroll = () => {
 	}
 }
 //fixed header end
+
+// document.querySelectorAll('.js-range-slider').forEach((item) => {
+// 	ionRangeSlider(`.js-range-slider[name="${item.name}"]`, {
+// 		skin: 'round',
+// 		onFinish: ((e) => {
+// 			const inputMin = document.querySelector(`input[type="hidden"][name="min-${item.name}"]`);
+// 			const inputMax = document.querySelector(`input[type="hidden"][name="max-${item.name}"]`);
+// 			if (inputMin) inputMin.value = e.from;
+// 			if (inputMax) inputMax.value = e.to;
+// 		}),
+// 	});
+// });
+
+// $(".js-range-slider").each((item) => {
+// 	this.ionRangeSlider({
+// 		skin: 'round',
+// 	});
+// })
+
+$(".js-range-slider").ionRangeSlider({
+	skin: 'round',
+	onFinish: ((e) => {
+		const name = e.input[0].name;
+		const inputMin = $(`input.full-filter__hidden-input[name="${name}_MIN"]`);
+		const inputMax = $(`input.full-filter__hidden-input[name="${name}_MAX"]`);
+		console.log({
+			inputMin, inputMax, asd: e.from, asdfg: e.to,
+		});
+		if (inputMin) {
+			inputMin.attr('value', e.from);
+			inputMin.trigger('keyup');
+		}
+		if (inputMax) {
+			inputMax.attr('value', e.to);
+			inputMax.trigger('keyup');
+		}
+	}),
+});

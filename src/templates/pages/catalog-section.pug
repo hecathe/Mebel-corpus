@@ -38,7 +38,7 @@ block content
                                 a.catalog-aside__link(href="#") Навесные полки
                             li.catalog-aside__item
                                 a.catalog-aside__link(href="#") Стеллажи
-                                
+
                     .catalog-section__content
                         .catalog-section__filter-menu.filter-menu
                             .filter-menu__select-wrap.select
@@ -80,11 +80,11 @@ block content
                                 include ../components/product-card.pug
                             li.catalog-list__item
                                 include ../components/product-card.pug
-                        
+
                         // Пагинация
                         .catalog-section__bottom
                             include ../components/pagination.pug
-                        
+
                         // Выезжающий фильтр
                         .catalog-section__full-filter.full-filter.modal#full-filter(data-popup)
                             button.full-filter__btn.button-close(data-close)
@@ -103,6 +103,8 @@ block content
                                         input.checkbox__input.visually-hidden(type="checkbox" name="sale" value="")
                                         span.checkbox__caption Акционный товар
 
+                                .full-filter__divider
+
                                 fieldset.full-filter__group.full-filter__group--col
                                     legend.full-filter__caption Производитель
                                     label.full-filter__label.checkbox
@@ -120,52 +122,44 @@ block content
                                     label.full-filter__label.checkbox
                                         input.checkbox__input.visually-hidden(type="checkbox" name="manufacturer" value="ololo")
                                         span.checkbox__caption Интерьер центр
-                                    
+
                                     button.full-filter__more-btn(type="button")
                                         span еще 10
                                         svg(width="10" height="10")
                                             use(xlink:href="assets/images/sprite.svg#arrow-downward")
 
-                                fieldset.full-filter__group.full-filter__group--row
-                                    legend.full-filter__caption Ширина (мм)
-                                    .full-filter__wrap
-                                        label.full-filter__range
-                                            span От
-                                            input(type="number" placeholder="1 000" data-thousands-separator)
-                                        label.full-filter__range
-                                            span До
-                                            input(type="number" min="0" placeholder="250 000")
-                                
-                                fieldset.full-filter__group.full-filter__group--row
-                                    legend.full-filter__caption Длина (мм)
-                                    .full-filter__wrap
-                                        label.full-filter__range
-                                            span От
-                                            input(type="number" min="0" max="100000" placeholder="1 000")
-                                        label.full-filter__range
-                                            span До
-                                            input(type="number" min="0" placeholder="250 000")
-                                
-                                fieldset.full-filter__group.full-filter__group--row
-                                    legend.full-filter__caption Высота (мм)
-                                    .full-filter__wrap
-                                        label.full-filter__range
-                                            span От
-                                            input(type="number" min="0" placeholder="1 000")
-                                        label.full-filter__range
-                                            span До
-                                            input(type="number" min="0" placeholder="250 000")
+                                .full-filter__divider
 
                                 fieldset.full-filter__group.full-filter__group--row
-                                    legend.full-filter__caption Цена (мм)
-                                    .full-filter__wrap
-                                        label.full-filter__range
-                                            span От
-                                            input(type="number" min="0" placeholder="1 000")
-                                        label.full-filter__range
-                                            span До
-                                            input(type="number" min="0" placeholder="250 000")
-                                
+                                    legend.full-filter__caption Ширина (мм)
+                                    div
+                                        input(type="text" class="js-range-slider" name="width" value="" data-type="double" data-min="1000" data-max="250000" data-from="1000" data-to="250000" data-grid="true")
+                                        input(type="text" name="width_MIN" value="1000" class="full-filter__hidden-input")
+                                        input(type="text" name="width_MAX" value="250000" class="full-filter__hidden-input")
+
+                                .full-filter__divider
+
+                                fieldset.full-filter__group.full-filter__group--row
+                                    legend.full-filter__caption Длина (мм)
+                                    div
+                                        input(type="text" class="js-range-slider" name="length" value="" data-type="double" data-min="1000" data-max="250000" data-from="1000" data-to="250000" data-grid="true")
+
+                                .full-filter__divider
+
+                                fieldset.full-filter__group.full-filter__group--row
+                                    legend.full-filter__caption Высота (мм)
+                                    div
+                                        input(type="text" class="js-range-slider" name="height" value="" data-type="double" data-min="1000" data-max="250000" data-from="1000" data-to="250000" data-grid="true")
+
+                                .full-filter__divider
+
+                                fieldset.full-filter__group.full-filter__group--row
+                                    legend.full-filter__caption Цена (₽)
+                                    div
+                                        input(type="text" class="js-range-slider" name="price" value="" data-type="double" data-min="1000" data-max="250000" data-from="1000" data-to="250000" data-grid="true")
+
+                                .full-filter__divider
+
                                 .full-filter__radios
                                     label.full-filter__label.radio-btn
                                         input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
@@ -173,6 +167,9 @@ block content
                                     label.full-filter__label.radio-btn
                                         input.radio-btn__input.visually-hidden(type="radio" name="price" value="")
                                         span.radio-btn__caption Розничные цены
-                                button.full-filter__reset-btn(type="reset") Сбросить фильтры
+
+                                .full-filter__buttons
+                                    button.full-filter__reset-btn.button(type="submit") Принять
+                                    button.full-filter__reset-btn.button.button--ghost(type="reset") Сбросить фильтры
 
         include ../components/about-block.pug

@@ -11,7 +11,7 @@ block content
         section.catalog-section.mb-90
             .container
                 h1.catalog-section__title.title-first.mb-60 Новинки
-                .catalog-section__wrap        
+                .catalog-section__wrap
                     .catalog-section__content
                         .catalog-section__filter-menu.filter-menu
                             .filter-menu__select-wrap.select
@@ -53,11 +53,11 @@ block content
                                 include ../components/product-card.pug
                             li.catalog-list__item
                                 include ../components/product-card.pug
-                        
+
                         // Пагинация
                         .catalog-section__bottom
                             include ../components/pagination.pug
-                        
+
                         // Выезжающий фильтр
                         .catalog-section__full-filter.full-filter.modal#full-filter
                             button.full-filter__btn.button-close(data-close)
@@ -93,7 +93,7 @@ block content
                                     label.full-filter__label.checkbox
                                         input.checkbox__input.visually-hidden(type="checkbox" name="manufacturer" value="ololo")
                                         span.checkbox__caption Интерьер центр
-                                    
+
                                     button.full-filter__more-btn(type="button")
                                         span еще 10
                                         svg(width="10" height="10")
@@ -108,7 +108,7 @@ block content
                                         label.full-filter__range
                                             span До
                                             input(type="number" min="0" placeholder="250 000")
-                                
+
                                 fieldset.full-filter__group.full-filter__group--row
                                     legend.full-filter__caption Длина (мм)
                                     .full-filter__wrap
@@ -118,7 +118,7 @@ block content
                                         label.full-filter__range
                                             span До
                                             input(type="number" min="0" placeholder="250 000")
-                                
+
                                 fieldset.full-filter__group.full-filter__group--row
                                     legend.full-filter__caption Высота (мм)
                                     .full-filter__wrap
@@ -138,7 +138,7 @@ block content
                                         label.full-filter__range
                                             span До
                                             input(type="number" min="0" placeholder="250 000")
-                                
+
                                 .full-filter__radios
                                     label.full-filter__label.radio-btn
                                         input.radio-btn__input.visually-hidden(type="radio" name="price" value="")

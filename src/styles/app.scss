@@ -152,7 +152,7 @@ select {
 	transition: background-color 150ms ease-in-out;
 	border-radius: 5px;
 	padding: 10px 30px;
-	
+
 	&:hover {
 		background-color: #008936;
 	}
@@ -329,8 +329,24 @@ select {
 	.mb-90 {
 		margin-bottom: 45px;
 	}
-	
+
 	.mb-60 {
 		margin-bottom: 30px;
 	}
+}
+
+// range slider
+.irs--round .irs-handle {
+	top: 28px!important;
+	width: 20px!important;
+	height: 20px!important;
+	border: 3px solid var(--color-primary)!important;
+}
+
+.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single, .irs-bar {
+	background-color: var(--color-primary)!important;
+}
+
+.irs--round .irs-from:before, .irs--round .irs-to:before {
+	border-top-color: var(--color-primary)!important;
 }

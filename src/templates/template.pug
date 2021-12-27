@@ -19,7 +19,13 @@ html
 		link(rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css")
 		link(rel="stylesheet" type="text/css" href="assets/styles/accordion.min.css")
 		link(rel="stylesheet" type="text/css" href="assets/styles/app.min.css")
-		
+
+		// rangeslider
+		link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css")
+
+		link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css")
+
+
 	body
 		.wrapper
 			include components/header.pug
@@ -36,9 +42,18 @@ html
 
 		.overlay(aria-label="Закрыть окно")
 
+		// jquery
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+
+		// range slider
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js")
+
 		//- https://imask.js.org
 		script(src="assets/scripts/imask.min.js")
-		
+
+		//// rangeslider
+		//script(src="assets/scripts/rangeslider.js")
+
 		//- https://github.com/michu2k/Accordion
 		script(src="assets/scripts/accordion.min.js")
 
@@ -50,6 +65,6 @@ html
 
 		//- https://github.com/WICG/focus-visible
 		script(src="assets/scripts/focus-visible.min.js")
-		
+
 		script(src="assets/scripts/map.js")
 		script(src="assets/scripts/main.js")

@@ -1,5 +1,7 @@
 .product-card {
     position: relative;
+    box-shadow: 0 4px 20px rgba(117, 130, 131, .16);
+    transition: box-shadow .3s ease;
 
     &__link {
         position: relative;
@@ -37,13 +39,18 @@
     &__info {
         display: grid;
         row-gap: 5px;
-        margin-top: 10px;
+        padding: 15px;
     }
 
     &__caption {
         font-weight: 700;
         font-size: 16px;
         line-height: 22px;
+        min-height: 66px;
+    }
+
+    &__row {
+        min-height: 40px;
     }
 
     &__term {
@@ -75,5 +82,9 @@
         svg {
             --cart-color: #{var(--color-white)};
         }
+    }
+
+    &:hover {
+        box-shadow: 0 20px 20px rgba(117, 130, 131, .16);
     }
 }
