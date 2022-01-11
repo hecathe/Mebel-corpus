@@ -63,6 +63,11 @@
         row-gap: 10px;
         color: var(--color-card-text);
     }
+
+    &__color-list {
+        margin-bottom: 10px!important;
+    }
+
     &__caption {
         font-weight: 600;
     }
@@ -125,7 +130,7 @@
 }
 
 .swiper-thumbs {
-    
+
     .swiper-slide {
         max-height: 100px;
         max-width: 100px;
@@ -163,6 +168,12 @@
 
         input:checked + img {
             border: 1px solid var(--color-primary);
+        }
+    }
+
+    &__count {
+        &-label {
+            font-weight: 600;
         }
     }
 }

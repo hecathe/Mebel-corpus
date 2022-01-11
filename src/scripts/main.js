@@ -367,7 +367,7 @@ if (cardInfoBlock) {
 		})
 	})
 
-	//toggle colors
+	// toggle colors
 	const colorBtnToggles = cardInfoBlock.querySelectorAll('[data-color-btn]');
 	const colorNames = cardInfoBlock.querySelectorAll('[data-color]');
 
@@ -414,6 +414,18 @@ if (cardInfoBlock) {
 					thumbsSwiper.update();
 					sliderWithThumbs.update();
 				}
+			}
+
+			const currentColor = toggle.dataset.colorBtn;
+			const optionItem = document.querySelector(`.possible_options > .item[data-color-xmlid=${currentColor}]`);
+			const currentCount = optionItem ? optionItem.dataset.offerCount : null;
+			const countWrapper = document.querySelector('.color-list__count');
+			const countValueWrapper = document.querySelector('.color-list__count-value');
+			if (currentCount) {
+				countWrapper.style.display = 'block';
+				countValueWrapper.innerText = currentCount;
+			} else {
+				countWrapper.style.display = 'none';
 			}
 		})
 	})

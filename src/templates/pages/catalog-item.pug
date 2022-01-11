@@ -13,10 +13,10 @@ block content
                 .catalog-item__wrap.mb-90
                     .catalog-item__slider
                         .possible_options(style="display: none")
-                            .item(data-color-xmlid="color-1")
+                            .item(data-color-xmlid="color-1" data-offer-count="123")
                                 img(src="http://185.46.11.33/upload/iblock/8a6/387522572_w700_h500_tumba_vykatnaya_s.jpg" alt="")
                                 img(src="http://185.46.11.33/upload/iblock/a1d/1614427348_45_p_fon_temno_krasnogo_tsveta_51.png" alt="")
-                            .item(data-color-xmlid="color-2")
+                            .item(data-color-xmlid="color-2" data-offer-count="321")
                                 img(src="http://185.46.11.33/upload/iblock/8a6/387522572_w700_h500_tumba_vykatnaya_s.jpg" alt="")
                                 img(src="http://185.46.11.33/upload/iblock/a1d/1614427348_45_p_fon_temno_krasnogo_tsveta_51.png" alt="")
 
@@ -85,6 +85,10 @@ block content
                                 label.color-list__item
                                     input.visually-hidden(type="radio" name="colors" value="color-4" data-color-btn="color-4")
                                     img.color-list__img(src="assets/images/color-2.jpg", alt="")
+                            .color-list__count
+                                span.color-list__count-label Остаток на складе:
+                                span.color-list__count-value 123
+                                | шт.
                         .catalog-item__btn-wrap
                             button.catalog-item__btn.catalog-item__btn--cart.button
                                 svg(width="21" height="21")
