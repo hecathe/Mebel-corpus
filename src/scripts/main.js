@@ -383,45 +383,45 @@ if (cardInfoBlock) {
 
 			const possibleOptions = document.querySelector('.possible_options');
 			if (possibleOptions) {
-				const images = possibleOptions.querySelectorAll(`[data-color-xmlid=${toggle.dataset.colorBtn}] > img`);
+				const images = possibleOptions.querySelectorAll(`[data-color-xmlid="${toggle.dataset.colorBtn}"] > img`);
 				if (images.length) {
-					let htmlMain = '';
-					let htmlThumb = '';
-
-					images.forEach((image) => {
-						htmlMain += `
-						<div class="swiper-slide">
-							<div class="catalog-item__slide">
-								<img src="${image.src}" alt="">
-								<button class="catalog-item__zoom-btn zoom-btn spotlight" data-src="${image.src}">
-									<svg width="30" height="30">
-										<use xlink:href="assets/images/sprite.svg#bi_zoom-in"></use>
-									</svg>
-								</button>
-							</div>
-						</div>`;
-
-						htmlThumb += `
-						<div class="swiper-slide">
-							<img src="${image.src}" alt="" class="catalog-item__thumb-img">
-						</div>
-					`;
-					});
-
-					document.querySelector('.catalog-item__slider .swiper-with-thumbs .swiper-wrapper').innerHTML = htmlMain;
-					document.querySelector('.catalog-item__slider .swiper-thumbs .swiper-wrapper').innerHTML = htmlThumb;
-
-					thumbsSwiper.update();
-					sliderWithThumbs.update();
+					// let htmlMain = '';
+					// let htmlThumb = '';
+					//
+					// images.forEach((image) => {
+					// 	htmlMain += `
+					// 	<div class="swiper-slide">
+					// 		<div class="catalog-item__slide">
+					// 			<img src="${image.src}" alt="">
+					// 			<button class="catalog-item__zoom-btn zoom-btn spotlight" data-src="${image.src}">
+					// 				<svg width="30" height="30">
+					// 					<use xlink:href="assets/images/sprite.svg#bi_zoom-in"></use>
+					// 				</svg>
+					// 			</button>
+					// 		</div>
+					// 	</div>`;
+					//
+					// 	htmlThumb += `
+					// 	<div class="swiper-slide">
+					// 		<img src="${image.src}" alt="" class="catalog-item__thumb-img">
+					// 	</div>
+					// `;
+					// });
+					//
+					// document.querySelector('.catalog-item__slider .swiper-with-thumbs .swiper-wrapper').innerHTML = htmlMain;
+					// document.querySelector('.catalog-item__slider .swiper-thumbs .swiper-wrapper').innerHTML = htmlThumb;
+					//
+					// thumbsSwiper.update();
+					// sliderWithThumbs.update();
 				}
 			}
 
 			const currentColor = toggle.dataset.colorBtn;
-			const optionItem = document.querySelector(`.possible_options > .item[data-color-xmlid=${currentColor}]`);
+			const optionItem = document.querySelector(`.possible_options > .item[data-color-xmlid="${currentColor}"]`);
 			const currentCount = optionItem ? optionItem.dataset.offerCount : null;
 			const countWrapper = document.querySelector('.color-list__count');
-			const countValueWrapper = document.querySelector('.color-list__count-value');
-			if (currentCount) {
+			const countValueWrapper = document.querySelector('.catalog-list__count-value');
+			if (currentCount !== null) {
 				countWrapper.style.display = 'block';
 				countValueWrapper.innerText = currentCount;
 			} else {
@@ -432,6 +432,8 @@ if (cardInfoBlock) {
 	//toggle colors end
 }
 //toggle opt&roz prices end
+
+
 
 //fixed header
 const header = document.querySelector('.header');
