@@ -209,7 +209,7 @@
             background-color: #929292;
             mask-image: url('../images/svg/close.svg');
             mask-position: center;
-            mask-repeat: no-repeat; 
+            mask-repeat: no-repeat;
         }
     }
 }
@@ -478,7 +478,7 @@
         }
 
         label {
-            
+
             input {
                 top: 9px;
                 left: 20px;
@@ -507,8 +507,23 @@
                     background-size: cover;
                     z-index: 13;
                 }
-            }            
+            }
         }
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .header__btns {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__toggle-menu {
+        margin-bottom: 20px;
+    }
+
+    .header__list {
+        margin-top: 25px;
     }
 }
 
