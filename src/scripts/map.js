@@ -2,9 +2,18 @@ if (document.querySelector('#map')) {
     ymaps.ready(init);
 }
 
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
 function init () {
+    const selectedCityCoords = document.querySelector(`option[data-contact-id="${getCookie('BITRIX_SM_setCityId')}"]`).value;
+    const center = selectedCityCoords ? selectedCityCoords.split(',') : null;
+
     var myMap = new ymaps.Map('map', {
-        center: [59.808459, 30.459113],
+        center: selectedCityCoords ? center : [59.808459, 30.459113],
         zoom: 9,
         // controls: ['smallMapDefaultSet']
         controls: []
@@ -14,7 +23,7 @@ function init () {
         // Описание геометрии.
         geometry: {
             type: "Point",
-            coordinates: [59.808459, 30.459113],
+            coordinates: selectedCityCoords ? center : [59.808459, 30.459113],
         },
     });
     myMap.geoObjects.add(myGeoObject)
@@ -41,8 +50,6 @@ function init () {
         });
         myMap.geoObjects.add(myGeoObject)
 
-        
-        // console.log(cityInfoList);
         cityList.forEach((cityItem) => {
             cityInfoList.forEach((cityInfoBlock) => {
                 cityInfoBlock.style.display = 'none'

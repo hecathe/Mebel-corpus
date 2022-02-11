@@ -132,7 +132,7 @@ const sliderWithThumbs = new Swiper('.swiper-with-thumbs', {
 })
 
 const toggleFullMenu = document.querySelector('[data-catalog-toggle]');
-const fullMenu = document.querySelector('[data-full-menu');
+const fullMenu = document.querySelector('[data-full-menu]');
 const closeBtn = document.querySelector('[data-close]');
 const searchBtn = document.querySelector('.search-form__btn');
 const burgerBtn = document.querySelector('[data-burger]')
@@ -152,10 +152,22 @@ window.onclick = (event) => {
 		body.classList.remove('scroll-hidden')
 	}
 
-	if (event.target == searchBtn) {
-		searchBtn.nextElementSibling.classList.add('show')
+	const handler = (e) => {
+		if (e.keyCode === 13) {
+			e.target.closest('.search-form').submit();
+		}
+	}
+
+	if (event.target == searchBtn || event.target == document.querySelector('.search-form__mobile-btn') || event.target == document.querySelector('.search-form__input')) {
+		if (window.screen.width <= 975) {
+			event.preventDefault();
+		}
+		searchBtn.nextElementSibling.classList.add('show');
+		document.querySelector('.search-form__input').addEventListener("keyup", handler);
+		document.querySelector('.search-form__input').focus();
 	} else if (event.target !== searchBtn.nextElementSibling.childNodes[1]) {
-		searchBtn.nextElementSibling.classList.remove('show')
+		searchBtn.nextElementSibling.classList.remove('show');
+		document.querySelector('.search-form__input').removeEventListener('keyup', handler);
 	}
 
 	if (event.target == burgerBtn) {
@@ -203,6 +215,13 @@ window.onclick = (event) => {
 	// 		})
 	// 	}
 	// })
+}
+
+const searchMobileButton = document.querySelector('.search-form__mobile-btn');
+if (searchMobileButton) {
+	searchMobileButton.addEventListener('click', (e) => {
+		e.target.closest('.search-form').submit();
+	});
 }
 
 function openedWindow(elem) {
