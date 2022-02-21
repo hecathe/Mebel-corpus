@@ -504,3 +504,11 @@ $(".js-range-slider").ionRangeSlider({
 		}
 	}),
 });
+
+const filterSelects = document.querySelectorAll('.filter-menu');
+filterSelects.forEach((select) => {
+	select.addEventListener('change', (e) => {
+		const value = e.target.value;
+		location.href = value === 'default' ? location.href.split('?')[0] : value;
+	});
+});
